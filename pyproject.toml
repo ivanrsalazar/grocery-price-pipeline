@@ -1,0 +1,12 @@
+[project]
+name = "grocery_pipeline"
+version = "0.1.0"
+description = "Grocery price ingestion pipeline"
+requires-python = ">=3.10"
+
+dependencies = [
+    "dagster",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
