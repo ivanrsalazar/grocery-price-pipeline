@@ -1,12 +1,23 @@
-CREATE TABLE IF NOT EXISTS `grocery-price-pipeline.grocery_bronze.bronze_kroger_products` (
-    snapshot_ts       TIMESTAMP NOT NULL,
-    location_id       STRING NOT NULL,
-    search_term       STRING,
-    raw_payload       JSON NOT NULL,
+DROP TABLE IF EXISTS `grocery-pipe-line.grocery_bronze.kroger_products`;
 
-    -- lineage / audit
-    source            STRING NOT NULL,
-    ingestion_run_id  STRING
+CREATE TABLE `grocery-pipe-line.grocery_bronze.kroger_products` (
+  ingestion_ts     TIMESTAMP NOT NULL,
+  source           STRING    NOT NULL,
+  search_term      STRING,
+
+  product_id       STRING    NOT NULL,
+  upc              STRING,
+  brand            STRING,
+  description      STRING,
+  categories       ARRAY<STRING>,
+
+  size             STRING,
+  temperature      STRING,
+  organic_claim    STRING,
+  non_gmo          BOOL,
+  snap_eligible    BOOL,
+
+  raw              JSON
 )
-PARTITION BY DATE(snapshot_ts)
-CLUSTER BY location_id;
+PARTITION BY DATE(ingestion_ts)
+CLUSTER BY product_id;
