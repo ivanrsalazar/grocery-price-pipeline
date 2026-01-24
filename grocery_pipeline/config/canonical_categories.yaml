@@ -1,0 +1,133 @@
+categories:
+
+  produce:
+    expected_category: "produce"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  dairy:
+    expected_category: "dairy"
+    defaults:
+      temperature: REFRIGERATED
+      snap: true
+
+  meat_seafood:
+    expected_category: "meat & seafood"
+    defaults:
+      temperature: REFRIGERATED
+      snap: true
+
+  bakery:
+    expected_category: "bakery"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  beverages:
+    expected_category: "beverages"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  snacks:
+    expected_category: "snacks"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  frozen:
+    expected_category: "frozen"
+    defaults:
+      temperature: FROZEN
+      snap: true
+
+  canned_packaged:
+    expected_category: "canned & packaged"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  breakfast:
+    expected_category: "breakfast"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  condiments_sauces:
+    expected_category: "condiment & sauces"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  international:
+    expected_category: "international"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  natural_organic:
+    expected_category: "natural & organic"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  personal_care:
+    expected_category: "personal care"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  cleaning_products:
+    expected_category: "cleaning products"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  baby:
+    expected_category: "baby"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  pet_care:
+    expected_category: "pet care"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  health:
+    expected_category: "health"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  electronics:
+    expected_category: "electronics"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  hardware:
+    expected_category: "hardware"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  office_school_crafts:
+    expected_category: "office, school, & crafts"
+    defaults:
+      temperature: AMBIENT
+      snap: false
+
+  party:
+    expected_category: "party"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  sporting_goods:
+    expected_category: "sporting goods"
+    defaults:
+      temperature: AMBIENT
+      snap: false

@@ -1,7 +1,7 @@
 from dagster import Definitions
 
-from grocery_pipeline.assets.bronze.bronze_kroger_products_daily import (
-    bronze_kroger_products_daily,
+from grocery_pipeline.assets.bronze.bronze_exploration_daily import (
+    exploration_kroger_products_daily,
 )
 from grocery_pipeline.jobs.jobs import (
     bronze_kroger_products_daily_job,
@@ -14,7 +14,7 @@ from grocery_pipeline.resources.bigquery import bigquery_client
 
 defs = Definitions(
     assets=[
-        bronze_kroger_products_daily,
+        exploration_kroger_products_daily,
     ],
     jobs=[
         bronze_kroger_products_daily_job,

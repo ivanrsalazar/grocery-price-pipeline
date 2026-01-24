@@ -1,0 +1,239 @@
+search_terms:
+
+  produce:
+    breadth:
+      - apples
+      - bananas
+      - oranges
+      - tomatoes
+      - berries
+    drilldown:
+      - gala apples
+      - granny smith apples
+      - roma tomatoes
+      - cherry tomatoes
+      - strawberries
+      - blueberries
+      - raspberries
+      - blackberries
+
+  dairy:
+    breadth:
+      - milk
+      - cheese
+      - eggs
+      - butter
+      - yogurt
+    drilldown:
+      - whole milk
+      - 2% milk
+      - fat free milk
+      - almond milk
+      - oat milk
+      - cheddar cheese
+      - mozzarella cheese
+      - greek yogurt
+
+  meat_seafood:
+    breadth:
+      - chicken
+      - beef
+      - turkey
+      - fish
+      - shrimp
+    drilldown:
+      - chicken breast
+      - chicken thighs
+      - ground chicken
+      - ground beef
+      - beef steak
+      - ground turkey
+      - raw shrimp
+      - salmon fillet
+
+  bakery:
+    breadth:
+      - bread
+      - rolls
+      - bagels
+      - muffins
+      - buns
+    drilldown:
+      - whole wheat bread
+      - white bread
+      - hamburger buns
+      - hot dog buns
+      - english muffins
+      - croissants
+      - dinner rolls
+      - sandwich bread
+
+  beverages:
+    breadth:
+      - soda
+      - juice
+      - water
+      - coffee
+      - tea
+    drilldown:
+      - sparkling water
+      - orange juice
+      - apple juice
+      - cold brew coffee
+      - ground coffee
+      - green tea
+      - black tea
+      - energy drinks
+
+  snacks:
+    breadth:
+      - chips
+      - crackers
+      - cookies
+      - candy
+      - popcorn
+    drilldown:
+      - potato chips
+      - tortilla chips
+      - chocolate candy
+      - gummy candy
+      - sandwich cookies
+      - snack crackers
+      - microwave popcorn
+      - pretzels
+
+  frozen:
+    breadth:
+      - frozen meals
+      - frozen vegetables
+      - frozen fruit
+      - ice cream
+      - frozen pizza
+    drilldown:
+      - frozen broccoli
+      - frozen mixed vegetables
+      - frozen berries
+      - vanilla ice cream
+      - chocolate ice cream
+      - frozen waffles
+      - frozen pancakes
+      - frozen chicken nuggets
+
+  canned_packaged:
+    breadth:
+      - canned soup
+      - canned beans
+      - canned vegetables
+      - canned tuna
+      - packaged meals
+    drilldown:
+      - chicken noodle soup
+      - black beans
+      - canned corn
+      - canned green beans
+      - canned chili
+      - canned tomatoes
+      - canned salmon
+      - instant meals
+
+  breakfast:
+    breadth:
+      - cereal
+      - oatmeal
+      - pancakes
+      - waffles
+      - breakfast bars
+    drilldown:
+      - cold cereal
+      - granola cereal
+      - instant oatmeal
+      - pancake mix
+      - waffle mix
+      - frozen waffles
+      - breakfast sandwiches
+      - breakfast burritos
+
+  condiments_sauces:
+    breadth:
+      - ketchup
+      - mustard
+      - mayonnaise
+      - pasta sauce
+      - salad dressing
+    drilldown:
+      - tomato ketchup
+      - yellow mustard
+      - dijon mustard
+      - alfredo sauce
+      - marinara sauce
+      - ranch dressing
+      - italian dressing
+      - soy sauce
+
+  personal_care:
+    breadth:
+      - shampoo
+      - soap
+      - toothpaste
+      - deodorant
+      - lotion
+    drilldown:
+      - body wash
+      - hand soap
+      - whitening toothpaste
+      - antiperspirant deodorant
+      - face lotion
+      - sunscreen
+      - shaving cream
+      - razors
+
+  cleaning_products:
+    breadth:
+      - laundry detergent
+      - dish soap
+      - cleaning spray
+      - sponges
+      - trash bags
+    drilldown:
+      - liquid laundry detergent
+      - dishwasher detergent
+      - disinfecting wipes
+      - glass cleaner
+      - all purpose cleaner
+      - scrub sponges
+      - paper towels
+      - floor cleaner
+
+  baby:
+    breadth:
+      - baby food
+      - baby formula
+      - diapers
+      - baby wipes
+      - baby lotion
+    drilldown:
+      - infant formula
+      - toddler snacks
+      - disposable diapers
+      - sensitive baby wipes
+      - baby shampoo
+      - baby soap
+      - baby sunscreen
+      - baby snacks
+
+  pet_care:
+    breadth:
+      - dog food
+      - cat food
+      - dog treats
+      - cat litter
+      - pet toys
+    drilldown:
+      - dry dog food
+      - wet dog food
+      - dry cat food
+      - cat treats
+      - clumping cat litter
+      - dog chew toys
+      - pet shampoo
+      - flea treatment

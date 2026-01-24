@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `grocery-pipe-line.grocery_bronze.exploration_kroger_
   temperature STRING,
 
   ingredient_statement STRING,
+  raw                    JSON,
 
   ingestion_ts TIMESTAMP
 );
