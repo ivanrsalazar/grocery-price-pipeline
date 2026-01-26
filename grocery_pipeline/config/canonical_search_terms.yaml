@@ -83,24 +83,27 @@ search_terms:
       - ground coffee
       - green tea
       - black tea
-      - energy drinks
+      - energy drink
 
   snacks:
     breadth:
       - chips
       - crackers
       - cookies
-      - candy
       - popcorn
     drilldown:
       - potato chips
       - tortilla chips
-      - chocolate candy
-      - gummy candy
       - sandwich cookies
       - snack crackers
       - microwave popcorn
       - pretzels
+  
+  candy:
+    breadth:
+      - candy
+      - chocolate candy
+      - gummy candy
 
   frozen:
     breadth:
@@ -115,9 +118,11 @@ search_terms:
       - frozen berries
       - vanilla ice cream
       - chocolate ice cream
-      - frozen waffles
       - frozen pancakes
       - frozen chicken nuggets
+      - breakfast burritos
+      - breakfast sandwiches
+      - frozen waffles
 
   canned_packaged:
     breadth:
@@ -134,14 +139,14 @@ search_terms:
       - canned chili
       - canned tomatoes
       - canned salmon
-      - instant meals
+      - instant
 
   breakfast:
     breadth:
       - cereal
       - oatmeal
-      - pancakes
-      - waffles
+      - pancake
+      - waffle
       - breakfast bars
     drilldown:
       - cold cereal
@@ -150,25 +155,30 @@ search_terms:
       - pancake mix
       - waffle mix
       - frozen waffles
-      - breakfast sandwiches
-      - breakfast burritos
 
-  condiments_sauces:
+  sauces:
+    breadth:
+      - pasta sauce
+    drilldown:
+      - alfredo sauce
+      - marinara sauce
+
+  condiment_sauces:
     breadth:
       - ketchup
       - mustard
       - mayonnaise
-      - pasta sauce
-      - salad dressing
-    drilldown:
-      - tomato ketchup
       - yellow mustard
+    drilldown:
       - dijon mustard
-      - alfredo sauce
-      - marinara sauce
-      - ranch dressing
       - italian dressing
+      - tomato ketchup
+      - mayonnaise
+      - mustard
+      - ranch dressing
+      - salad dressing
       - soy sauce
+
 
   personal_care:
     breadth:
@@ -214,7 +224,7 @@ search_terms:
     drilldown:
       - infant formula
       - toddler snacks
-      - disposable diapers
+      - diapers
       - sensitive baby wipes
       - baby shampoo
       - baby soap
@@ -227,13 +237,13 @@ search_terms:
       - cat food
       - dog treats
       - cat litter
-      - pet toys
+      - toy 
     drilldown:
       - dry dog food
       - wet dog food
       - dry cat food
       - cat treats
       - clumping cat litter
-      - dog chew toys
+      - dog toy
       - pet shampoo
       - flea treatment

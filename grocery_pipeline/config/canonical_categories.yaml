@@ -35,6 +35,12 @@ categories:
     defaults:
       temperature: AMBIENT
       snap: true
+  
+  candy:
+    expected_category: "candy"
+    defaults:
+      temperature: AMBIENT 
+      snap: true
 
   frozen:
     expected_category: "frozen"
@@ -54,7 +60,13 @@ categories:
       temperature: AMBIENT
       snap: true
 
-  condiments_sauces:
+  sauces:
+    expected_category: "sauces"
+    defaults:
+      temperature: AMBIENT
+      snap: true
+
+  condiment_sauces:
     expected_category: "condiment & sauces"
     defaults:
       temperature: AMBIENT
