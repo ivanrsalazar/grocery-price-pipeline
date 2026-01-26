@@ -1,8 +1,15 @@
 from dagster import Definitions
 
+# Bronze
 from grocery_pipeline.assets.bronze.bronze_exploration_daily import (
     exploration_kroger_products_daily,
 )
+
+# Silver
+from grocery_pipeline.assets.silver.silver_exploration_kroger_products import (
+    silver_exploration_kroger_products,
+)
+
 from grocery_pipeline.jobs.jobs import (
     bronze_kroger_products_daily_job,
 )
@@ -15,6 +22,7 @@ from grocery_pipeline.resources.bigquery import bigquery_client
 defs = Definitions(
     assets=[
         exploration_kroger_products_daily,
+        silver_exploration_kroger_products
     ],
     jobs=[
         bronze_kroger_products_daily_job,
