@@ -9,7 +9,7 @@ from typing import Dict, List
 import yaml
 import requests
 from google.cloud import bigquery
-from dagster import asset, AssetExecutionContext
+from dagster import asset, AssetExecutionContext, RetryPolicy
 
 # =====================================================
 # Constants
@@ -114,6 +114,7 @@ def load_search_terms() -> List[str]:
 
 @asset(
     name="exploration_kroger_products_daily",
+    retry_policy=RetryPolicy(max_retries=5, delay=180),
     compute_kind="python",
 )
 def exploration_kroger_products_daily(context: AssetExecutionContext) -> None:
