@@ -1,10 +1,10 @@
+import json
 import re
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 
 import yaml
 from dagster import AssetExecutionContext, AssetKey, asset
-
 
 # =====================================================
 # BigQuery tables
@@ -15,7 +15,6 @@ BQ_PROJECT = "grocery-pipe-line"
 BRONZE_TABLE = f"{BQ_PROJECT}.grocery_bronze.exploration_kroger_products"
 SILVER_TABLE = f"{BQ_PROJECT}.grocery_silver.exploration_kroger_products"
 
-
 # =====================================================
 # Config paths
 # =====================================================
@@ -24,10 +23,10 @@ CONFIG_DIR = Path(__file__).resolve().parents[2] / "config"
 SEARCH_TERMS_PATH = CONFIG_DIR / "canonical_search_terms.yaml"
 CATEGORIES_PATH = CONFIG_DIR / "canonical_categories.yaml"
 
-
 # =====================================================
 # Small helpers
 # =====================================================
+
 
 def _norm_simple(s: Optional[str]) -> str:
     """Normalization for search_term keys (lowercase + collapse whitespace)."""
@@ -42,13 +41,21 @@ def _require_file(p: Path) -> None:
         raise FileNotFoundError(f"Missing required config file: {p}")
 
 
+def _safe_json(obj) -> str:
+    try:
+        return json.dumps(obj, default=str)
+    except Exception:
+        return str(obj)
+
+
 # =====================================================
 # Config loading
 # =====================================================
 
+
 def load_search_terms_bucket_map() -> Dict[str, str]:
     """
-    Returns {normalized_search_term: bucket_key} from canonical_search_terms.yaml
+    Returns {normalized_search_term: bucket_key} from canonical_search_terms.yaml.
     """
     _require_file(SEARCH_TERMS_PATH)
     with SEARCH_TERMS_PATH.open("r") as f:
@@ -57,7 +64,7 @@ def load_search_terms_bucket_map() -> Dict[str, str]:
     st = cfg.get("search_terms") or {}
     mapping: Dict[str, str] = {}
 
-    for bucket_key, block in st.items():
+    for bucket_key, block in (st or {}).items():
         block = block or {}
         terms = (block.get("breadth") or []) + (block.get("drilldown") or [])
         for term in terms:
@@ -82,7 +89,7 @@ def load_category_expected() -> Dict[str, str]:
     cats = cfg.get("categories") or {}
     out: Dict[str, str] = {}
 
-    for bucket_key, block in cats.items():
+    for bucket_key, block in (cats or {}).items():
         block = block or {}
         expected_category = block.get("expected_category")
         if not expected_category:
@@ -97,22 +104,83 @@ def load_category_expected() -> Dict[str, str]:
     return out
 
 
-def build_term_records() -> List[Tuple[str, str, str]]:
+# =====================================================
+# Rules (only overrides for the two abnormal terms)
+# =====================================================
+
+
+def load_search_term_rules() -> Dict[str, Dict]:
+    """
+    Returns rules keyed by normalized search_term.
+
+    Only two overrides:
+      - packaged meals: match ANY of ["meal", "microwave", "dinner", "skillet", "compleats", "helper"]
+      - pet shampoo: match ANY of ["dog shampoo", "cat shampoo", "pet shampoo", "puppy shampoo", "kitten shampoo"]
+
+    Everything else defaults to all_of (tokens from search_term must appear).
+    """
+    return {
+        "packaged meals": {
+            "strategy": "any_of",
+            "any_of": [
+                "meal",
+                "microwave",
+                "dinner",
+                "skillet",
+                "compleats",
+                "helper",
+            ],
+        },
+        "pet shampoo": {
+            "strategy": "any_of",
+            "any_of": [
+                "dog shampoo",
+                "cat shampoo",
+                "pet shampoo",
+                "puppy shampoo",
+                "kitten shampoo",
+            ],
+        },
+    }
+
+
+def build_term_records() -> List[Tuple[str, str, str, str, List[str]]]:
     """
     Produces list of tuples:
-      (normalized_search_term, bucket_key, expected_category)
+      (search_term_norm, bucket_key, expected_category, strategy, any_of_tokens)
+
+    strategy in {"all_of", "any_of"}
+    any_of_tokens used only when strategy == "any_of"
     """
     term_to_bucket = load_search_terms_bucket_map()
     bucket_to_expected = load_category_expected()
+    rules = load_search_term_rules()
 
-    records: List[Tuple[str, str, str]] = []
+    records: List[Tuple[str, str, str, str, List[str]]] = []
     missing_buckets = set()
 
-    for term, bucket in sorted(term_to_bucket.items(), key=lambda x: (x[1], x[0])):
+    for term_norm, bucket in sorted(term_to_bucket.items(), key=lambda x: (x[1], x[0])):
         if bucket not in bucket_to_expected:
             missing_buckets.add(bucket)
             continue
-        records.append((term, bucket, bucket_to_expected[bucket]))
+
+        rule = rules.get(term_norm, {})
+        strategy = rule.get("strategy", "all_of")
+
+        if strategy not in {"all_of", "any_of"}:
+            raise ValueError(f"Invalid strategy '{strategy}' for term '{term_norm}'")
+
+        any_of_tokens: List[str] = []
+        if strategy == "any_of":
+            any_of_tokens = [
+                str(x).strip().lower()
+                for x in (rule.get("any_of") or [])
+                if str(x).strip()
+            ]
+            if not any_of_tokens:
+                raise ValueError(f"strategy=any_of requires non-empty any_of list for term '{term_norm}'")
+
+        records.append((term_norm, bucket, bucket_to_expected[bucket], strategy, any_of_tokens))
 
     if missing_buckets:
         raise ValueError(
@@ -130,6 +198,7 @@ def build_term_records() -> List[Tuple[str, str, str]]:
 # Asset
 # =====================================================
 
+
 @asset(
     name="silver_exploration_kroger_products",
     compute_kind="bigquery",
@@ -141,7 +210,12 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
 
     Filters enforced:
       - category matches expected_category (from canonical_categories.yaml)
-      - description contains all tokens from search_term
+      - description matching:
+          * default: ALL tokens from search_term must appear in description_norm
+          * overrides for two terms: ANY OF configured synonyms must appear (EXISTS)
+
+    IMPORTANT: DEDUPES source rows before MERGE so BigQuery never sees >1 source row for the MERGE key:
+      (snapshot_date, location_id, search_term, product_id)
     """
     # Prefer resource if you wired it, else create client
     bq = getattr(context.resources, "bigquery_client", None)
@@ -151,23 +225,35 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
 
     term_records = build_term_records()
     context.log.info(
-        f"Loaded canonical config | terms={len(term_records)} | "
+        "Loaded canonical config | "
+        f"terms={len(term_records)} | "
         f"search_terms={SEARCH_TERMS_PATH} | categories={CATEGORIES_PATH}"
     )
 
-    # Build UNNEST-able array of STRUCTs for mapping in SQL
-    # Use normalized search_term consistently (lowercase + collapsed whitespace)
+    # IMPORTANT: every STRUCT in the UNNEST array must have the exact same schema
+    # so we always include match_strategy + any_of_tokens (possibly empty array).
     term_map_sql = ",\n".join(
         [
             "STRUCT("
             f"{repr(term)} AS search_term_norm, "
             f"{repr(bucket)} AS bucket_key, "
-            f"{repr(expected_cat)} AS expected_category"
+            f"{repr(expected_cat)} AS expected_category, "
+            f"{repr(strategy)} AS match_strategy, "
+            + (
+                "CAST([" + ", ".join(repr(t) for t in any_of_tokens) + "] AS ARRAY<STRING>)"
+                if any_of_tokens
+                else "CAST([] AS ARRAY<STRING>)"
+            )
+            + " AS any_of_tokens"
             ")"
-            for term, bucket, expected_cat in term_records
+            for term, bucket, expected_cat, strategy, any_of_tokens in term_records
         ]
     )
 
+    # NOTE:
+    # - any_of uses EXISTS (non-scalar)
+    # - all_of uses COUNTIF vs ARRAY_LENGTH (non-scalar)
+    # - final SELECT uses QUALIFY to dedupe source rows for MERGE
     query = f"""
     MERGE `{SILVER_TABLE}` T
     USING (
@@ -191,25 +277,35 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
           b.country_of_origin,
           b.description,
           b.receipt_description,
-          b.snap_eligible,
-          b.price,
+
+          CAST(b.snap_eligible AS BOOL) AS snap_eligible,
+          CAST(b.price AS FLOAT64) AS price,
+
           b.size,
           b.sold_by,
           b.gross_weight,
           b.net_weight,
           b.temperature,
           b.ingredient_statement,
-          b.raw,
+
+          b.raw,  -- keep JSON as JSON
 
           tm.bucket_key,
           tm.expected_category AS canonical_category,
+          tm.match_strategy,
+          tm.any_of_tokens,
 
-          -- normalize description + category list
+          -- normalize fields used for filtering + debugging columns
           REGEXP_REPLACE(LOWER(COALESCE(b.description, "")), r"[^a-z0-9]+", " ") AS description_norm,
 
           ARRAY(
             SELECT tok
-            FROM UNNEST(SPLIT(REGEXP_REPLACE(LOWER(COALESCE(b.search_term, "")), r"[^a-z0-9]+", " "), " ")) tok
+            FROM UNNEST(
+              SPLIT(
+                REGEXP_REPLACE(LOWER(COALESCE(b.search_term, "")), r"[^a-z0-9]+", " "),
+                " "
+              )
+            ) tok
             WHERE tok IS NOT NULL AND tok != ""
           ) AS term_tokens,
 
@@ -232,11 +328,25 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
           -- category match: expected category appears in normalized categories array
           expected_category_norm IN UNNEST(categories_norm) AS matched_category,
 
-          -- description match: all term tokens appear in description_norm
-          IFNULL(
-            (SELECT LOGICAL_AND(STRPOS(description_norm, tok) > 0) FROM UNNEST(term_tokens) tok),
-            FALSE
-          ) AS matched_all_tokens
+          -- description match using strategy:
+          CASE
+            WHEN match_strategy = "any_of" THEN
+              EXISTS (
+                SELECT 1
+                FROM UNNEST(any_of_tokens) tok
+                WHERE tok IS NOT NULL
+                  AND tok != ""
+                  AND STRPOS(description_norm, REGEXP_REPLACE(LOWER(tok), r"[^a-z0-9]+", " ")) > 0
+              )
+            ELSE
+              (
+                ARRAY_LENGTH(term_tokens) = 0
+                OR (
+                  (SELECT COUNTIF(STRPOS(description_norm, tok) > 0) FROM UNNEST(term_tokens) tok)
+                  = ARRAY_LENGTH(term_tokens)
+                )
+              )
+          END AS matched_all_tokens
         FROM src
       )
       SELECT
@@ -277,6 +387,12 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
         bucket_key
       FROM scored
       WHERE (matched_all_tokens AND matched_category)
+
+      -- CRITICAL: ensure S has only 1 row per MERGE key
+      QUALIFY ROW_NUMBER() OVER (
+        PARTITION BY snapshot_date, location_id, search_term, product_id
+        ORDER BY ingestion_ts DESC
+      ) = 1
     ) S
     ON
       T.snapshot_date = S.snapshot_date
@@ -389,6 +505,6 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
     """
 
     context.log.info(f"Running silver merge into `{SILVER_TABLE}` from `{BRONZE_TABLE}`")
-    job = bq.query(query)
+    job = bq.query(query, location="us-east1")
     job.result()
     context.log.info("Silver exploration merge completed.")

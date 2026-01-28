@@ -172,8 +172,6 @@ search_terms:
       - dijon mustard
       - italian dressing
       - tomato ketchup
-      - mayonnaise
-      - mustard
       - ranch dressing
       - salad dressing
       - soy sauce
@@ -223,7 +221,6 @@ search_terms:
     drilldown:
       - infant formula
       - toddler snacks
-      - diapers
       - sensitive baby wipes
       - baby shampoo
       - baby soap
@@ -236,7 +233,7 @@ search_terms:
       - cat food
       - dog treats
       - cat litter
-      - toy 
+      - toy
     drilldown:
       - dry dog food
       - wet dog food
@@ -246,3 +243,114 @@ search_terms:
       - dog toy
       - pet shampoo
       - flea treatment
+
+  international:
+    breadth:
+      - international food
+      - ethnic food
+      - imported food
+    drilldown:
+      - mexican food
+      - italian food
+      - asian food
+      - indian food
+      - korean food
+      - chinese food
+      - japanese food
+      - mediterranean food
+      - middle eastern food
+      - thai food
+    
+  natural_organic:
+    breadth:
+      - organic food
+      - natural food
+    drilldown:
+      - organic produce
+      - organic milk
+      - organic eggs
+      - organic snacks
+      - organic yogurt
+      - organic frozen food
+      - non gmo food
+      - natural snacks
+
+  health:
+    breadth:
+      - vitamins
+      - supplements
+      - health products
+    drilldown:
+      - multivitamins
+      - vitamin c
+      - vitamin d
+      - protein powder
+      - probiotics
+      - omega 3
+      - electrolyte drinks
+      - immunity supplements
+
+
+  electronics:
+    breadth:
+      - electronics
+      - electronic accessories
+    drilldown:
+      - headphones
+      - earbuds
+      - phone charger
+      - usb cable
+      - power bank
+      - batteries
+      - smart plugs
+
+  hardware:
+    breadth:
+      - hardware
+      - tools
+    drilldown:
+      - light bulbs
+      - extension cords
+      - screws
+      - nails
+      - duct tape
+      - flashlights
+
+  office_school_crafts:
+    breadth:
+      - office supplies
+      - school supplies
+      - craft supplies
+    drilldown:
+      - printer paper
+      - notebooks
+      - pens
+      - pencils
+      - markers
+      - glue
+      - scissors
+      - tape
+
+  party:
+    breadth:
+      - party supplies
+    drilldown:
+      - paper plates
+      - paper cups
+      - plastic cutlery
+      - balloons
+      - decorations
+      - napkins
+      - birthday candles
+
+  sporting_goods:
+    breadth:
+      - sporting goods
+      - fitness equipment
+    drilldown:
+      - dumbbells
+      - resistance bands
+      - yoga mat
+      - protein shaker
+      - water bottle
+      - jump rope

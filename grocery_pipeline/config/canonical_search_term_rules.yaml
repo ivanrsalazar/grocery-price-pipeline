@@ -1,0 +1,31 @@
+# =====================================================
+# Search term matching rules
+#
+# Default behavior (implicit):
+#   - strategy: all_tokens
+#   - All normalized tokens from search_term
+#     must appear in description
+#
+# Only exceptions are explicitly defined below.
+# =====================================================
+
+defaults:
+  strategy: all_tokens
+
+
+# =====================================================
+# Explicit overrides for problematic search terms
+# =====================================================
+
+rules:
+
+  packaged meals:
+    strategy: any_of
+    any_of:
+      - microwave
+      - microwavable
+
+  pet shampoo:
+    strategy: any_of
+    any_of:
+      - shampoo
