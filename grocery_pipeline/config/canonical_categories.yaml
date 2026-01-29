@@ -143,3 +143,9 @@ categories:
     defaults:
       temperature: AMBIENT
       snap: false
+
+  kitchen:
+    expected_category: "kitchen"
+    defaults:
+      temperature: AMBIENT
+      snap: false

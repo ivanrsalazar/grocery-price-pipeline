@@ -26,6 +26,136 @@ rules:
       - microwavable
 
   pet shampoo:
-    strategy: any_of
+    strategy: any_of  
     any_of:
       - shampoo
+
+  asian food:
+    strategy: any_of
+    any_of:
+      - asia
+      - asian
+
+  chinese food:
+    strategy: any_of
+    any_of:
+      - china
+      - chinese
+  
+  extension cords:
+    strategy: any_of
+    any_of:
+      - extension cord
+      - extension cords
+
+  dumbbells:
+    strategy: any_of
+    any_of: 
+      - dumbbells
+      - dumbbell
+
+  flashlights:
+    strategy: any_of
+    any_of:
+      - flashlight
+      - flashlights
+
+  headphones:
+    strategy: any_of
+    any_of:
+      - headphones
+      - earbuds
+
+  imported food:
+    strategy: any_of
+    any_of:
+      - imported
+      - imports
+
+  italian food:
+    strategy: any_of
+    any_of:
+      - Italy
+      - italian
+
+  light bulbs:
+    strategy: any_of
+    any_of:
+      - light bulbs
+      - light bulb
+
+  mediterranean food:
+    strategy: any_of
+    any_of:
+      - mediterranean
+
+  mexican food:
+    strategy: any_of
+    any_of:
+      - mexican
+      - mexico
+
+  middle eastern food:
+    strategy: any_of
+    any_of:
+      - middle eastern
+      - middle east
+  
+  non gmo food:
+    strategy: any_of
+    any_of:
+      - non-gmo
+      - non gmo
+
+  notebooks:
+    strategy: any_of
+    any_of:
+      - notebooks
+      - notebook
+
+  party supplies:
+    strategy: any_of
+    any_of:
+      - party
+
+  phone charger:
+    strategy: any_of
+    any_of:
+      - charger
+
+  printer paper:
+    strategy: any_of
+    any_of:
+      - printer paper
+      - copy paper
+      - multipurpose paper
+      - multi-purpose paper
+
+  screws:
+    strategy: any_of
+    any_of:
+      - screw
+      - screws
+
+  smart plugs:
+    strategy: any_of
+    any_of:
+      - smart plugs
+      - smart plug
+
+  thai food:
+    strategy: any_of
+    any_of:
+      - thai
+      - thailand
+
+  electrolyte drinks:
+    strategy: any_of
+    any_of:
+      - electrolyte drink
+      - electrolyte drinks
+
+
+
+  
+  
