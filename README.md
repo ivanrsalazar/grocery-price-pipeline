@@ -21,16 +21,27 @@
 
 ---
 
-### Current issues:
+#### Rough Outline of things to be done:
+- Make sure that all data that should be in silver, is in silver [ X ]
+    - Due: Friday Night 01/29
+- Make sure there are no False Positives in Silver [ ]
+    - Due: Sunday Night 02/01
+- Integrate Walmart API [ ]
+    - Finalize Canonical Configs
+        - search_terms
+        - rules
+    - explore
+    - implement parent/child client
+    - Due: 02/08
 
-- Frozen Waffles not showing in silver exploration
-    - Fixed Duplication in YAML file
-    - Need to verify this fixed this issue
-
-- How to handle unexpected descriptions for abnormal `search_terms`
-    - Packaged Meals
-    - Instant Meals
-    - Pet Shampoo
+- Finalize Bronze Daily table [ ]
+    - Due: 02/11
+- Finalize Silver Daily table [ ]
+    - Due: 02/15
+- Add Slack updates [ ]
+    - Due:  02/15
+- Finalize README [ ]
+    - Due: 2/16
 
 
 

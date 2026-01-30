@@ -155,6 +155,21 @@ rules:
       - electrolyte drink
       - electrolyte drinks
 
+  resistance bands:
+    strategy: any_of
+    any_of:
+      - resistance bands
+      - resistance band
+      - exercise bands
+      - exercise band
+      - loop band
+  
+  yoga mat:
+    strategy: any_of
+    any_of:
+      - fitness mat
+      - yoga mat
+
 
 
   

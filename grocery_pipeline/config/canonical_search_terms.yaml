@@ -285,6 +285,8 @@ search_terms:
       - dumbbells
       - first aid
       - bandages
+      - resistance bands
+      - yoga mat
 
 
   electronics:
@@ -328,11 +330,9 @@ search_terms:
       - birthday candles
 
   sporting_goods:
-    drilldown:
-      - resistance bands
-      - yoga mat
-      - shaker bottle
+    
 
   kitchen:
     drilldown:
       - water bottle
+      - shaker bottle
