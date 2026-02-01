@@ -1,34 +1,367 @@
 # =====================================================
 # Search term matching rules
 #
-# Default behavior (implicit):
+# Default behavior:
 #   - strategy: all_tokens
-#   - All normalized tokens from search_term
-#     must appear in description
+#   - All normalized tokens from search_term must appear in description_norm
 #
-# Only exceptions are explicitly defined below.
+# Overrides below handle:
+#   - synonym / alias matching (any_of / require_any_of / require_all_of)
+#   - false positives via none_of
+#   - stripping phrases before matching via strip_tokens
+#
+# NOTE:
+#   - Tokens are normalized to: lowercase, non-alnum -> space, collapse whitespace
 # =====================================================
 
 defaults:
   strategy: all_tokens
 
-
-# =====================================================
-# Explicit overrides for problematic search terms
-# =====================================================
-
 rules:
 
+  # -------------------------
+  # Produce / fruit edge cases
+  # -------------------------
+
+  blueberries:
+    # You saw "medley" packs showing up across berries.
+    # If you want to REMOVE medleys from single-berry terms, block common "mix/medley" cues.
+    strategy: all_tokens
+    none_of:
+      - medley
+      - mixed
+      - mix
+      - variety pack
+      - trio
+      - blend
+      - raspberry
+      - raspberries
+      - blackberry
+      - blackberries
+
+  raspberries:
+    strategy: all_tokens
+    none_of:
+      - medley
+      - mixed
+      - mix
+      - variety pack
+      - trio
+      - blend
+
+  blackberries:
+    strategy: all_tokens
+    none_of:
+      - medley
+      - mixed
+      - mix
+      - variety pack
+      - trio
+      - blend
+
+  frozen fruit:
+    # "Fruit candy" showing up as frozen fruit.
+    strategy: all_tokens
+    none_of:
+      - candy
+      - gummy
+      - gummies
+      - sour
+      - chocolate
+      - covered
+
+  frozen berries:
+    # Tru Fru / chocolate-covered berries
+    strategy: all_tokens
+    none_of:
+      - chocolate
+      - covered
+      - candy
+      - gummies
+      - gummy
+
+  # -------------------------
+  # Dairy
+  # -------------------------
+
+  fat free milk:
+    # Core problem: "lactose free 2%" incorrectly passing after stripping.
+    # Fix:
+    #   - strip "lactose free" + "dairy free" phrases (so they don't act as confusing tokens)
+    #   - require the fat-free meaning to remain (fat + free) AND milk
+    # This should reject "2% reduced fat milk" after stripping because it won't contain both fat+free.
+    strategy: require_all_of
+    strip_tokens:
+      - lactose free
+      - lactose-free
+      - dairy free
+      - dairy-free
+    require_all_of:
+      - fat
+      - free
+      - milk
+    # optional: you may want to exclude reduced-fat explicitly (uncomment if needed)
+    # none_of:
+    #   - reduced fat
+    #   - 2
+
+  soy sauce:
+    # Teriyaki sauces getting in.
+    strategy: all_tokens
+    none_of:
+      - teriyaki
+
+  oat milk:
+    # Not strictly "oat milk" when it's an oat creamer.
+    strategy: all_tokens
+    none_of:
+      - creamer
+
+  greek yogurt:
+    # If you don't want "greek style", exclude it.
+    # If you decide later you DO want it, delete this rule.
+    strategy: all_tokens
+    none_of:
+      - greek style
+
+  yogurt:
+    # You saw yogurt drinks/smoothies. This is preference-y:
+    # - If you're okay counting them as yogurt-adjacent: remove this rule.
+    # - If you want strict tubs/cups: exclude "drink" + "smoothie".
+    strategy: all_tokens
+    none_of:
+      - drink
+      - smoothie
+
+  # -------------------------
+  # Meat / seafood
+  # -------------------------
+
+  fish:
+    # "Fish fry" / breading / tartar sauce false positives.
+    strategy: all_tokens
+    none_of:
+      - fish fry
+      - breading
+      - seasoned
+      - seafood breading
+      - tartar sauce
+      - sauce
+      - batter
+      - coating
+      - mix
+
+  ground beef:
+    # "beef & pork" mixtures
+    strategy: all_tokens
+    none_of:
+      - pork
+      - chicken
+      - turkey
+      - lamb
+      - deer
+
+  beef:
+    # You mentioned "include grade" - that's not a false-positive fix.
+    # Leaving default behavior unless you later add a require_any_of for grades.
+    # Example if you want it later:
+    # strategy: require_any_of
+    # require_any_of: ["choice", "select", "prime", "angus"]
+    strategy: all_tokens
+
+  # -------------------------
+  # Beverages
+  # -------------------------
+
+  coffee:
+    # Creamers are polluting coffee results.
+    strategy: all_tokens
+    none_of:
+      - creamer
+     
+
+  # -------------------------
+  # Snacks
+  # -------------------------
+
+  crackers:
+    # Cracker sandwiches showing up.
+    strategy: all_tokens
+    none_of:
+      - sandwich
+      - sandwiches
+
+  # -------------------------
+  # Frozen section false positives
+  # -------------------------
+
+  frozen broccoli:
+    # Medleys + meals showing up.
+    # Keep it simple: exclude clear meal cues + medley cues.
+    strategy: all_tokens
+    none_of:
+      - meal
+      - alfredo
+      - fettuccine
+      - chicken
+      - cheese
+      - stuffed
+      - medley
+      - mixed
+      - mix
+      - frozen meal
+      - peas
+      - carrots
+      - chestnuts
+      - pasta
+
+
+
+  frozen pancakes:
+    # Pancake-and-sausage on a stick, etc.
+    # If you want JUST pancakes, exclude sausage.
+    strategy: all_tokens
+    none_of:
+      - sausage
+
+  frozen chicken nuggets:
+    # Meals with nuggets included
+    strategy: all_tokens
+    none_of:
+      - meal
+      - mac
+
+  ice cream:
+    # You noted low distinct count; no clear rule yet.
+    strategy: all_tokens
+
+  # -------------------------
+  # Canned / packaged
+  # -------------------------
+
   packaged meals:
-    strategy: any_of
-    any_of:
+    # Your earlier rule was too strict and missed older data.
+    # Better: require ANY meal-ish keyword, but don't force only microwave.
+    strategy: require_any_of
+    require_any_of:
+      - meal
+      - meals
       - microwave
       - microwavable
+      - heat eat
+      - heat and eat
+      - entree
+      - ready to eat
 
-  pet shampoo:
-    strategy: any_of  
+
+
+
+  # -------------------------
+  # Breakfast
+  # -------------------------
+
+  pancake:
+    # Pancake syrup false positive.
+    strategy: all_tokens
+    none_of:
+      - syrup
+
+  # -------------------------
+  # Condiments / sauces
+  # -------------------------
+
+  mayonnaise:
+    # Abbreviation support: mayo
+    strategy: any_of
     any_of:
-      - shampoo
+      - mayonnaise
+      - mayo
+
+  dijon mustard:
+    # Dijon honey mustard salad dressing false positive.
+    # Exclude dressing / salad dressing.
+    strategy: all_tokens
+    none_of:
+      - dressing
+      - salad dressing
+
+  
+    
+  # -------------------------
+  # Personal care
+  # -------------------------
+
+  shampoo:
+    # Exclude "set" (shampoo + conditioner sets).
+    strategy: all_tokens
+    none_of:
+      - set
+
+
+  earbuds:
+    strategy: any_of
+    any_of:
+      - earbuds
+      - ear buds
+
+  phone charger:
+    # Exclude watch chargers.
+    strategy: any_of
+    any_of:
+      - phone charger
+      - wall charger
+      - car charger
+    none_of:
+      - watch
+
+
+  printer paper:
+    strategy: any_of
+    any_of:
+      - printer paper
+      - copy paper
+      - multipurpose paper
+      - multi purpose paper
+
+  notebooks:
+    strategy: any_of
+    any_of:
+      - notebook
+      - notebooks
+
+  extension cords:
+    strategy: any_of
+    any_of:
+      - extension cord
+      - extension cords
+
+  screws:
+    strategy: any_of
+    any_of:
+      - screw
+      - screws
+
+  flashlights:
+    strategy: any_of
+    any_of:
+      - flashlight
+      - flashlights
+
+  light bulbs:
+    strategy: any_of
+    any_of:
+      - light bulb
+      - light bulbs
+
+  smart plugs:
+    strategy: any_of
+    any_of:
+      - smart plug
+      - smart plugs
+
+  # -------------------------
+  # International category terms (wording variants)
+  # -------------------------
 
   asian food:
     strategy: any_of
@@ -41,136 +374,32 @@ rules:
     any_of:
       - china
       - chinese
-  
-  extension cords:
-    strategy: any_of
-    any_of:
-      - extension cord
-      - extension cords
-
-  dumbbells:
-    strategy: any_of
-    any_of: 
-      - dumbbells
-      - dumbbell
-
-  flashlights:
-    strategy: any_of
-    any_of:
-      - flashlight
-      - flashlights
-
-  headphones:
-    strategy: any_of
-    any_of:
-      - headphones
-      - earbuds
-
-  imported food:
-    strategy: any_of
-    any_of:
-      - imported
-      - imports
 
   italian food:
     strategy: any_of
     any_of:
-      - Italy
+      - italy
       - italian
 
-  light bulbs:
+  mexican food:
     strategy: any_of
     any_of:
-      - light bulbs
-      - light bulb
+      - mexico
+      - mexican
 
   mediterranean food:
     strategy: any_of
     any_of:
       - mediterranean
 
-  mexican food:
-    strategy: any_of
-    any_of:
-      - mexican
-      - mexico
-
   middle eastern food:
     strategy: any_of
     any_of:
       - middle eastern
       - middle east
-  
-  non gmo food:
-    strategy: any_of
-    any_of:
-      - non-gmo
-      - non gmo
-
-  notebooks:
-    strategy: any_of
-    any_of:
-      - notebooks
-      - notebook
-
-  party supplies:
-    strategy: any_of
-    any_of:
-      - party
-
-  phone charger:
-    strategy: any_of
-    any_of:
-      - charger
-
-  printer paper:
-    strategy: any_of
-    any_of:
-      - printer paper
-      - copy paper
-      - multipurpose paper
-      - multi-purpose paper
-
-  screws:
-    strategy: any_of
-    any_of:
-      - screw
-      - screws
-
-  smart plugs:
-    strategy: any_of
-    any_of:
-      - smart plugs
-      - smart plug
 
   thai food:
     strategy: any_of
     any_of:
       - thai
       - thailand
-
-  electrolyte drinks:
-    strategy: any_of
-    any_of:
-      - electrolyte drink
-      - electrolyte drinks
-
-  resistance bands:
-    strategy: any_of
-    any_of:
-      - resistance bands
-      - resistance band
-      - exercise bands
-      - exercise band
-      - loop band
-  
-  yoga mat:
-    strategy: any_of
-    any_of:
-      - fitness mat
-      - yoga mat
-
-
-
-  
-  
