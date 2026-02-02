@@ -22,9 +22,9 @@
 ---
 
 #### Rough Outline of things to be done:
-- Make sure that all data that should be in silver, is in silver [ X ]
+- Make sure that all data that should be in silver, is in silver [DONE]
     - Due: Friday Night 01/29
-- Make sure there are no False Positives in Silver [ ]
+- Make sure there are no False Positives in Silver [DONE]
     - Due: Sunday Night 02/01
 - Integrate Walmart API [ ]
     - Finalize Canonical Configs

@@ -1,0 +1,392 @@
+{"search_term": "fat free milk", "idx": 0, "label": "PASS", "reason": "Explicitly fat free milk", "description": "Alta Dena Fat Free Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 1, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Clover Sonoma Organic Lactose Free 2% Reduced Fat Milk 0.5 gal", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 2, "label": "PASS", "reason": "Fat free chocolate milk accepted as fat free milk", "description": "Dairy Pure™ Milk50™ Fat Free Lactose Free Ultra-Pasteurized Chocolate Skim Milk Bottle", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 3, "label": "PASS", "reason": "Fat free vanilla milk accepted as fat free milk", "description": "Dairy Pure™ Milk50™ Fat Free Lactose Free Ultra-Pasteurized Vanilla Skim Milk Bottle", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 4, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Darigold® Fit 2% Lactose Free Reduced Fat Ultra Filtered Milk", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 5, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Darigold® Fit 2% Lactose-Free Reduced Fat Ultra-Filtered Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 6, "label": "PASS", "reason": "Explicitly fat free milk", "description": "Darigold® Fit Fat Free Lactose Free Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 7, "label": "PASS", "reason": "Explicitly fat free milk", "description": "Darigold® Zero Ultra-Pasteurized Fat Free Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 8, "label": "PASS", "reason": "Explicitly fat free milk", "description": "Horizon Organic Fat Free Milk Half Gallon", "categories": "Natural & Organic,Dairy"}
+{"search_term": "fat free milk", "idx": 9, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Horizon Organic Lactose Free 2% Reduced Fat Milk Half Gallon", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 10, "label": "PASS", "reason": "Fat free skim milk", "description": "Kemps Select Fat Free Skim Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 11, "label": "PASS", "reason": "Fat free chocolate milk accepted as fat free milk", "description": "Kroger® CARBmaster® Lactose Free Non-Fat Ultra Filtered Chocolate Milk", "categories": "Dairy,Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 12, "label": "PASS", "reason": "Fat free milk", "description": "Kroger® CARBmaster® Lactose Free Non-Fat Ultra Filtered Milk", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 13, "label": "PASS", "reason": "Fat free milk", "description": "Kroger® Fat Free Skim Milk 32 fl. oz. Bottle", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 14, "label": "FAIL", "reason": "1% low fat, not fat free", "description": "Kroger® Lactose Free 1% Low Fat Milk Half Gallon", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 15, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Kroger® Lactose Free 2% Reduced Fat Milk Gallon", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 16, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Kroger® Lactose Free 2% Reduced Fat Milk Half Gallon", "categories": "Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 17, "label": "PASS", "reason": "Fat free skim milk", "description": "Kroger® Skim Fat Free Milk 16 fl. oz. Bottle", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 18, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "LaLa® Lactose Free 2% Reduced Fat Shelf Stable Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 19, "label": "FAIL", "reason": "1% low fat, not fat free", "description": "Lactaid® Lactose Free 1% Lowfat Milk Half Gallon", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 20, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Lactaid® Lactose Free 2% Reduced Fat Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 21, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Lactaid® Lactose Free 2% Reduced Fat Milk Half Gallon", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 22, "label": "FAIL", "reason": "2% reduced fat, not fat free", "description": "Lactaid® Lactose Free Calcium Fortified 2% Reduced Fat Milk Half Gallon", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 23, "label": "FAIL", "reason": "1% low fat, not fat free", "description": "Lactaid® Lactose-Free 1% Low-Fat Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 24, "label": "FAIL", "reason": "Oat milk, not dairy fat free milk", "description": "Oatly Dairy Free Full Fat Oat Milk Half Gallon", "categories": "Dairy,Dairy,Natural & Organic"}
+{"search_term": "fat free milk", "idx": 25, "label": "PASS", "reason": "Description explicitly states fat free milk.", "description": "Organic Valley® Fat Free Milk Half Gallon", "categories": "Natural & Organic,Dairy"}
+{"search_term": "fat free milk", "idx": 26, "label": "PASS", "reason": "Description explicitly states fat free skim milk.", "description": "Roundy's® Select Fat Free Skim Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 27, "label": "FAIL", "reason": "2% reduced fat is not fat free.", "description": "Simple Truth Organic® Lactose Free 2% Reduced Fat Milk Half Gallon", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "fat free milk", "idx": 28, "label": "PASS", "reason": "Description explicitly states skim fat free milk.", "description": "Simple Truth Organic® Skim Fat Free Milk Half Gallon", "categories": "Natural & Organic,Dairy"}
+{"search_term": "fat free milk", "idx": 29, "label": "PASS", "reason": "Description explicitly states fat free milk.", "description": "Twin Brook Creamery Fat Free Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 30, "label": "FAIL", "reason": "2% reduced fat chocolate milk is not fat free.", "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Chocolate Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 31, "label": "FAIL", "reason": "2% reduced fat milk is not fat free.", "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Milk", "categories": "Dairy"}
+{"search_term": "fat free milk", "idx": 32, "label": "PASS", "reason": "Description explicitly states fat free milk.", "description": "fairlife Ultra-Filtered Milk, Lactose Free, High Protein, Fat Free Milk", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 0, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Activia Peach & Strawberry Probiotic Low Fat Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 1, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani Blended Greek Reduced Fat Honey Vanilla Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 2, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Black Cherry on the Bottom Nonfat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 3, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Flip® Chocolate Chip Cookie Dough™ Low Fat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 4, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Flip® Chocolate S'more S'mores™ Low Fat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 5, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Flip® Key Lime Crumble™ Low Fat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 6, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Madagascar Vanilla Cinnamon Less Sugar Low Fat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 7, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Mixed Berry Low Fat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 8, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Peach on the Bottom Nonfat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 9, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Plain Nonfat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 10, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Plain Nonfat Greek Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 11, "label": "FAIL", "reason": "Yogurt drink, not yogurt", "description": "Chobani® Strawberry Low Fat Greek Yogurt Drink", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 12, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Strawberry on the Bottom Nonfat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 13, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Vanilla Nonfat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 14, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Vanilla Nonfat Greek Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 15, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Vanilla with Mixed Berry Low Fat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 16, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Whole Milk Plain Greek Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 17, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Chobani® Zero Sugar Vanilla Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 18, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Fage® Total Plain 0% Milkfat Greek Yogurt Cup", "categories": "Dairy,Natural & Organic"}
+{"search_term": "yogurt", "idx": 19, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Fage® Total Plain Low Fat Greek Yogurt Tub", "categories": "Dairy,Natural & Organic"}
+{"search_term": "yogurt", "idx": 20, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Fage® Total Plain Nonfat Greek Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 21, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Fage® Total Plain Whole Milk Greek Yogurt Tub", "categories": "Dairy,Natural & Organic"}
+{"search_term": "yogurt", "idx": 22, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Go GURT Berry and Fruit Punch Kids Fat Free Yogurt Tubes", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 23, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Kroger® CARBmaster® Cinnamon Roll Lactose Free Lowfat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 24, "label": "PASS", "reason": "Description clearly states yogurt", "description": "Kroger® CARBmaster® Orange Vanilla Lactose Free Lowfat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 25, "label": "PASS", "reason": "Clearly labeled yogurt cup", "description": "Kroger® CARBmaster® Strawberry Lactose Free Lowfat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 26, "label": "PASS", "reason": "Clearly labeled yogurt tub", "description": "Kroger® CARBmaster® Vanilla Lactose Free Lowfat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 27, "label": "PASS", "reason": "Plain low fat yogurt tub", "description": "Kroger® Plain Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 28, "label": "PASS", "reason": "Protein strawberry yogurt cup", "description": "Kroger® Protein Strawberry Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 29, "label": "PASS", "reason": "Strawberry & vanilla yogurt tubes", "description": "Kroger® Strawberry & Vanilla Low Fat Yogurt Tubes", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 30, "label": "PASS", "reason": "Strawberry banana & cherry yogurt tubes", "description": "Kroger® Strawberry Banana & Cherry Low Fat Yogurt Tubes", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 31, "label": "PASS", "reason": "Vanilla blended whole milk yogurt tub", "description": "Kroger® Vanilla Blended Whole Milk Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 32, "label": "PASS", "reason": "Vanilla low fat yogurt tub", "description": "Kroger® Vanilla Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 33, "label": "PASS", "reason": "Probiotic yogurt smoothie still yogurt", "description": "LaLa® Wild Strawberry Probiotic Yogurt Smoothie", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 34, "label": "PASS", "reason": "Fat free Greek yogurt cups", "description": "Light + Fit Blueberry Fat Free Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 35, "label": "PASS", "reason": "Fat free Greek yogurt cups", "description": "Light + Fit Cherry Fat Free Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 36, "label": "PASS", "reason": "Greek yogurt cups with mix-ins", "description": "Light + Fit REMIX Strawberry Cheesecake Fat Free Greek Yogurt Cups with Mix-Ins", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 37, "label": "PASS", "reason": "Fat free yogurt tub", "description": "Light + Fit Vanilla Gluten-Free Fat Free Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 38, "label": "PASS", "reason": "Plain low fat yogurt tub", "description": "Mountain High Plain Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 39, "label": "PASS", "reason": "Plain yogurt tub", "description": "Mountain High Plain Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 40, "label": "PASS", "reason": "Vanilla yogurt tub", "description": "Mountain High Vanilla Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 41, "label": "PASS", "reason": "Lemon yogurt cup", "description": "Noosa® Lemon Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 42, "label": "PASS", "reason": "Pumpkin yogurt cup", "description": "Noosa® Pumpkin Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 43, "label": "PASS", "reason": "Protein yogurt cultured milk product cup", "description": "Oikos Pro 20g Protein Vanilla Yogurt-Cultured Ultra-Filtered Milk Product Cup​s", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 44, "label": "PASS", "reason": "High protein nonfat Greek yogurt cups", "description": "Oikos Triple Zero Mixed Berry High Protein Nonfat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 45, "label": "PASS", "reason": "High protein nonfat Greek yogurt cup", "description": "Oikos Triple Zero Strawberry High Protein Nonfat Greek Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 46, "label": "PASS", "reason": "High protein nonfat Greek yogurt cups", "description": "Oikos Triple Zero Vanilla High Protein Nonfat Greek Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 47, "label": "PASS", "reason": "High protein nonfat Greek yogurt tub", "description": "Oikos Triple Zero Vanilla High Protein Nonfat Greek Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 48, "label": "PASS", "reason": "Whole milk French style yogurt jar", "description": "Oui by Yoplait Black Cherry Whole Milk French Style Yogurt Jar", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 49, "label": "PASS", "reason": "Whole milk French style yogurt jar", "description": "Oui by Yoplait Mocha and Chocolate Whole Milk French Style Yogurt Jar", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 50, "label": "PASS", "reason": "French style yogurt explicitly stated", "description": "Oui by Yoplait Vanilla and Chocolate Whole Milk French Style Yogurt Jar", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 51, "label": "PASS", "reason": "Described as yogurt cultured dairy snack", "description": "Ratio Protein Blueberry Yogurt Cultured Dairy Snack", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 52, "label": "PASS", "reason": "Plain nonfat Greek yogurt", "description": "Simple Truth Organic® Plain Nonfat Greek Yogurt Tub", "categories": "Dairy,Natural & Organic"}
+{"search_term": "yogurt", "idx": 53, "label": "PASS", "reason": "Vanilla nonfat Greek yogurt", "description": "Simple Truth Organic® Vanilla Nonfat Greek Yogurt Tub", "categories": "Dairy,Natural & Organic"}
+{"search_term": "yogurt", "idx": 54, "label": "PASS", "reason": "Reduced fat yogurt tubes", "description": "Stonyfield Organic Kids Cherry & Berry Reduced Fat Yogurt Tubes", "categories": "Natural & Organic,Dairy"}
+{"search_term": "yogurt", "idx": 55, "label": "PASS", "reason": "Reduced fat yogurt tubes", "description": "Stonyfield Organic Kids Reduced Fat Yogurt Tubes, Strawberry", "categories": "Natural & Organic,Dairy"}
+{"search_term": "yogurt", "idx": 56, "label": "PASS", "reason": "Lowfat yogurt smoothies", "description": "Stonyfield Organic Lowfat Yogurt Smoothies, Strawberry Banana, 3.1 fl. Oz., 6 Ct", "categories": "Natural & Organic,Dairy"}
+{"search_term": "yogurt", "idx": 57, "label": "PASS", "reason": "Plain whole milk probiotic yogurt", "description": "Stonyfield Organic Plain Whole Milk Probiotic Yogurt, 32 oz Container", "categories": "Natural & Organic,Dairy"}
+{"search_term": "yogurt", "idx": 58, "label": "PASS", "reason": "Vanilla whole milk probiotic yogurt", "description": "Stonyfield Organic Vanilla Whole Milk Probiotic Yogurt, 32 oz Container", "categories": "Natural & Organic,Dairy"}
+{"search_term": "yogurt", "idx": 59, "label": "PASS", "reason": "Greek style yogurt tub", "description": "The Greek Gods® Honey Greek Style Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 60, "label": "PASS", "reason": "Greek style yogurt tub", "description": "The Greek Gods® Honey Vanilla Greek Style Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 61, "label": "PASS", "reason": "Greek style yogurt tub", "description": "The Greek Gods® Strawberry with Honey Greek Style Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 62, "label": "PASS", "reason": "Low fat yogurt cup", "description": "Tillamook California Peach Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 63, "label": "PASS", "reason": "Low fat yogurt cup", "description": "Tillamook Oregon Marionberry Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 64, "label": "PASS", "reason": "Low fat yogurt cup", "description": "Tillamook Oregon Strawberry Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 65, "label": "PASS", "reason": "Low fat yogurt cup", "description": "Tillamook Vanilla Bean Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 66, "label": "PASS", "reason": "Low fat yogurt tub", "description": "Tillamook Vanilla Bean Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 67, "label": "PASS", "reason": "Low fat yogurt cup", "description": "Tillamook Washington Raspberry Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 68, "label": "PASS", "reason": "Probiotic nonfat yogurt drinks", "description": "Yakult® Probiotic Nonfat Yogurt Drinks", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 69, "label": "PASS", "reason": "Low fat yogurt cups", "description": "YoCrunch Vanilla with Mini M&Ms Low Fat Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 70, "label": "PASS", "reason": "Lactose free lowfat yogurt cup", "description": "Yogurt® CARBmaster® Banana Cream Pie Lactose Free Lowfat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 71, "label": "PASS", "reason": "Fat free yogurt cup", "description": "Yoplait Light Blueberry Patch Fat Free Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 72, "label": "PASS", "reason": "Fat free yogurt cup", "description": "Yoplait Light Cherry Fat Free Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 73, "label": "PASS", "reason": "Fat free yogurt cup", "description": "Yoplait Light Strawberry Fat Free Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 74, "label": "PASS", "reason": "Fat free yogurt cup", "description": "Yoplait Light Very Vanilla Fat Free Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 75, "label": "PASS", "reason": "Low fat yogurt cups match search term yogurt", "description": "Yoplait Original French Vanilla Low Fat Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 76, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Cherry Orchard Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 77, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat French Vanilla Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 78, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Harvest Peach Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 79, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Key Lime Pie Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 80, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Mixed Berry Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 81, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Mountain Blueberry Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 82, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Red Raspberry Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 83, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Strawberry Banana Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 84, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Low Fat Strawberry Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 85, "label": "PASS", "reason": "Low fat yogurt cups variety matches yogurt", "description": "Yoplait Original Low Fat Strawberry and Harvest Peach Yogurt Cups", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 86, "label": "PASS", "reason": "Low fat yogurt cups variety matches yogurt", "description": "Yoplait Original Low Fat Yogurt Cups Variety Pack", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 87, "label": "PASS", "reason": "Low fat yogurt cup matches yogurt", "description": "Yoplait Original Orange Creme Flavored Low Fat Yogurt Cup", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 88, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait Original Strawberry Banana Flavored Smooth Style Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 89, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait Original Strawberry Flavored Smooth Style Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 90, "label": "PASS", "reason": "Low fat yogurt cups variety matches yogurt", "description": "Yoplait The Super Mario Galaxy Movie Low Fat Yogurt Cups Variety Pack", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 91, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait® Original Smooth Style Strawberry Banana Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 92, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait® Original Smooth Style Strawberry Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 93, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait® Original Smooth Style Vanilla Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 94, "label": "PASS", "reason": "Low fat yogurt tub matches yogurt", "description": "Yoplait® Original Vanilla Flavored Smooth Style Low Fat Yogurt Tub", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 95, "label": "PASS", "reason": "Icelandic-style lowfat yogurt matches yogurt", "description": "siggi’s Blueberry Icelandic-Style Lowfat Yogurt, 5.3 oz", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 96, "label": "PASS", "reason": "Icelandic-style lowfat yogurt matches yogurt", "description": "siggi’s Coconut Icelandic-Style Lowfat Yogurt, 5.3 oz", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 97, "label": "PASS", "reason": "Icelandic skyr nonfat yogurt matches yogurt", "description": "siggi’s Icelandic Skyr Nonfat Yogurt, Mixed Berries & Acai", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 98, "label": "PASS", "reason": "Icelandic-style nonfat yogurt matches yogurt", "description": "siggi’s Raspberry Icelandic-Style Nonfat Yogurt, 5.3 oz", "categories": "Dairy"}
+{"search_term": "yogurt", "idx": 99, "label": "PASS", "reason": "Icelandic-style nonfat yogurt matches yogurt", "description": "siggi’s Vanilla Icelandic-Style Nonfat Yogurt, 5.3 oz", "categories": "Dairy"}
+{"search_term": "oat milk", "idx": 0, "label": "PASS", "reason": "Explicit oat milk product", "description": "BetterBody Foods Oatsome™ Organic Original Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 1, "label": "PASS", "reason": "Explicit oat milk product", "description": "Califia Farms Dairy Free Organic Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 2, "label": "PASS", "reason": "Explicit oat milk product", "description": "Califia Farms® Extra Creamy Dairy Free Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 3, "label": "PASS", "reason": "Explicit oat milk product", "description": "Califia Farms® Oat Barista Blend Oatmilk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 4, "label": "PASS", "reason": "Explicit oat milk product", "description": "Chobani® Dairy Free Extra Creamy Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 5, "label": "PASS", "reason": "Explicit oat milk product", "description": "Chobani® Dairy Free Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 6, "label": "PASS", "reason": "Flavored oat milk still oat milk", "description": "Chobani® Dairy Free Vanilla Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 7, "label": "PASS", "reason": "Explicit oat milk product", "description": "MALK Organic Dairy Free Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 8, "label": "PASS", "reason": "Flavored oat milk still oat milk", "description": "MALK Organic Dairy Free Vanilla Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 9, "label": "PASS", "reason": "Explicit oat milk product", "description": "Minor Figures Barista Oat Milk", "categories": "Dairy,Natural & Organic"}
+{"search_term": "oat milk", "idx": 10, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy Free Full Fat Oat Milk Half Gallon", "categories": "Dairy,Dairy,Natural & Organic"}
+{"search_term": "oat milk", "idx": 11, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy Free Original Oatmilk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 12, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy Free Super Basic Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 13, "label": "FAIL", "reason": "Coffee creamer, not core oat milk", "description": "Oatly Dairy Free Sweet & Creamy Oatmilk Coffee Creamer", "categories": "Dairy,Dairy,Natural & Organic"}
+{"search_term": "oat milk", "idx": 14, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy Free Unsweetened Oatmilk", "categories": "Dairy,Natural & Organic"}
+{"search_term": "oat milk", "idx": 15, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy-Free Original Barista Edition Oatmilk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 16, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy-Free Shelf-Stable Barista Edition Original Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 17, "label": "PASS", "reason": "Explicit oat milk product", "description": "Oatly Dairy-Free Shelf-Stable Original Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 18, "label": "PASS", "reason": "Explicit oat milk product", "description": "Planet Oat Dairy Free Barista Oat Milk 52 fl oz", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 19, "label": "PASS", "reason": "Explicit oat milk product", "description": "Planet Oat Dairy Free Original Oat Milk 52 fl oz", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 20, "label": "PASS", "reason": "Explicit oat milk product", "description": "Planet Oat Dairy Free Shelf Stable Original Oat Milk Quart", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 21, "label": "PASS", "reason": "Flavored oat milk still oat milk", "description": "Planet Oat Dairy Free Vanilla Oat Milk 52 fl oz", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 22, "label": "PASS", "reason": "Explicit oat milk product", "description": "Planet Oat Unsweetened Extra Creamy Oatmilk, 52 oz", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 23, "label": "PASS", "reason": "Flavored oat milk still oat milk", "description": "Planet Oat® Dairy Free Dark Chocolate Oat Milk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 24, "label": "PASS", "reason": "Explicit oat milk product", "description": "Planet Oat® Dairy Free Extra Creamy Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 25, "label": "PASS", "reason": "Description clearly states oat milk.", "description": "Planet Oat® Dairy Free Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 26, "label": "PASS", "reason": "Description clearly states oat milk.", "description": "Planet Oat® Dairy Free Unsweeted Original Oat Milk", "categories": "Natural & Organic,Dairy"}
+{"search_term": "oat milk", "idx": 27, "label": "PASS", "reason": "Description clearly states oatmilk.", "description": "Planet Oat® Dairy-Free Extra Creamy Shelf-Stable Original Oatmilk", "categories": "Natural & Organic,Dairy,Dairy"}
+{"search_term": "oat milk", "idx": 28, "label": "PASS", "reason": "Description clearly states oatmilk.", "description": "Planet Oat® Unsweetened Original Oatmilk", "categories": "Dairy"}
+{"search_term": "oat milk", "idx": 29, "label": "PASS", "reason": "Description clearly states oat milk.", "description": "Simple Truth™ Dairy Free Shelf Stable Original Oat Milk Quart", "categories": "Dairy,Dairy,Natural & Organic"}
+{"search_term": "fish", "idx": 0, "label": "FAIL", "reason": "Seasoning/breading, not actual fish", "description": "Andy's Seasoning® Red Fish Breading", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 1, "label": "PASS", "reason": "Fresh catfish fillet is fish", "description": "Fresh Catfish Fillet (never frozen; sustainably sourced)", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 2, "label": "PASS", "reason": "Catfish nuggets are fish pieces", "description": "Fresh Catfish Nuggets (never frozen; sustainably sourced)", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 3, "label": "PASS", "reason": "Whole fresh catfish is fish", "description": "Fresh Catfish Whole (never frozen; sustainably sourced)", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 4, "label": "PASS", "reason": "Rockfish fillet is fish", "description": "Fresh Rockfish Fillet Pacific Caught (sustainably sourced)", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 5, "label": "PASS", "reason": "Beer battered whole fish fillets are fish", "description": "Gorton’s Beer Battered Fish 100% Whole Fish Fillets (Not Minced), Wild Caught Pollock, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 6, "label": "PASS", "reason": "Beer battered fish fillets are fish", "description": "Gorton’s Beer Battered Fish Fillets, Wild Caught Pollock, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 7, "label": "PASS", "reason": "Breaded fish sandwich cut from whole fish fillets", "description": "Gorton’s Breaded Fish Sandwich Cut from Whole Fish Fillets (Not Minced), Wild Caught, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 8, "label": "PASS", "reason": "Crispy battered fish fillets are fish", "description": "Gorton’s Crispy Battered Fish Portions Fish Fillets, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 9, "label": "PASS", "reason": "Crunchy breaded whole fish fillets are fish", "description": "Gorton’s Crunchy Breaded Fish 100% Whole Fish Fillets (Not Minced), Crunchy Panko Breadcrumbs", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 10, "label": "PASS", "reason": "Crunchy breaded fish portions with pollock are fish", "description": "Gorton’s Crunchy Breaded Fish Portions, Pollock, Crunchy Panko Breadcrumbs, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 11, "label": "PASS", "reason": "Crunchy breaded fish sticks from fish", "description": "Gorton’s Crunchy Breaded Fish Sticks (Not Minced), Panko Breadcrumbs, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 12, "label": "PASS", "reason": "Breaded fish sticks cut from real fish", "description": "Gorton’s Crunchy Breaded Fish Sticks Cut from Real Fish, Crunchy Panko Breadcrumbs, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 13, "label": "PASS", "reason": "Parmesan crusted whole fish fillets are fish", "description": "Gorton’s Parmesan Crusted Fish 100% Whole Fish Fillets (Not Minced), Wild Caught, Frozen", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 14, "label": "PASS", "reason": "Farm raised catfish fillets are fish", "description": "Kroger® Farm Raised Catfish Fillets", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 15, "label": "PASS", "reason": "Frozen farm raised catfish fillets are fish", "description": "Kroger® Farm Raised Catfish Fillets Frozen BIG DEAL!", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 16, "label": "FAIL", "reason": "Fish fry breading mix, not fish", "description": "Louisiana Fish Fry Products New Orleans-Style Fish Fry Seafood Breading Mix", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 17, "label": "FAIL", "reason": "Seasoned fish fry breading mix, not fish", "description": "Louisiana Fish Fry Products Seasoned Fish Fry Seafood Breading Mix", "categories": "Meat & Seafood"}
+{"search_term": "fish", "idx": 18, "label": "FAIL", "reason": "Tartar sauce, not fish", "description": "Louisiana® Fish Fry Products Tartar Sauce", "categories": "Meat & Seafood,Condiment & Sauces"}
+{"search_term": "fish", "idx": 19, "label": "PASS", "reason": "Crunchy breaded fish sticks are fish", "description": "Van de Kamp's® Crunchy Breaded Fish Sticks", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 20, "label": "PASS", "reason": "Crunchy breaded fish for sandwiches are fish", "description": "Van de Kamp's® Crunchy Breaded Fish for Sandwiches", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 21, "label": "PASS", "reason": "Crunchy breaded jumbo fish sticks are fish", "description": "Van de Kamp's® Crunchy Breaded Jumbo Fish Sticks", "categories": "Frozen,Meat & Seafood"}
+{"search_term": "fish", "idx": 22, "label": "FAIL", "reason": "Fish fry breading, not fish", "description": "Zatarain's Crispy Southern Fish Fri", "categories": "Meat & Seafood"}
+{"search_term": "bread", "idx": 0, "label": "PASS", "reason": "Clearly labeled bread", "description": "Alfaro's Artesano Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 1, "label": "PASS", "reason": "Clearly labeled bread", "description": "Alfaro's Artesano Golden Wheat Bakery Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 2, "label": "PASS", "reason": "Clearly labeled bread", "description": "Alfaro's Artesano Hawaiian Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 3, "label": "PASS", "reason": "Clearly labeled bread", "description": "Aunt Millie's Country Buttermilk Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 4, "label": "PASS", "reason": "Clearly labeled bread", "description": "Bakery Fresh Crisp & Soft French Bread", "categories": "Bakery,Bakery"}
+{"search_term": "bread", "idx": 5, "label": "PASS", "reason": "Clearly labeled bread", "description": "Bimbo Large White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 6, "label": "PASS", "reason": "Clearly labeled bread", "description": "Bimbo Soft White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 7, "label": "PASS", "reason": "Clearly labeled bread", "description": "California Goldminer® Sourdough Square Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 8, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread 21 Whole Grains and Seeds Thin-Sliced Organic Bread, 20.5 oz", "categories": "Natural & Organic,Bakery"}
+{"search_term": "bread", "idx": 9, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread Organic 21 Whole Grains and Seeds Bread", "categories": "Natural & Organic,Bakery"}
+{"search_term": "bread", "idx": 10, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread Organic Thin Sliced Good Seed Whole Grain Bread", "categories": "Natural & Organic,Bakery"}
+{"search_term": "bread", "idx": 11, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread Organic Thin Sliced Sprouted and Whole Grain Bread", "categories": "Natural & Organic,Bakery"}
+{"search_term": "bread", "idx": 12, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread Organic Thin Sliced White Bread Done Right Artisan Style Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 13, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread White Bread Done Right, Artisan-Style Organic White Bread, 24 oz Loaf", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 14, "label": "PASS", "reason": "Clearly labeled bread", "description": "Dave's Killer Bread® 100% Whole Wheat Thin-Sliced Organic Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 15, "label": "PASS", "reason": "Clearly labeled bread", "description": "Franz® Mckenzie Buttermilk Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 16, "label": "PASS", "reason": "Clearly labeled bread", "description": "Franz® San Juan Island Multigrain Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 17, "label": "PASS", "reason": "Clearly labeled bread", "description": "Franz® White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 18, "label": "PASS", "reason": "Clearly labeled bread", "description": "Grandma Sycamore's White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 19, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® 100% Whole Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 20, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® Classic White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 21, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® Honey Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 22, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® Soft Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 23, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® Soft Wheat Sandwich Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 24, "label": "PASS", "reason": "Clearly labeled bread", "description": "Kroger® White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 25, "label": "PASS", "reason": "Description clearly states bread", "description": "Kroger® White Sandwich Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 26, "label": "PASS", "reason": "Description clearly states bread", "description": "Mrs Baird's Large Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 27, "label": "PASS", "reason": "Organic wheat bread clearly matches bread", "description": "Naked Bread Organic Wheat Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 28, "label": "PASS", "reason": "Organic white bread clearly matches bread", "description": "Naked Bread Organic White Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 29, "label": "PASS", "reason": "Organic 100% whole wheat bread clearly matches bread", "description": "Naked Bread® Organic 100% Whole Wheat Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 30, "label": "PASS", "reason": "100% whole wheat bread clearly matches bread", "description": "Nature's Own 100% Whole Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 31, "label": "PASS", "reason": "Butterbread bread clearly matches bread", "description": "Nature's Own Butterbread Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 32, "label": "PASS", "reason": "Honey wheat bread clearly matches bread", "description": "Nature's Own Honey Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 33, "label": "PASS", "reason": "Wheat plus protein bread clearly matches bread", "description": "Nature's Own Life Wheat Plus Protein Bread, 22g Protein per 2 slices, Keto Friendly, 16 oz Loaf", "categories": "Bakery"}
+{"search_term": "bread", "idx": 34, "label": "PASS", "reason": "Non GMO white bread clearly matches bread", "description": "Nature's Own Perfectly Crafted Non GMO White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 35, "label": "PASS", "reason": "WhiteWheat bread clearly matches bread", "description": "Nature's Own WhiteWheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 36, "label": "PASS", "reason": "Buttermilk bread clearly matches bread", "description": "Oroweat Country Style Buttermilk Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 37, "label": "PASS", "reason": "Oatnut whole grain bread clearly matches bread", "description": "Oroweat Oatnut Whole Grain Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 38, "label": "PASS", "reason": "Organic rustic white bread clearly matches bread", "description": "Oroweat Organic Non GMO Rustic White Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 39, "label": "PASS", "reason": "Whole wheat bread clearly matches bread", "description": "Oroweat Whole Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 40, "label": "PASS", "reason": "Hearty white bread clearly matches bread", "description": "Pepperidge Farm Farmhouse Hearty White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 41, "label": "PASS", "reason": "Sourdough bread clearly matches bread", "description": "Pepperidge Farm Farmhouse Sourdough Bread, 24 Oz Loaf", "categories": "Bakery"}
+{"search_term": "bread", "idx": 42, "label": "PASS", "reason": "100% whole wheat bread clearly matches bread", "description": "Private Selection® 100% Whole Wheat Bread Wide Pan", "categories": "Bakery"}
+{"search_term": "bread", "idx": 43, "label": "PASS", "reason": "Honey oat bread clearly matches bread", "description": "Private Selection® Honey Oat Bread Wide Pan", "categories": "Bakery"}
+{"search_term": "bread", "idx": 44, "label": "PASS", "reason": "Sourdough bread clearly matches bread", "description": "Private Selection® Sourdough Bread Wide Pan", "categories": "Bakery"}
+{"search_term": "bread", "idx": 45, "label": "PASS", "reason": "Sugar free 100% whole wheat bread clearly matches bread", "description": "Private Selection® Sugar Free 100% Whole Wheat Bread Wide Pan", "categories": "Bakery"}
+{"search_term": "bread", "idx": 46, "label": "PASS", "reason": "Rustic white bread clearly matches bread", "description": "Private Selection® White Bread Rustic Wide Pan", "categories": "Bakery"}
+{"search_term": "bread", "idx": 47, "label": "PASS", "reason": "Wide pan sourdough bread clearly matches bread", "description": "Private Selection® Wide Pan Sourdough Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 48, "label": "PASS", "reason": "Plain sourdough bread clearly matches bread", "description": "San Luis Sourdough Plain Sourdough Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 49, "label": "PASS", "reason": "Golden wheat bread clearly matches bread", "description": "Sara Lee Artesano Golden Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 50, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sara Lee Artesano Original Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 51, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sara Lee Butter Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 52, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sara Lee Classic Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 53, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sara Lee Honey Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 54, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sara Lee White made with Whole Grain Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 55, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Simple Truth Organic® White Bread", "categories": "Bakery,Natural & Organic"}
+{"search_term": "bread", "idx": 56, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Smart Way™ White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 57, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Sunbeam Giant White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 58, "label": "PASS", "reason": "Clearly labeled bread product", "description": "The Rustik Oven Artisan Style Sourdough Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 59, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® 100% Whole Wheat Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 60, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® 12 Grain Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 61, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® Artisan White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 62, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® Buttermilk Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 63, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® Old Fashioned White Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 64, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Western Hearth® Sweet Hawaiian Bread", "categories": "Bakery"}
+{"search_term": "bread", "idx": 65, "label": "PASS", "reason": "Clearly labeled bread product", "description": "Wonder Classic White Bread", "categories": "Bakery"}
+{"search_term": "soda", "idx": 0, "label": "PASS", "reason": "Description clearly states soda", "description": "7UP Lemon Lime Caffeine-Free Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 1, "label": "PASS", "reason": "Description clearly states soda", "description": "7UP Tropical Caffeine Free Lemon Lime Mango Peach Soda Cans", "categories": "Beverages,Beverages,Beverages"}
+{"search_term": "soda", "idx": 2, "label": "PASS", "reason": "Description clearly states soda", "description": "A&W® Root Beer Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 3, "label": "PASS", "reason": "Description clearly states soda", "description": "A&W® Root Beer Zero Sugar Soda Bottle", "categories": "Beverages"}
+{"search_term": "soda", "idx": 4, "label": "PASS", "reason": "Description clearly states soda", "description": "A&W® Root Beer Zero Sugar Soda Bottles", "categories": "Beverages"}
+{"search_term": "soda", "idx": 5, "label": "PASS", "reason": "Description clearly states soda", "description": "A&W® Root Beer Zero Sugar Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 6, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Cherry Cola Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 7, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Cola Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 8, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Dr. K Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 9, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Lemon Lime Caffeine Free Soda Bottle", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 10, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Lemon Lime Caffeine Free Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 11, "label": "PASS", "reason": "Description clearly states soda", "description": "Big K® Orange Caffeine Free Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 12, "label": "PASS", "reason": "Description clearly states soda", "description": "Cactus Cooler Orange Pineapple Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 13, "label": "PASS", "reason": "Description clearly states soda", "description": "Canada Dry Ginger Ale Caffeine Free Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 14, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola Classic Soda Bottle", "categories": "Beverages"}
+{"search_term": "soda", "idx": 15, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Cherry Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 16, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Cherry Zero Sugar Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 17, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Soda Bottle", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 18, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Soda Bottles", "categories": "Beverages"}
+{"search_term": "soda", "idx": 19, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 20, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Soda Mini Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 21, "label": "PASS", "reason": "Description clearly states soda", "description": "Coca-Cola® Zero Sugar Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 22, "label": "PASS", "reason": "Description clearly states soda", "description": "Diet Coke® Soda Bottles", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 23, "label": "PASS", "reason": "Description clearly states soda", "description": "Diet Coke® Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 24, "label": "PASS", "reason": "Description clearly states soda", "description": "Diet Dr Pepper Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 25, "label": "PASS", "reason": "Diet Mountain Dew is a soda.", "description": "Diet Mountain Dew® Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 26, "label": "PASS", "reason": "Dr Pepper Cherry is a soda.", "description": "Dr Pepper Cherry Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 27, "label": "PASS", "reason": "Dr Pepper soda bottle matches soda.", "description": "Dr Pepper Soda Bottle", "categories": "Beverages"}
+{"search_term": "soda", "idx": 28, "label": "PASS", "reason": "Dr Pepper soda bottles match soda.", "description": "Dr Pepper Soda Bottles", "categories": "Beverages"}
+{"search_term": "soda", "idx": 29, "label": "PASS", "reason": "Dr Pepper soda cans match soda.", "description": "Dr Pepper Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 30, "label": "PASS", "reason": "Dr Pepper soda cans match soda.", "description": "Dr Pepper Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 31, "label": "PASS", "reason": "Dr Pepper Zero Sugar soda cans are soda.", "description": "Dr Pepper Zero Sugar Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 32, "label": "PASS", "reason": "Dr Pepper soda cans match soda.", "description": "Dr Pepper® Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 33, "label": "PASS", "reason": "Fanta Orange is a soda.", "description": "Fanta® Orange Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 34, "label": "PASS", "reason": "Fanta Pineapple is a soda.", "description": "Fanta® Pineapple Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 35, "label": "PASS", "reason": "Fanta Strawberry is a soda.", "description": "Fanta® Strawberry Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 36, "label": "PASS", "reason": "Kroger Big K Zero Sugar Cola is soda.", "description": "Kroger® Big K® Zero Sugar Cola Soda Bottle", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 37, "label": "PASS", "reason": "Mountain Dew Baja Blast is soda.", "description": "Mountain Dew® Baja Blast Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 38, "label": "PASS", "reason": "Mountain Dew Baja Cabo Citrus Zero Sugar is soda.", "description": "Mountain Dew® Baja Cabo Citrus Zero Sugar Tropical Punch Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 39, "label": "PASS", "reason": "Mountain Dew soda cans match soda.", "description": "Mountain Dew® Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 40, "label": "PASS", "reason": "Mountain Dew soda pop Baja Cabo Citrus is soda.", "description": "Mountain Dew® Soda Pop Baja Cabo Citrus Tropical Punch Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 41, "label": "PASS", "reason": "Mr. Pibb Zero Sugar Cherry is soda.", "description": "Mr. Pibb® Zero Sugar Cherry Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 42, "label": "PASS", "reason": "Pepsi Cola soda pop is soda.", "description": "Pepsi Cola Soda Pop", "categories": "Beverages"}
+{"search_term": "soda", "idx": 43, "label": "PASS", "reason": "Pepsi Cola soda pop mini cans are soda.", "description": "Pepsi Cola Soda Pop Mini Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 44, "label": "PASS", "reason": "Pepsi Cola soda bottles are soda.", "description": "Pepsi Cola® Soda Bottles", "categories": "Beverages"}
+{"search_term": "soda", "idx": 45, "label": "PASS", "reason": "Pepsi Cola Wild Cherry is soda.", "description": "Pepsi Cola® Wild Cherry Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 46, "label": "PASS", "reason": "Pepsi Diet Soda Cola is soda.", "description": "Pepsi Diet Soda Cola 12 Fl Oz, 24 Count", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 47, "label": "PASS", "reason": "Pepsi Soda Cola is soda.", "description": "Pepsi Soda Cola 12 Fl Oz, 24 Count", "categories": "Beverages"}
+{"search_term": "soda", "idx": 48, "label": "PASS", "reason": "Sprite Lemon Lime Caffeine Free is soda.", "description": "Sprite® Lemon Lime Caffeine Free Soda Bottle", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 49, "label": "PASS", "reason": "Sprite Lemon Lime Caffeine Free bottles are soda.", "description": "Sprite® Lemon Lime Caffeine Free Soda Bottles", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 50, "label": "PASS", "reason": "Sprite is a well-known soda brand", "description": "Sprite® Lemon Lime Caffeine Free Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 51, "label": "PASS", "reason": "Vanilla Sprite is a soda variant", "description": "Sprite® Vanilla Frost Caffeine Free Soda Cans", "categories": "Beverages"}
+{"search_term": "soda", "idx": 52, "label": "PASS", "reason": "Squirt Grapefruit is a soda", "description": "Squirt Grapefruit Soda Bottle", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 53, "label": "PASS", "reason": "Squirt Citrus is a soda", "description": "Squirt® Citrus Soda Bottles", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 54, "label": "PASS", "reason": "Squirt Grapefruit soda is soda", "description": "Squirt® Grapefruit Soda Cans", "categories": "Beverages,Beverages"}
+{"search_term": "soda", "idx": 55, "label": "PASS", "reason": "Sunkist Orange soda is soda", "description": "Sunkist® Orange Zero Sugar Soda Cans", "categories": "Beverages"}
+{"search_term": "cheese", "idx": 0, "label": "PASS", "reason": "Queso fresco is a type of cheese", "description": "Cacique® Ranchero® Part Skim Milk Queso Fresco Cheese", "categories": "International,Dairy,International"}
+{"search_term": "cheese", "idx": 1, "label": "PASS", "reason": "American cheese slices are cheese", "description": "Horizon Organic American Cheese Slices", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 2, "label": "PASS", "reason": "Mozzarella string cheese is cheese", "description": "Horizon Organic Mozzarella String Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 3, "label": "PASS", "reason": "Four cheese shredded blend is cheese", "description": "Kraft Mexican Style Four Cheese Finely Shredded Natural Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 4, "label": "PASS", "reason": "Sharp cheddar shredded is cheese", "description": "Kraft Sharp Cheddar Finely Shredded Natural Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 5, "label": "PASS", "reason": "American sliced cheese is cheese", "description": "Kraft Singles American Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 6, "label": "PASS", "reason": "Triple cheddar shredded is cheese", "description": "Kraft Triple Cheddar Finely Shredded Natural Cheese Bag", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 7, "label": "PASS", "reason": "Cheddar jack shredded is cheese", "description": "Kroger® Cheddar Jack Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 8, "label": "PASS", "reason": "Colby jack block is cheese", "description": "Kroger® Colby Jack Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 9, "label": "PASS", "reason": "Colby jack block is cheese", "description": "Kroger® Colby Jack Block Cheese BIG DEAL!", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 10, "label": "PASS", "reason": "Colby jack shredded is cheese", "description": "Kroger® Colby Jack Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 11, "label": "PASS", "reason": "Colby jack sliced is cheese", "description": "Kroger® Colby Jack Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 12, "label": "PASS", "reason": "Extra sharp cheddar sliced is cheese", "description": "Kroger® Extra Sharp Cheddar Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 13, "label": "PASS", "reason": "Havarti sliced is cheese", "description": "Kroger® Havarti Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 14, "label": "PASS", "reason": "Italian style blend shredded is cheese", "description": "Kroger® Italian Style Blend Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 15, "label": "PASS", "reason": "Medium cheddar block is cheese", "description": "Kroger® Medium Cheddar Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 16, "label": "PASS", "reason": "Medium cheddar shredded is cheese", "description": "Kroger® Medium Cheddar Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 17, "label": "PASS", "reason": "Medium cheddar sliced is cheese", "description": "Kroger® Medium Cheddar Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 18, "label": "PASS", "reason": "Mexican style blend shredded is cheese", "description": "Kroger® Mexican Style Blend Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 19, "label": "PASS", "reason": "Mexican style blend shredded is cheese", "description": "Kroger® Mexican Style Blend Shredded Cheese Family Size", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 20, "label": "PASS", "reason": "Mild cheddar block is cheese", "description": "Kroger® Mild Cheddar Cheese Block", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 21, "label": "PASS", "reason": "Mild cheddar shredded is cheese", "description": "Kroger® Mild Cheddar Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 22, "label": "PASS", "reason": "Monterey Jack block is cheese", "description": "Kroger® Monterey Jack Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 23, "label": "PASS", "reason": "Monterey Jack shredded is cheese", "description": "Kroger® Monterey Jack Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 24, "label": "PASS", "reason": "Mozzarella block is cheese", "description": "Kroger® Mozzarella Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 25, "label": "PASS", "reason": "Mozzarella shredded cheese is cheese", "description": "Kroger® Mozzarella Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 26, "label": "PASS", "reason": "Mozzarella shredded cheese family size is cheese", "description": "Kroger® Mozzarella Shredded Cheese Family Size", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 27, "label": "PASS", "reason": "Mozzarella string cheese is cheese", "description": "Kroger® Mozzarella String Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 28, "label": "PASS", "reason": "Parmesan shredded cheese is cheese", "description": "Kroger® Parmesan Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 29, "label": "PASS", "reason": "Pepper Jack sliced cheese is cheese", "description": "Kroger® Pepper Jack Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 30, "label": "PASS", "reason": "Reduced fat Mexican style shredded cheese is cheese", "description": "Kroger® Reduced Fat Mexican Style Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 31, "label": "PASS", "reason": "Sharp cheddar block cheese is cheese", "description": "Kroger® Sharp Cheddar Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 32, "label": "PASS", "reason": "Sharp cheddar shredded cheese is cheese", "description": "Kroger® Sharp Cheddar Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 33, "label": "PASS", "reason": "Singles American sliced cheese is cheese", "description": "Kroger® Singles American Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 34, "label": "PASS", "reason": "Smoke flavored provolone sliced cheese is cheese", "description": "Kroger® Smoke Flavored Provolone Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 35, "label": "PASS", "reason": "Swiss sliced cheese is cheese", "description": "Kroger® Swiss Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 36, "label": "PASS", "reason": "Whole milk mozzarella shredded cheese is cheese", "description": "Kroger® Whole Milk Mozzarella Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 37, "label": "PASS", "reason": "Colby-Jack sliced cheese is cheese", "description": "Sargento® Colby-Jack Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 38, "label": "PASS", "reason": "4 State Cheddar shredded cheese is cheese", "description": "Sargento® Off the Block 4 State Cheddar® Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 39, "label": "PASS", "reason": "4 Cheese Mexican Blend natural cheese shreds is cheese blend", "description": "Sargento® Off the Block Fine Cut 4 Cheese Mexican Blend Natural Cheese Shreds", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 40, "label": "PASS", "reason": "Pepper Jack sliced cheese is cheese", "description": "Sargento® Pepper Jack Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 41, "label": "PASS", "reason": "Provolone sliced cheese is cheese", "description": "Sargento® Provolone Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 42, "label": "PASS", "reason": "Sharp cheddar sliced cheese is cheese", "description": "Sargento® Sharp Cheddar Sliced Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 43, "label": "PASS", "reason": "Whole milk mozzarella shredded cheese is cheese", "description": "Sargento® Whole Milk Mozzarella Shredded Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 44, "label": "PASS", "reason": "Colby Jack block cheese is cheese", "description": "Simple Truth Organic® Colby Jack Block Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 45, "label": "PASS", "reason": "Colby Jack cheese slices is cheese", "description": "Simple Truth Organic® Colby Jack Cheese Slices", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 46, "label": "PASS", "reason": "Grated Parmesan cheese is cheese", "description": "Simple Truth Organic® Grated Parmesan Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 47, "label": "PASS", "reason": "Low moisture part skim mozzarella shredded cheese is cheese", "description": "Simple Truth Organic® Low Moisture Part Skim Mozzarella Shredded Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 48, "label": "PASS", "reason": "Mexican style blend shredded cheese is cheese blend", "description": "Simple Truth Organic® Mexican Style Blend Shredded Cheese", "categories": "Dairy,Natural & Organic"}
+{"search_term": "cheese", "idx": 49, "label": "PASS", "reason": "Sharp white cheddar block cheese is cheese", "description": "Simple Truth Organic® Sharp White Cheddar Block Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 50, "label": "PASS", "reason": "Sharp white cheddar shredded cheese is a type of cheese", "description": "Simple Truth Organic® Sharp White Cheddar Shredded Cheese", "categories": "Dairy,Natural & Organic"}
+{"search_term": "cheese", "idx": 51, "label": "PASS", "reason": "Sharp white cheddar sliced cheese is a type of cheese", "description": "Simple Truth Organic® Sharp White Cheddar Sliced Cheese", "categories": "Natural & Organic,Dairy"}
+{"search_term": "cheese", "idx": 52, "label": "PASS", "reason": "Aged medium cheddar block is a type of cheese", "description": "Tillamook® Aged Medium Cheddar Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 53, "label": "PASS", "reason": "Aged sharp cheddar block is a type of cheese", "description": "Tillamook® Aged Sharp Cheddar Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 54, "label": "PASS", "reason": "Medium cheddar block is a type of cheese", "description": "Tillamook® Medium Cheddar Block Cheese", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 55, "label": "PASS", "reason": "Mexican 4 cheese shredded is a cheese blend", "description": "Tillamook® Mexican 4 Cheese Shredded Cheese Farmstyle", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 56, "label": "PASS", "reason": "Mozzarella shredded is a type of cheese", "description": "Tillamook® Mozzarella Shredded Cheese Farmstyle", "categories": "Dairy"}
+{"search_term": "cheese", "idx": 57, "label": "PASS", "reason": "Triple cheddar shredded is a cheese blend", "description": "Tillamook® Triple Cheddar Shredded Cheese Farmstyle", "categories": "Dairy,Deli"}
+{"search_term": "cheese", "idx": 58, "label": "PASS", "reason": "Velveeta sliced cheese is a processed cheese product", "description": "Velveeta Original Flavored Sliced Cheese", "categories": "Dairy"}
+{"search_term": "oranges", "idx": 0, "label": "PASS", "reason": "Cara Cara Navel Oranges are a type of orange", "description": "Cara Cara Navel Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 1, "label": "PASS", "reason": "Mandarin Clementine Oranges are a type of orange", "description": "Cuties® Organic Seedless Mandarin Clementine Oranges in 2lb Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 2, "label": "PASS", "reason": "Mandarin Clementine Oranges are a type of orange", "description": "Cuties® Seedless California Mandarin Clementine Oranges in 3lb Bag", "categories": "Produce,Produce"}
+{"search_term": "oranges", "idx": 3, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Fresh Large Organic Navel Oranges - Each", "categories": "Natural & Organic,Produce"}
+{"search_term": "oranges", "idx": 4, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Fresh Medium Organic Navel Oranges - Each", "categories": "Natural & Organic,Produce"}
+{"search_term": "oranges", "idx": 5, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Fresh Navel Oranges - Each", "categories": "Produce"}
+{"search_term": "oranges", "idx": 6, "label": "PASS", "reason": "Mandarin Clementine Oranges are a type of orange", "description": "Kroger® Adorbs™ Fresh Seedless Mandarin Clementine Oranges Bag", "categories": "Produce,Produce,Produce"}
+{"search_term": "oranges", "idx": 7, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Kroger® Fresh Navel Oranges Bag", "categories": "Produce,Produce"}
+{"search_term": "oranges", "idx": 8, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Kroger® Fresh Navel Oranges Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 9, "label": "PASS", "reason": "Oranges bag clearly matches oranges", "description": "Kroger® Oranges Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 10, "label": "PASS", "reason": "Valencia Oranges are a type of orange", "description": "Large Valencia Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 11, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Medium Fresh Navel Oranges- Each", "categories": "Produce,Produce"}
+{"search_term": "oranges", "idx": 12, "label": "PASS", "reason": "Valencia Oranges are a type of orange", "description": "Medium Valencia Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 13, "label": "PASS", "reason": "Red Navel Oranges are a type of orange", "description": "Organic Red Navel Oranges", "categories": "Natural & Organic,Produce"}
+{"search_term": "oranges", "idx": 14, "label": "PASS", "reason": "Blood Oranges are a type of orange", "description": "Private Selection® Fresh Blood Oranges Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 15, "label": "PASS", "reason": "Navel Oranges Cara Cara are a type of orange", "description": "Private Selection® Fresh Navel Oranges Cara Cara Bag", "categories": "Produce,Produce"}
+{"search_term": "oranges", "idx": 16, "label": "PASS", "reason": "Navel Oranges Cara Cara are a type of orange", "description": "Private Selection® Fresh Navel Oranges Cara Cara Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 17, "label": "PASS", "reason": "Navel Oranges Heirloom are a type of orange", "description": "Private Selection® Fresh Navel Oranges Heirloom Bag", "categories": "Produce"}
+{"search_term": "oranges", "idx": 18, "label": "UNCLEAR", "reason": "Raspberry Oranges unclear if actual oranges or flavored", "description": "Private Selection® Raspberry Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 19, "label": "PASS", "reason": "Sugar Gem Navel Oranges are a type of orange", "description": "Private Selection® Sugar Gem Extra Sweet Navel Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 20, "label": "PASS", "reason": "Red Navel Oranges are a type of orange", "description": "Red Navel Oranges", "categories": "Produce"}
+{"search_term": "oranges", "idx": 21, "label": "PASS", "reason": "Mandarin Clementine Oranges are a type of orange", "description": "Seedless California Cuties® Mandarin Clementine Oranges in 5lb Bag", "categories": "Produce,Produce,Produce"}
+{"search_term": "oranges", "idx": 22, "label": "PASS", "reason": "Mandarin Clementine Oranges are a type of orange", "description": "Seedless Mandarin Clementine Oranges", "categories": "Produce,Produce"}
+{"search_term": "oranges", "idx": 23, "label": "PASS", "reason": "Navel Oranges are a type of orange", "description": "Simple Truth Organic® Fresh Navel Oranges Bag", "categories": "Produce,Natural & Organic"}
+{"search_term": "oranges", "idx": 24, "label": "PASS", "reason": "Seedless Mandarin Oranges are a type of orange", "description": "Simple Truth Organic® Fresh Seedless Mandarin Oranges Bag", "categories": "Natural & Organic,Produce"}
