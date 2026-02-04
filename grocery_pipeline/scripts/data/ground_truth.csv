@@ -1,0 +1,43 @@
+search_term,idx,eval_result,description,reason,categories
+2% milk,19,pass,Kroger® 1% Lowfat Milk 32 fl. oz. Bottle,1% milk is not 2% milk,Dairy
+2% milk,24,pass,Kroger® Fat Free Skim Milk 32 fl. oz. Bottle,Fat free milk is not 2% milk,Dairy
+2% milk,51,pass,a2 Milk® Vitamin D Whole Milk,Whole milk is not 2% milk,Dairy
+balloons,0,pass,American Greetings Birthday Beverage Bag - Happy Birthday Balloons (#9),"Item is a beverage bag, not actual balloons",Party
+balloons,1,pass,American Greetings Medium Gift Bag Balloons and Stars ( #4),"Item is a gift bag with balloon design, not balloons",Party
+blueberries,8,pass,Vanilla Yogurt with Blueberries,"Product is yogurt with blueberries, not blueberries alone",Produce
+chicken noodle soup,0,pass,Amy's® Organic No Chicken Noodle Soup,"No chicken in soup, contradicts search term","Natural & Organic,Canned & Packaged,Canned & Packaged"
+chicken thighs,5,pass,Foster Farms Fresh & Natural Cage Free Chicken Thighs & Drumsticks Picnic Pack,"Includes drumsticks, not only chicken thighs","Meat & Seafood,Natural & Organic"
+clumping cat litter,11,pass,Fresh Step Febreeze Fresh Non-Clumping Cat Litter,Non-clumping cat litter,Pet Care
+clumping cat litter,24,pass,Purina Tidy Cats Non-Clumping Cat Litter 24/7 Performance,Non-clumping cat litter,Pet Care
+clumping cat litter,28,pass,Smart Way™ Fresh Scent Non Clumping Clay Multi Cat Litter,Description states non clumping litter,Pet Care
+eggs,16,pass,Just Egg® Plant Based Eggs,"Plant based, not real eggs","Natural & Organic,Dairy"
+fat free milk,1,pass,Clover Sonoma Organic Lactose Free 2% Reduced Fat Milk 0.5 gal,"2% reduced fat, not fat free","Dairy,Dairy"
+fat free milk,4,pass,Darigold® Fit 2% Lactose Free Reduced Fat Ultra Filtered Milk,"2% reduced fat, not fat free","Dairy,Dairy"
+fat free milk,5,pass,Darigold® Fit 2% Lactose-Free Reduced Fat Ultra-Filtered Milk,"2% reduced fat, not fat free",Dairy
+fat free milk,9,pass,Horizon Organic Lactose Free 2% Reduced Fat Milk Half Gallon,"2% reduced fat, not fat free","Natural & Organic,Dairy,Dairy"
+fat free milk,14,pass,Kroger® Lactose Free 1% Low Fat Milk Half Gallon,"1% low fat, not fat free","Dairy,Dairy"
+fat free milk,15,pass,Kroger® Lactose Free 2% Reduced Fat Milk Gallon,"2% reduced fat, not fat free","Dairy,Dairy"
+fat free milk,16,pass,Kroger® Lactose Free 2% Reduced Fat Milk Half Gallon,"2% reduced fat, not fat free","Dairy,Dairy"
+fat free milk,18,pass,LaLa® Lactose Free 2% Reduced Fat Shelf Stable Milk,"2% reduced fat, not fat free","Natural & Organic,Dairy,Dairy"
+fat free milk,19,pass,Lactaid® Lactose Free 1% Lowfat Milk Half Gallon,"1% lowfat, not fat free",Dairy
+fat free milk,20,pass,Lactaid® Lactose Free 2% Reduced Fat Milk,"2% reduced fat, not fat free",Dairy
+fat free milk,21,pass,Lactaid® Lactose Free 2% Reduced Fat Milk Half Gallon,"2% reduced fat, not fat free",Dairy
+fat free milk,22,pass,Lactaid® Lactose Free Calcium Fortified 2% Reduced Fat Milk Half Gallon,"2% reduced fat, not fat free",Dairy
+fat free milk,23,pass,Lactaid® Lactose-Free 1% Low-Fat Milk,"1% low fat, not fat free",Dairy
+fat free milk,24,pass,Oatly Dairy Free Full Fat Oat Milk Half Gallon,"Oat milk, not dairy fat free milk","Dairy,Dairy,Natural & Organic"
+fat free milk,27,pass,Simple Truth Organic® Lactose Free 2% Reduced Fat Milk Half Gallon,2% reduced fat is not fat free,"Natural & Organic,Dairy,Dairy"
+fat free milk,30,pass,"fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Chocolate Milk",2% reduced fat chocolate milk is not fat free,Dairy
+fat free milk,31,pass,"fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Milk",2% reduced fat milk is not fat free,Dairy
+frozen broccoli,3,pass,"Birds Eye Cheddar Broccoli Bake, Frozen Side","Broccoli bake is a prepared dish, not plain frozen broccoli","Frozen,Frozen"
+frozen chicken nuggets,2,pass,Beyond Meat Plant-Based Frozen Chicken Nuggets,"Plant-based, not actual chicken","Frozen,Natural & Organic"
+frozen chicken nuggets,4,pass,Impossible® Plant-Based Frozen Chicken Nuggets,"Plant-based, not actual chicken",Frozen
+frozen chicken nuggets,5,pass,Impossible® Plant-Based Frozen Spicy Chicken Nuggets,"Plant-based, not actual chicken",Frozen
+frozen chicken nuggets,6,pass,"Impossible™ Character Shaped Chicken Nuggets Meat From Plants, Frozen,Fully Cooked, 12.1 oz","Plant-based, not actual chicken",Frozen
+glass cleaner,7,pass,Weiman Glass Cook Top Cleaner & Polish,"Glass Cook Top Cleaner is for cooktops, not general glass",Cleaning Products
+glue,7,pass,Elmer's® CraftBond® Dual Temp Mini Glue Gun,"Glue gun, not glue itself","Office, School, & Crafts"
+glue,18,pass,Gorilla® Glue Duct Adhesive Tape - Black,"Adhesive tape, not glue","Office, School, & Crafts"
+ketchup,1,pass,Heinz Mayo & Ketchup Mayochup Sauce,"Mayochup is a mayo-ketchup mix, not pure ketchup","Condiment & Sauces,Condiment & Sauces"
+pancake mix,24,pass,Manischewitz® Potato Pancake Mix,Potato pancake mix is a different type of pancake mix,"Breakfast,International"
+screws,0,pass,Allied Racheting Screwdriver,"Screwdriver is a tool, not screws",Hardware
+screws,3,pass,Project Partners® Precision Screwdriver Set,"Screwdriver set is a tool, not screws",Hardware
+shrimp,23,pass,Kroger® Shrimp & Surimi Snow Legs Bowl with Cocktail Sauce,Shrimp & surimi mix is not pure shrimp,Meat & Seafood

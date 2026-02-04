@@ -125,6 +125,13 @@ def load_search_term_rules() -> Tuple[str, Dict[str, Dict]]:
       - require_all_of   (new): require ALL of require_all_of tokens must appear in description_norm
       - none_of          (new): require NONE of none_of tokens appear in description_norm
 
+    Optional lists that may exist on any rule:
+      - any_of
+      - require_any_of
+      - require_all_of
+      - none_of
+      - strip_tokens  (phrases to remove from description_norm_raw before matching)
+
     YAML shape (example):
 
     defaults:
@@ -150,6 +157,7 @@ def load_search_term_rules() -> Tuple[str, Dict[str, Dict]]:
             "require_any_of": list[str],
             "require_all_of": list[str],
             "none_of": list[str],
+            "strip_tokens": list[str],
           }
     """
     _require_file(SEARCH_TERM_RULES_PATH)
@@ -196,6 +204,9 @@ def load_search_term_rules() -> Tuple[str, Dict[str, Dict]]:
         req_all_norm = _norm_list(rule.get("require_all_of"))
         none_of_norm = _norm_list(rule.get("none_of"))
 
+        # stripping: keep as normalized phrases
+        strip_norm = _norm_list(rule.get("strip_tokens"))
+
         # Basic validations for the "driving" strategy
         if strategy == "any_of" and not any_of_norm:
             raise ValueError(
@@ -222,11 +233,14 @@ def load_search_term_rules() -> Tuple[str, Dict[str, Dict]]:
             "require_any_of": req_any_norm,
             "require_all_of": req_all_norm,
             "none_of": none_of_norm,
+            "strip_tokens": strip_norm,
         }
 
     return default_strategy, rules_by_term
 
-def build_term_records() -> List[Tuple[str, str, str, str, List[str], List[str], List[str], List[str]]]:
+def build_term_records() -> List[
+    Tuple[str, str, str, str, List[str], List[str], List[str], List[str], List[str]]
+]:
     """
     Produces list of tuples:
       (
@@ -237,7 +251,8 @@ def build_term_records() -> List[Tuple[str, str, str, str, List[str], List[str],
         any_of_tokens,
         require_any_of_tokens,
         require_all_of_tokens,
-        none_of_tokens
+        none_of_tokens,
+        strip_tokens
       )
     """
     term_to_bucket = load_search_terms_bucket_map()
@@ -246,7 +261,7 @@ def build_term_records() -> List[Tuple[str, str, str, str, List[str], List[str],
 
     valid_strategies = {"all_tokens", "any_of", "require_any_of", "require_all_of", "none_of"}
 
-    records: List[Tuple[str, str, str, str, List[str], List[str], List[str], List[str]]] = []
+    records: List[Tuple[str, str, str, str, List[str], List[str], List[str], List[str], List[str]]] = []
     missing_buckets = set()
 
     for term_norm, bucket in sorted(term_to_bucket.items(), key=lambda x: (x[1], x[0])):
@@ -263,6 +278,7 @@ def build_term_records() -> List[Tuple[str, str, str, str, List[str], List[str],
         require_any_of_tokens = list(rule.get("require_any_of") or [])
         require_all_of_tokens = list(rule.get("require_all_of") or [])
         none_of_tokens = list(rule.get("none_of") or [])
+        strip_tokens = list(rule.get("strip_tokens") or [])
 
         records.append(
             (
@@ -274,6 +290,7 @@ def build_term_records() -> List[Tuple[str, str, str, str, List[str], List[str],
                 require_any_of_tokens,
                 require_all_of_tokens,
                 none_of_tokens,
+                strip_tokens,
             )
         )
 
@@ -340,7 +357,8 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
             f"{_arr_sql(any_of_tokens)} AS any_of_tokens, "
             f"{_arr_sql(require_any_of_tokens)} AS require_any_of_tokens, "
             f"{_arr_sql(require_all_of_tokens)} AS require_all_of_tokens, "
-            f"{_arr_sql(none_of_tokens)} AS none_of_tokens"
+            f"{_arr_sql(none_of_tokens)} AS none_of_tokens, "
+            f"{_arr_sql(strip_tokens)} AS strip_tokens"
             ")"
             for (
                 term,
@@ -351,6 +369,7 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
                 require_any_of_tokens,
                 require_all_of_tokens,
                 none_of_tokens,
+                strip_tokens,
             ) in term_records
         ]
     )
@@ -398,9 +417,84 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
           tm.require_any_of_tokens,
           tm.require_all_of_tokens,
           tm.none_of_tokens,
+          tm.strip_tokens,
 
-          -- normalize fields used for filtering + debugging columns
-          REGEXP_REPLACE(LOWER(COALESCE(b.description, "")), r"[^a-z0-9]+", " ") AS description_norm,
+          -- normalize description (raw)
+          REGEXP_REPLACE(LOWER(COALESCE(b.description, "")), r"[^a-z0-9]+", " ") AS description_norm_raw,
+
+          -- Build strip_pattern from strip_tokens
+          (
+            SELECT
+              IF(
+                COUNT(1) = 0,
+                NULL,
+                CONCAT(
+                  r"(^|\\s)(",
+                  STRING_AGG(
+                    REPLACE(
+                      REGEXP_REPLACE(LOWER(tok), r"[^a-z0-9]+", " "),
+                      " ",
+                      r"\\s+"
+                    ),
+                    "|"
+                  ),
+                  r")(\\s|$)"
+                )
+              )
+            FROM UNNEST(tm.strip_tokens) tok
+            WHERE tok IS NOT NULL AND tok != ""
+          ) AS strip_pattern,
+
+          -- Apply stripping if strip_pattern exists, then normalize whitespace.
+          REGEXP_REPLACE(
+            IF(
+              (
+                SELECT
+                  IF(
+                    COUNT(1) = 0,
+                    NULL,
+                    CONCAT(
+                      r"(^|\\s)(",
+                      STRING_AGG(
+                        REPLACE(
+                          REGEXP_REPLACE(LOWER(tok), r"[^a-z0-9]+", " "),
+                          " ",
+                          r"\\s+"
+                        ),
+                        "|"
+                      ),
+                      r")(\\s|$)"
+                    )
+                  )
+                FROM UNNEST(tm.strip_tokens) tok
+                WHERE tok IS NOT NULL AND tok != ""
+              ) IS NULL,
+              REGEXP_REPLACE(LOWER(COALESCE(b.description, "")), r"[^a-z0-9]+", " "),
+              REGEXP_REPLACE(
+                REGEXP_REPLACE(LOWER(COALESCE(b.description, "")), r"[^a-z0-9]+", " "),
+                (
+                  SELECT
+                    CONCAT(
+                      r"(^|\\s)(",
+                      STRING_AGG(
+                        REPLACE(
+                          REGEXP_REPLACE(LOWER(tok), r"[^a-z0-9]+", " "),
+                          " ",
+                          r"\\s+"
+                        ),
+                        "|"
+                      ),
+                      r")(\\s|$)"
+                    )
+                  FROM UNNEST(tm.strip_tokens) tok
+                  WHERE tok IS NOT NULL AND tok != ""
+                ),
+                " "
+              )
+            ),
+            r"\\s+",
+            " "
+          ) AS description_norm,
 
           ARRAY(
             SELECT tok

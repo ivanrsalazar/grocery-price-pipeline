@@ -8,7 +8,6 @@
 # Overrides below handle:
 #   - synonym / alias matching (any_of / require_any_of / require_all_of)
 #   - false positives via none_of
-#   - stripping phrases before matching via strip_tokens
 #
 # NOTE:
 #   - Tokens are normalized to: lowercase, non-alnum -> space, collapse whitespace
@@ -18,6 +17,34 @@ defaults:
   strategy: all_tokens
 
 rules:
+
+  # -------------------------
+  # Dairy
+  # -------------------------
+
+  2% milk:
+    # STRPOS substring matching causes "2" to match in "32 fl oz" or "a2".
+    # Exclude non-2% milk types that slip through.
+    strategy: all_tokens
+    none_of:
+      - lowfat
+      - low fat
+      - skim
+      - fat free
+      - whole
+      - chocolate
+      - 1%
+    strip_tokens:
+      - 12
+      - 22
+      - 32
+      - 42
+
+  eggs:
+    # Plant-based eggs (e.g. Just Egg) are not real eggs.
+    strategy: all_tokens
+    none_of:
+      - plant based
 
   # -------------------------
   # Produce / fruit edge cases
@@ -38,6 +65,7 @@ rules:
       - raspberries
       - blackberry
       - blackberries
+      - yogurt
 
   raspberries:
     strategy: all_tokens
@@ -85,31 +113,25 @@ rules:
   # -------------------------
 
   fat free milk:
-    # Core problem: "lactose free 2%" incorrectly passing after stripping.
-    # Fix:
-    #   - strip "lactose free" + "dairy free" phrases (so they don't act as confusing tokens)
-    #   - require the fat-free meaning to remain (fat + free) AND milk
-    # This should reject "2% reduced fat milk" after stripping because it won't contain both fat+free.
-    strategy: require_all_of
+    # Core problem: "lactose free 2% reduced fat" passes because "free" from
+    # "lactose free" + "fat" from "reduced fat" + "milk" all appear.
+    # Fix: strip "lactose free" / "dairy free" so "free" must come from actual "fat free".
+    strategy: all_tokens
     strip_tokens:
       - lactose free
       - lactose-free
       - dairy free
       - dairy-free
-    require_all_of:
-      - fat
-      - free
-      - milk
-    # optional: you may want to exclude reduced-fat explicitly (uncomment if needed)
-    # none_of:
-    #   - reduced fat
-    #   - 2
+    none_of:
+      - whole
+      - oat
 
   soy sauce:
-    # Teriyaki sauces getting in.
+    # Teriyaki sauces and stir fry sauces getting in.
     strategy: all_tokens
     none_of:
       - teriyaki
+      - stir fry
 
   oat milk:
     # Not strictly "oat milk" when it's an oat creamer.
@@ -151,6 +173,12 @@ rules:
       - coating
       - mix
 
+  shrimp:
+    # "Shrimp & Surimi" mix is not pure shrimp.
+    strategy: all_tokens
+    none_of:
+      - surimi
+
   ground beef:
     # "beef & pork" mixtures
     strategy: all_tokens
@@ -181,6 +209,45 @@ rules:
      
 
   # -------------------------
+  # Meat / seafood (continued)
+  # -------------------------
+
+  chicken thighs:
+    # "Chicken Thighs & Drumsticks" packs include drumsticks, not only thighs.
+    strategy: all_tokens
+    none_of:
+      - drumstick
+      - drumsticks
+
+  chicken noodle soup:
+    # "No Chicken Noodle Soup" contains all tokens but has no chicken.
+    strategy: all_tokens
+    none_of:
+      - no chicken
+
+  # -------------------------
+  # Canned / packaged (continued)
+  # -------------------------
+
+  black beans:
+    # Dinner mixes (e.g. "Black Beans & Rice Dinner Mix") are not plain black beans.
+    strategy: all_tokens
+    none_of:
+      - dinner mix
+      - rice
+
+  # -------------------------
+  # Pet care
+  # -------------------------
+
+  clumping cat litter:
+    # STRPOS finds "clumping" inside "non clumping" / "non-clumping".
+    strategy: all_tokens
+    none_of:
+      - non clumping
+      - non-clumping
+
+  # -------------------------
   # Snacks
   # -------------------------
 
@@ -196,8 +263,7 @@ rules:
   # -------------------------
 
   frozen broccoli:
-    # Medleys + meals showing up.
-    # Keep it simple: exclude clear meal cues + medley cues.
+    # Medleys, meals, and flavored/prepared sides showing up.
     strategy: all_tokens
     none_of:
       - meal
@@ -214,6 +280,13 @@ rules:
       - carrots
       - chestnuts
       - pasta
+      - cheddar
+      - ranch
+      - sauced
+      - garlic butter
+      - normandy
+      - blend
+      - stir fry
 
 
 
@@ -225,11 +298,13 @@ rules:
       - sausage
 
   frozen chicken nuggets:
-    # Meals with nuggets included
+    # Meals with nuggets included, plus plant-based products.
     strategy: all_tokens
     none_of:
       - meal
       - mac
+      - plant based
+      - from plants
 
   ice cream:
     # You noted low distinct count; no clear rule yet.
@@ -266,9 +341,21 @@ rules:
     none_of:
       - syrup
 
+  pancake mix:
+    # Potato pancake mix is a different product category.
+    strategy: all_tokens
+    none_of:
+      - potato
+
   # -------------------------
   # Condiments / sauces
   # -------------------------
+
+  ketchup:
+    # "Mayochup" is a mayo-ketchup mix, not pure ketchup.
+    strategy: all_tokens
+    none_of:
+      - mayochup
 
   mayonnaise:
     # Abbreviation support: mayo
@@ -287,6 +374,16 @@ rules:
 
   
     
+  # -------------------------
+  # Cleaning products
+  # -------------------------
+
+  glass cleaner:
+    # "Glass Cook Top Cleaner" is for cooktops, not general glass cleaning.
+    strategy: all_tokens
+    none_of:
+      - cook top
+
   # -------------------------
   # Personal care
   # -------------------------
@@ -328,6 +425,17 @@ rules:
     any_of:
       - notebook
       - notebooks
+    none_of:
+      - divider
+      - dividers
+
+  glue:
+    # Adhesive tape products contain "glue" in their brand name (Gorilla Glue).
+    # Glue guns are tools, not glue itself.
+    strategy: all_tokens
+    none_of:
+      - tape
+      - gun
 
   extension cords:
     strategy: any_of
@@ -336,10 +444,13 @@ rules:
       - extension cords
 
   screws:
+    # "screwdriver" contains "screw" as substring — exclude it.
     strategy: any_of
     any_of:
       - screw
       - screws
+    none_of:
+      - screwdriver
 
   flashlights:
     strategy: any_of
@@ -358,6 +469,16 @@ rules:
     any_of:
       - smart plug
       - smart plugs
+
+  # -------------------------
+  # Party supplies
+  # -------------------------
+
+  balloons:
+    # Gift bags / beverage bags with balloon designs are not actual balloons.
+    strategy: all_tokens
+    none_of:
+      - bag
 
   # -------------------------
   # International category terms (wording variants)

@@ -20,7 +20,7 @@ from openai import OpenAI
 # ==========================
 DEFAULT_BQ_PROJECT = "grocery-pipe-line"
 DEFAULT_SOURCE_TABLE = (
-    "grocery-pipe-line.grocery_silver.exploration_kroger_products__backup_20260131"
+    "grocery-pipe-line.grocery_silver.exploration_kroger_products"
 )
 
 # canonical_search_terms.yaml lives here (per your repo layout)

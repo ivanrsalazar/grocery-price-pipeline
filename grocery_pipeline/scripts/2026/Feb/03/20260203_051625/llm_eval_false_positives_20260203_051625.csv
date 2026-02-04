@@ -1,0 +1,171 @@
+search_term,idx,label,reason,description,categories
+2% milk,0,PASS,Exact 2% reduced fat milk,1836 Farms Organic 2% Reduced Fat Milk,"Dairy,Natural & Organic"
+2% milk,1,PASS,Exact 2% reduced fat milk,Alexandre Family Farm A2 Organic 2% Reduced Fat Milk,"Natural & Organic,Dairy"
+2% milk,2,PASS,Exact 2% reduced fat milk,Alta Dena 2% Reduced Fat Milk,Dairy
+2% milk,3,PASS,Exact 2% reduced fat milk,Borden 2% Reduced Fat Milk,Dairy
+2% milk,4,PASS,Exact 2% reduced fat milk,Clover Sonoma Organic 2% Reduced Fat Milk 0.5 gal,"Dairy,Natural & Organic"
+2% milk,5,PASS,2% reduced fat lactose free milk still matches,Clover Sonoma Organic Lactose Free 2% Reduced Fat Milk 0.5 gal,"Dairy,Dairy"
+2% milk,6,PASS,2% reduced fat lactose free milk still matches,Darigold® Fit 2% Lactose Free Reduced Fat Ultra Filtered Milk,"Dairy,Dairy"
+2% milk,7,PASS,2% reduced fat lactose free milk still matches,Darigold® Fit 2% Lactose-Free Reduced Fat Ultra-Filtered Milk,Dairy
+2% milk,8,PASS,Exact 2% reduced fat milk,Darigold® Two Ultra-Pasteurized Reduced Fat 2% Milk,Dairy
+2% milk,9,PASS,Exact 2% reduced fat milk,Horizon Organic 2% Reduced Fat Milk Gallon,"Natural & Organic,Dairy"
+2% milk,10,PASS,Exact 2% reduced fat milk,Horizon Organic 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy"
+2% milk,11,PASS,Exact 2% reduced fat milk,Horizon Organic Grassfed 2% Reduced Fat Milk,"Natural & Organic,Dairy"
+2% milk,12,PASS,Exact 2% milk variant,Horizon Organic Growing Years 2% Milk,"Dairy,Natural & Organic"
+2% milk,13,PASS,2% reduced fat lactose free milk still matches,Horizon Organic Lactose Free 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+2% milk,14,PASS,Exact 2% reduced fat milk,Kemps Select 2% Reduced Fat Milk,Dairy
+2% milk,15,PASS,Exact 2% reduced fat milk,Kroger® 2% Reduced Fat Milk 16 fl. oz. Bottle,Dairy
+2% milk,16,PASS,Exact 2% reduced fat milk,Kroger® 2% Reduced Fat Milk 32 fl. oz. Bottle,Dairy
+2% milk,17,PASS,Exact 2% reduced fat milk,Kroger® 2% Reduced Fat Milk Gallon,Dairy
+2% milk,18,PASS,Exact 2% reduced fat milk,Kroger® 2% Reduced Fat Milk Half Gallon,Dairy
+2% milk,19,PASS,2% reduced fat lactose free milk still matches,Kroger® Lactose Free 2% Reduced Fat Milk Gallon,"Dairy,Dairy"
+2% milk,20,PASS,2% reduced fat lactose free milk still matches,Kroger® Lactose Free 2% Reduced Fat Milk Half Gallon,"Dairy,Dairy"
+2% milk,21,PASS,2% reduced fat lactose free milk still matches,Lactaid® Lactose Free 2% Reduced Fat Milk,Dairy
+2% milk,22,PASS,2% reduced fat lactose free milk still matches,Lactaid® Lactose Free 2% Reduced Fat Milk Half Gallon,Dairy
+2% milk,23,PASS,Exact 2% reduced fat milk,Maple Hill® Organic 100% Grassfed 2% Reduced Fat Milk,"Natural & Organic,Dairy"
+2% milk,24,PASS,Exact 2% reduced fat milk,Organic Valley® 2% Reduced Fat Milk Gallon,"Natural & Organic,Dairy"
+2% milk,25,PASS,Explicit 2% reduced fat milk,Organic Valley® 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy"
+2% milk,26,PASS,Explicit 2% reduced fat milk,Organic Valley® 2% Reduced Fat Milk Quart,"Natural & Organic,Dairy"
+2% milk,27,PASS,Explicit 2% reduced fat milk,Organic Valley® Grassmilk® Organic Grassfed 2% Reduced Fat Milk,"Natural & Organic,Dairy"
+2% milk,28,PASS,Explicit 2% reduced fat milk,QFC 2% Reduced Fat Milk Half Gallon,Dairy
+2% milk,29,PASS,Explicit 2% reduced fat milk,Ralphs® 2% Reduced Fat Milk Gallon,Dairy
+2% milk,30,PASS,Explicit 2% reduced fat milk,Ralphs® 2% Reduced Fat Milk Half Gallon,Dairy
+2% milk,31,PASS,Explicit 2% reduced fat milk,Roundy's Select 2% Reduced Fat Milk,Dairy
+2% milk,32,PASS,Explicit 2% reduced fat milk,Roundy's® Select 2% Reduced Fat Milk,Dairy
+2% milk,33,PASS,Explicit 2% reduced fat milk,Shamrock Farms® 2% Reduced Fat Milk,Dairy
+2% milk,34,PASS,Explicit 2% reduced fat milk,Simple Truth Organic® 100% Grassfed 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy"
+2% milk,35,PASS,Explicit 2% reduced fat milk,Simple Truth Organic® 2% Reduced Fat Milk Gallon,"Dairy,Natural & Organic"
+2% milk,36,PASS,Explicit 2% reduced fat milk,Simple Truth Organic® 2% Reduced Fat Milk Gallon,"Natural & Organic,Dairy"
+2% milk,37,PASS,Explicit 2% reduced fat milk,Simple Truth Organic® 2% Reduced Fat Milk Half Gallon,"Dairy,Natural & Organic"
+2% milk,38,PASS,Explicit 2% reduced fat milk,Simple Truth Organic® 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy"
+2% milk,39,PASS,2% milk with DHA omega-3 still 2% milk,Simple Truth Organic® 2% Reduced Fat Milk with DHA Omega-3 Half Gallon,"Natural & Organic,Dairy"
+2% milk,40,PASS,Lactose free variant still 2% milk,Simple Truth Organic® Lactose Free 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+2% milk,41,PASS,Explicit 2% reduced fat milk,Springdale® 2% Reduced Fat Milk Gallon,Dairy
+2% milk,42,PASS,Explicit 2% reduced fat milk,Stremicks Heritage Foods® Organic 2% Reduced Fat Milk Half Gallon,"Natural & Organic,Dairy"
+2% milk,43,PASS,Explicit 2% reduced fat milk,Twin Brook Creamery 2% Reduced Fat Milk,Dairy
+2% milk,44,PASS,Explicit 2% reduced fat milk,a2 Milk® 2% Reduced Fat Milk,Dairy
+2% milk,45,PASS,Fortified 2% reduced fat milk still 2% milk,a2 Milk™ Fortified 2% Reduced Fat Milk,Dairy
+2% milk,46,PASS,Ultra-filtered lactose free 2% milk variant,"fairlife Ultra-Filtered Milk, Lactose Free, High Protein, 2% Reduced Fat Milk",Dairy
+alfredo sauce,0,PASS,Clear Alfredo sauce with Parmesan cheese,Bertolli® Alfredo Sauce With Aged Parmesan Cheese,"Pasta, Sauces, Grain"
+alfredo sauce,1,PASS,Creamy Basil Alfredo is a variant of Alfredo sauce,Bertolli® Creamy Basil Alfredo with Aged Parmesan Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,2,PASS,Garlic Alfredo is a variant of Alfredo sauce,Bertolli® Garlic Alfredo Sauce with Aged Parmesan Cheese,"Pasta, Sauces, Grain"
+alfredo sauce,3,PASS,Mushroom Alfredo is a variant of Alfredo sauce,Bertolli® Mushroom Alfredo with Portobello Mushrooms Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,4,PASS,D'Italia Alfredo Sauce is a direct Alfredo sauce,Bertolli® d'Italia Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,5,PASS,Four Cheese Alfredo is a variant of Alfredo sauce,Bertolli® d'Italia Four Cheese Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,6,PASS,Buitoni Alfredo Sauce is a direct Alfredo sauce,Buitoni® Alfredo Sauce,"Pasta, Sauces, Grain,Snacks"
+alfredo sauce,7,PASS,Alfredo Pasta Sauce is a direct Alfredo sauce,Carbone™ Alfredo Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,8,PASS,Roasted Garlic Alfredo is a variant of Alfredo sauce,Carbone™ Roasted Garlic Alfredo Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,9,PASS,Creamy Alfredo Pasta Sauce is a direct Alfredo sauce,Classico Creamy Alfredo Spaghetti Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,10,PASS,Four Cheese Alfredo Pasta Sauce is a variant of Alfredo sauce,Classico Four Cheese Alfredo Spaghetti Pasta Sauce,"Pasta, Sauces, Grain,Snacks"
+alfredo sauce,11,PASS,Light Creamy Alfredo is a variant of Alfredo sauce,Classico Light Creamy Alfredo Spaghetti Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,12,PASS,Roasted Garlic Alfredo is a variant of Alfredo sauce,Classico Roasted Garlic Alfredo Spaghetti Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,13,PASS,Sun-Dried Tomato Alfredo is a variant of Alfredo sauce,Classico Sun-Dried Tomato Alfredo Spaghetti Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,14,PASS,Four Cheese Alfredo Sauce is a variant of Alfredo sauce,Kroger® Four Cheese Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,15,PASS,Roasted Garlic Alfredo Sauce is a variant of Alfredo sauce,Kroger® Roasted Garlic Alfredo Sauce,"Pasta, Sauces, Grain,Snacks"
+alfredo sauce,16,PASS,Traditional Alfredo Sauce is a direct Alfredo sauce,Kroger® Traditional Alfredo Sauce,"Pasta, Sauces, Grain,Snacks"
+alfredo sauce,17,PASS,Alfredo Pasta Sauce with Roasted Garlic is a variant,Prego® Alfredo Pasta Sauce with Roasted Garlic and Parmesan Cheese Jar,"Pasta, Sauces, Grain"
+alfredo sauce,18,PASS,Garlic & Caramelized Onion Alfredo Sauce is a variant,Prego® Garlic & Caramelized Onion Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,19,PASS,Homestyle Alfredo Pasta Sauce is a direct Alfredo sauce,Prego® Homestyle Alfredo Pasta Sauce Jar,"Pasta, Sauces, Grain"
+alfredo sauce,20,PASS,No Dairy Garlic Alfredo Sauce is an Alfredo variant,Primal Kitchen No Dairy Garlic Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,21,PASS,Basil Pesto Alfredo is a variant of Alfredo sauce,Private Selection® Basil Pesto Alfredo Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,22,PASS,Classic Alfredo Pasta Sauce is a direct Alfredo sauce,Private Selection® Classic Alfredo Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,23,PASS,Classic Alfredo Sauce is a direct Alfredo sauce,Ragu® Classic Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,24,PASS,Classic Alfredo Sauce is a direct Alfredo sauce,Ragu® Classic Alfredo Sauce,"Pasta, Sauces, Grain,Snacks"
+alfredo sauce,25,PASS,Clearly labeled Alfredo sauce,Ragu® Roasted Garlic Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,26,PASS,Clearly labeled Alfredo sauce,Rao Four Cheese Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,27,PASS,Clearly labeled Alfredo sauce,Rao's Homemade Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,28,PASS,"Bacon is an additive, still Alfredo sauce",Rao's Homemade® Bacon Alfredo Pasta Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,29,PASS,Clearly labeled Alfredo sauce,Rao's Homemade® Roasted Garlic Alfredo Sauce,"Pasta, Sauces, Grain"
+alfredo sauce,30,PASS,Clearly labeled Alfredo sauce,Simple Truth Organic™ Classic Alfredo Sauce,"Pasta, Sauces, Grain,Snacks,Natural & Organic"
+alfredo sauce,31,PASS,Clearly labeled Alfredo sauce,Simple Truth® Vegan Non Dairy No Sugar Added Alfredo Pasta Sauce,"Pasta, Sauces, Grain,Natural & Organic"
+all purpose cleaner,0,PASS,Exact all purpose cleaner product,Clean Cult™ All Purpose Cleaner,Cleaning Products
+all purpose cleaner,1,PASS,All purpose cleaner with scent variant,Clean Cult™ All Purpose Cleaner Lemon Verbena,Cleaning Products
+all purpose cleaner,2,PASS,Disinfecting all purpose cleaner,Clorox Bleach Free Disinfecting All Purpose Cleaner Crisp Lemon,Cleaning Products
+all purpose cleaner,3,PASS,All purpose cleaner with bleach,Clorox Clean-Up All Purpose Cleaner with Bleach Rain Clean,Cleaning Products
+all purpose cleaner,4,PASS,All purpose cleaner with bleach variant,Comet Ultra Lemon Scent All-Purpose Cleaner with Bleach,Cleaning Products
+all purpose cleaner,5,PASS,Plant powered all purpose cleaner,ECOS® Plant Powered Orange Plus® All-Purpose Cleaner,"Cleaning Products,Cleaning Products"
+all purpose cleaner,6,PASS,All purpose cleaner with bleach,Kroger® All Purpose Cleaner with Bleach,Cleaning Products
+all purpose cleaner,7,PASS,All purpose cleaner with lemon scent,Kroger® Lemon All Purpose Cleaner,Cleaning Products
+all purpose cleaner,8,PASS,All purpose cleaner with lemon breeze scent,Lysol All Purpose Cleaner Lemon Breeze,Cleaning Products
+all purpose cleaner,9,PASS,All purpose cleaner spray with lemon breeze scent,Lysol All Purpose Cleaner Spray Lemon Breeze,Cleaning Products
+all purpose cleaner,10,PASS,All purpose cleaner spray disinfecting variant,"Lysol Brand New Day All Purpose Cleaner Spray, Disinfecting Spray, Coconut and Sea Minerals",Cleaning Products
+all purpose cleaner,11,PASS,Hydrogen peroxide all purpose cleaner,Lysol Hydrogen Peroxide All Purpose Cleaner Citrus Sparkle Zest,Cleaning Products
+all purpose cleaner,12,PASS,All purpose cleaner concentrate disinfectant,Lysol Power Clean All Purpose Cleaner Concentrate Disinfectant Lemon,Cleaning Products
+all purpose cleaner,13,PASS,All purpose cleaner with lavender scent,Lysol® Brand New Day™ All Purpose Cleaner Lavender & Cotton Blossom,Cleaning Products
+all purpose cleaner,14,PASS,All purpose cleaner with lime scent,"Method All Purpose Cleaner, Lime + Sea Salt","Cleaning Products,Cleaning Products"
+all purpose cleaner,15,PASS,All purpose cleaner with grapefruit scent,"Method All Purpose Cleaner, Pink Grapefruit","Cleaning Products,Cleaning Products"
+all purpose cleaner,16,PASS,All purpose cleaner with lavender scent,"Method All-Purpose Cleaner, French Lavender","Cleaning Products,Cleaning Products"
+all purpose cleaner,17,PASS,All purpose cleaner with Febreze scent,"Mr. Clean 2X Concentrated Multi Surface Cleaner with Febreze Lavender, All Purpose Cleaner","Cleaning Products,Cleaning Products"
+all purpose cleaner,18,PASS,All purpose floor cleaner variant,Mr. Clean All Purpose Cleaner Floor Cleaner for Mopping Cleaning Liquid Meadows & Rain,"Cleaning Products,Cleaning Products"
+all purpose cleaner,19,PASS,All purpose floor cleaner variant,Mr. Clean All Purpose Cleaner Floor Cleaner for Mopping Cleaning Liquid Meadows & Rain,Cleaning Products
+all purpose cleaner,20,PASS,All purpose floor cleaner variant,Mr. Clean All Purpose Cleaner Floor Cleaner for Mopping Cleaning Liquid Unstopables,"Cleaning Products,Cleaning Products"
+all purpose cleaner,21,PASS,Antibacterial all purpose floor cleaner,Mr. Clean Antibacterial All Purpose Cleaner Floor Cleaner for Mopping Cleaning Liquid Lemon,Cleaning Products
+all purpose cleaner,22,PASS,All purpose cleaner spray multi-surface,Mr. Clean Clean Freak All Purpose Cleaner Spray Multi-Surface Cleaning Grapefruit Scent,"Cleaning Products,Cleaning Products"
+all purpose cleaner,23,PASS,All purpose cleaner spray multi-surface,Mr. Clean Clean Freak All Purpose Cleaner Spray Multi-Surface Cleaning Unstopables Scent,Cleaning Products
+all purpose cleaner,24,FAIL,"Magic Eraser sponge is a cleaning tool, not cleaner",Mr. Clean Magic Eraser Sponge All Purpose Cleaner Long Lasting Cleaning Scrubber Ultra Thick,Cleaning Products
+all purpose cleaner,25,PASS,Description explicitly states all purpose cleaner.,Soft Scrub Lemon Scent All Purpose Cleaner and Surface Cleanser,Cleaning Products
+all purpose cleaner,26,PASS,Description explicitly states all purpose cleaner.,Spic & Span Everyday® All Purpose Fresh Citrus Scent Antibacterial Cleaner,Cleaning Products
+almond milk,0,PASS,Almondmilk with banana is still almond milk,"Almond Breeze Almondmilk Blended with Real Bananas, 64 oz","Natural & Organic,Dairy"
+almond milk,1,PASS,Vanilla almondmilk is a variant of almond milk,Almond Breeze Dairy Free Reduced Sugar Vanilla Almondmilk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,2,PASS,Chocolate almond milk is almond milk variant,Almond Breeze Dairy Free Shelf Stable Chocolate Almond Milk Quart,"Natural & Organic,Dairy,Dairy,Dairy"
+almond milk,3,PASS,Unsweetened chocolate almond milk is almond milk,Almond Breeze Dairy Free Shelf Stable Unsweetened Chocolate Almond Milk Quart,"Natural & Organic,Dairy,Dairy,Dairy"
+almond milk,4,PASS,Unsweetened original almond milk is almond milk,Almond Breeze Dairy Free Shelf Stable Unsweetened Original Almond Milk Quart,"Natural & Organic,Dairy"
+almond milk,5,PASS,Vanilla almond milk is almond milk,Almond Breeze Dairy Free Shelf Stable Vanilla Almond Milk Quart,"Natural & Organic,Dairy,Dairy,Dairy"
+almond milk,6,PASS,Unsweetened original almond milk is almond milk,Almond Breeze Dairy Free Unsweetened Original Almond Milk Half Gallon,"Natural & Organic,Dairy"
+almond milk,7,PASS,Unsweetened vanilla almond milk is almond milk,Almond Breeze Dairy Free Unsweetened Vanilla Almond Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,8,PASS,Vanilla almond milk is almond milk,Almond Breeze Dairy Free Vanilla Almond Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,9,PASS,Original almond milk is almond milk,Almond Breeze® Dairy Free Original Almond Milk Half Gallon,"Natural & Organic,Dairy"
+almond milk,10,PASS,Unsweetened vanilla almond milk is almond milk,Almond Breeze® Dairy Free Shelf Stable Unsweetened Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy,Dairy"
+almond milk,11,PASS,Unsweetened vanilla almond milk is almond milk,Almond Breeze® Dairy Free Unsweetened Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,12,PASS,Hint of honey vanilla almond milk is almond milk,Almond Breeze® Dairy-Free Hint of Honey Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,13,PASS,Unsweetened original almond milk is almond milk,Almond Breeze® Dairy-Free Unsweetened Original Blue Diamond® Almond Milk,"Natural & Organic,Dairy"
+almond milk,14,PASS,Original almond milk is almond milk,Blue Diamond® Almond Breeze® Original Almond Milk,"Natural & Organic,Dairy"
+almond milk,15,PASS,Vanilla almond milk is almond milk,Blue Diamond® Almond Breeze® Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,16,PASS,Chocolate almondmilk is almond milk variant,Blue Diamond™ Chocolate Almondmilk,"Dairy,Dairy"
+almond milk,17,PASS,Creamy almondmilk is almond milk variant,Blue Diamond™ Signature Creamy Almondmilk,"Dairy,Natural & Organic"
+almond milk,18,PASS,Sweetened almondmilk is almond milk variant,Blue Diamond™ Sweetened Simple Almondmilk,"Dairy,Natural & Organic"
+almond milk,19,PASS,Unsweetened almondmilk is almond milk,Blue Diamond™ Unsweetened Simple Almondmilk,"Natural & Organic,Dairy"
+almond milk,20,PASS,Unsweetened plain almond milk is almond milk,Califia Farms Dairy Free Unsweetened Plain Almond Milk,"Natural & Organic,Dairy"
+almond milk,21,PASS,Unsweetened original almond milk is almond milk,Califia Farms® Dairy Free Organic Unsweetened Original Almond Milk,"Natural & Organic,Dairy"
+almond milk,22,FAIL,Toasted coconut almond milk blend is not pure almond milk,Califia Farms® Dairy Free Toasted Coconut Almond Milk Blend,"Natural & Organic,Dairy"
+almond milk,23,PASS,Unsweetened almond milk is almond milk,MALK Organic Dairy Free Unsweetened Almond Milk,"Natural & Organic,Dairy"
+almond milk,24,PASS,Vanilla almond milk is almond milk,MALK Organic Dairy Free Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,25,PASS,Original almond milk clearly matches search term,Silk Dairy Free Original Almond Milk Half Gallon,"Natural & Organic,Dairy"
+almond milk,26,PASS,Unsweet almond milk is a direct variant,Silk Dairy Free Unsweet Almond Milk Half Gallon,"Natural & Organic,Dairy"
+almond milk,27,PASS,Vanilla almond milk is a flavored variant of almond milk,Silk Dairy Free Vanilla Shelf Stable Almond Milk Half Pint,"Natural & Organic,Dairy,Dairy,Dairy"
+almond milk,28,PASS,Chocolate almond milk is a flavored almond milk variant,Silk Dark Chocolate Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,29,PASS,Unsweet vanilla almond milk is a variant of almond milk,Silk Unsweet Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,30,PASS,Vanilla almond milk is a flavored almond milk variant,Silk Vanilla Almond Milk,"Natural & Organic,Dairy,Dairy"
+almond milk,31,PASS,Unsweetened organic almondmilk matches search term,Simple Truth Organic™ Dairy Free Organic Shelf Stable Unsweetened Almondmilk Quart,"Natural & Organic,Dairy"
+almond milk,32,PASS,Chocolate almond milk is a flavored almond milk variant,Simple Truth® Dairy Free Chocolate Almond Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,33,PASS,Unsweetened vanilla almond milk is a variant of almond milk,Simple Truth® Dairy Free Unsweetened Vanilla Almond Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,34,PASS,Vanilla almond milk is a flavored almond milk variant,Simple Truth® Dairy Free Vanilla Almond Milk Half Gallon,"Natural & Organic,Dairy,Dairy"
+almond milk,35,PASS,Original plant based almond milk matches search term,Simple Truth® Plant Based Dairy Free Original Almond Milk Half Gallon,"Natural & Organic,Dairy"
+almond milk,36,PASS,Unsweetened plant based almondmilk matches search term,Simple Truth® Plant Based Non Dairy Unsweetened Almondmilk Half Gallon,"Natural & Organic,Dairy"
+almond milk,37,PASS,Unsweetened plain almond milk matches search term,Simple Truth™ Dairy Free Shelf Stable Unsweetened Plain Almond Milk Quart,"Natural & Organic,Dairy"
+antiperspirant deodorant,0,PASS,Explicitly antiperspirant deodorant stick,Arm & Hammer Ultra Max Fresh Antiperspirant Deodorant Stick,"Personal Care,Personal Care"
+antiperspirant deodorant,1,PASS,Explicitly antiperspirant deodorant solid,Arm & Hammer™ Ultra Max™ Active Sport Solid Antiperspirant Deodorant,"Personal Care,Personal Care"
+antiperspirant deodorant,2,PASS,Explicitly antiperspirant deodorant,Arm & Hammer™ Ultra Max™ Powder Fresh Antiperspirant Deodorant,"Personal Care,Personal Care"
+antiperspirant deodorant,3,PASS,Antiperspirant deodorant for men,Axe Phoenix Antiperspirant For Men Crushed Mint & Rosemary Deodorant,Personal Care
+antiperspirant deodorant,4,PASS,Roll-on antiperspirant and deodorant,"Ban Invisible Roll-on Antiperspirant and Deodorant for Women and Men, Unscented","Personal Care,Personal Care,Personal Care"
+antiperspirant deodorant,5,PASS,Antiperspirant deodorant stick,Degree Advanced Men's Antiperspirant Deodorant Stick Cool Rush Twin Pack,Personal Care
+antiperspirant deodorant,6,PASS,Antiperspirant deodorant travel size,"Degree Men Advanced Cool Rush Antiperspirant Deodorant, Travel Size",Personal Care
+antiperspirant deodorant,7,PASS,Antiperspirant deodorant,Degree Men Original Protection Antiperspirant Deodorant Cool Comfort,Personal Care
+antiperspirant deodorant,8,PASS,Antiperspirant deodorant 2-pack,Degree Men Original Protection Antiperspirant Deodorant Extreme Blast 2-Pack,Personal Care
+antiperspirant deodorant,9,PASS,Antiperspirant deodorant,Degree Original Men Antiperspirant Deodorant Cool Rush Antiperspirant For Men,Personal Care
+antiperspirant deodorant,10,PASS,Antiperspirant deodorant,Degree Original Men's Antiperspirant Deodorant Cool Rush,Personal Care
+antiperspirant deodorant,11,PASS,Antiperspirant deodorant 2-pack,Degree Original Protection Antiperspirant Deodorant Sport For Men 2-Pack,Personal Care
+antiperspirant deodorant,12,PASS,Antiperspirant deodorant with motion sense,Degree UltraClear Men's Antiperspirant Deodorant Black+White With MotionSense Technology 2-Pack,Personal Care
+antiperspirant deodorant,13,PASS,Antiperspirant deodorant dry spray,Degree UltraClear Men's Antiperspirant Deodorant Dry Spray Fresh Scent,Personal Care
+antiperspirant deodorant,14,PASS,Antiperspirant deodorant with motion sense,Degree UltraClear Men's Antiperspirant Deodorant Fresh With MotionSense Technology,Personal Care
+antiperspirant deodorant,15,PASS,Antiperspirant deodorant stick,Degree UltraClear Men's Antiperspirant Deodorant Stick,Personal Care
+antiperspirant deodorant,16,PASS,Antiperspirant deodorant for women,Degree Women Sexy Intrigue Antiperspirant Deodorant with Body Heat Activated Technology,Personal Care
+antiperspirant deodorant,17,PASS,Antiperspirant deodorant for women,Degree Women's Antiperspirant for Women Pure Clean Deodorant for Women,Personal Care
+antiperspirant deodorant,18,PASS,Antiperspirant deodorant dry spray,Dove Advanced Care Antiperspirant Deodorant Dry Spray Cool Essentials With Pro Ceramide Technology,Personal Care
+antiperspirant deodorant,19,PASS,Antiperspirant deodorant for women,Dove Advanced Care Antiperspirant Deodorant for Women Clear Finish 72 Hour Sweat And Odor Protection,Personal Care
+antiperspirant deodorant,20,PASS,Antiperspirant deodorant for women,Dove Advanced Care Women's Antiperspirant Deodorant for Women Cool Essentials,Personal Care
+antiperspirant deodorant,21,PASS,Antiperspirant deodorant stick,Dove Advanced Care women Antiperspirant Deodorant Stick Caring Coconut,Personal Care
+antiperspirant deodorant,22,PASS,Antiperspirant deodorant stick,Dove Men+Care Men's Antiperspirant Deodorant Stick Clean Comfort,Personal Care
+antiperspirant deodorant,23,PASS,Antiperspirant deodorant stick 2-pack,Dove Men+Care Men's Antiperspirant Deodorant Stick Extra Fresh Twin Pack,Personal Care
+antiperspirant deodorant,24,PASS,Antiperspirant deodorant stick with moisturizer,Dove Men+Care Men's Antiperspirant Deodorant Stick Extra Fresh with 1/4 Moisturizing Cream,Personal Care
+antiperspirant deodorant,25,PASS,Explicit antiperspirant deodorant in description,Dove Men+Care Men’s Antiperspirant Deodorant Clean Comfort with Triple Defense Technology,Personal Care

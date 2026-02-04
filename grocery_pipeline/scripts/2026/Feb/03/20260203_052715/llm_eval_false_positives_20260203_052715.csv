@@ -1,0 +1,378 @@
+search_term,idx,label,reason,description,categories
+fat free milk,0,PASS,Explicitly fat free milk,Alta Dena Fat Free Milk,Dairy
+fat free milk,1,PASS,Fat free milk with vanilla flavor still matches core item,Dairy Pure™ Milk50™ Fat Free Lactose Free Ultra-Pasteurized Vanilla Skim Milk Bottle,"Dairy,Dairy"
+fat free milk,2,PASS,Fat free lactose free milk matches search term,Darigold® Fit Fat Free Lactose Free Milk,Dairy
+fat free milk,3,PASS,Ultra-pasteurized fat free milk matches search term,Darigold® Zero Ultra-Pasteurized Fat Free Milk,Dairy
+fat free milk,4,PASS,Organic fat free milk matches search term,Horizon Organic Fat Free Milk Half Gallon,"Natural & Organic,Dairy"
+fat free milk,5,PASS,Fat free skim milk is equivalent to fat free milk,Kemps Select Fat Free Skim Milk,Dairy
+fat free milk,6,PASS,Non-fat milk is fat free milk,Kroger® CARBmaster® Lactose Free Non-Fat Ultra Filtered Milk,"Dairy,Dairy"
+fat free milk,7,PASS,Fat free skim milk matches search term,Kroger® Fat Free Skim Milk 32 fl. oz. Bottle,Dairy
+fat free milk,8,PASS,Skim fat free milk matches search term,Kroger® Skim Fat Free Milk 16 fl. oz. Bottle,Dairy
+fat free milk,9,PASS,Organic fat free milk matches search term,Organic Valley® Fat Free Milk Half Gallon,"Natural & Organic,Dairy"
+fat free milk,10,PASS,Fat free skim milk matches search term,Roundy's® Select Fat Free Skim Milk,Dairy
+fat free milk,11,PASS,Organic skim fat free milk matches search term,Simple Truth Organic® Skim Fat Free Milk Half Gallon,"Natural & Organic,Dairy"
+fat free milk,12,PASS,Fat free milk explicitly stated,Twin Brook Creamery Fat Free Milk,Dairy
+fat free milk,13,PASS,Fat free milk explicitly stated,"fairlife Ultra-Filtered Milk, Lactose Free, High Protein, Fat Free Milk",Dairy
+yogurt,0,PASS,"Contains 'Yogurt' in description, clearly yogurt product",Activia Peach & Strawberry Probiotic Low Fat Yogurt Cups,Dairy
+yogurt,1,PASS,"Greek yogurt cup, clearly yogurt",Chobani Blended Greek Reduced Fat Honey Vanilla Yogurt Cup,Dairy
+yogurt,2,PASS,"Nonfat Greek yogurt cup, clearly yogurt",Chobani® Black Cherry on the Bottom Nonfat Greek Yogurt Cup,Dairy
+yogurt,3,PASS,"Greek yogurt cup, despite mix-ins, still yogurt",Chobani® Flip® Chocolate Chip Cookie Dough™ Low Fat Greek Yogurt Cup,Dairy
+yogurt,4,PASS,"Greek yogurt cup with mix-ins, still yogurt",Chobani® Flip® Chocolate S'more S'mores™ Low Fat Greek Yogurt Cup,Dairy
+yogurt,5,PASS,"Greek yogurt cup with mix-ins, still yogurt",Chobani® Flip® Key Lime Crumble™ Low Fat Greek Yogurt Cup,Dairy
+yogurt,6,PASS,"Greek yogurt cup, clearly yogurt",Chobani® Madagascar Vanilla Cinnamon Less Sugar Low Fat Greek Yogurt Cup,Dairy
+yogurt,7,PASS,"Greek yogurt cup, clearly yogurt",Chobani® Mixed Berry Low Fat Greek Yogurt Cup,Dairy
+yogurt,8,PASS,"Greek yogurt cup, clearly yogurt",Chobani® Monterey Strawberry Less Sugar Low Fat Greek Yogurt Cup,Dairy
+yogurt,9,PASS,"Nonfat Greek yogurt cup, clearly yogurt",Chobani® Peach on the Bottom Nonfat Greek Yogurt Cups,Dairy
+yogurt,10,PASS,"Plain nonfat Greek yogurt cup, clearly yogurt",Chobani® Plain Nonfat Greek Yogurt Cup,Dairy
+yogurt,11,PASS,"Plain nonfat Greek yogurt tub, clearly yogurt",Chobani® Plain Nonfat Greek Yogurt Tub,Dairy
+yogurt,12,PASS,"Nonfat Greek yogurt cup, clearly yogurt",Chobani® Strawberry on the Bottom Nonfat Greek Yogurt Cups,Dairy
+yogurt,13,PASS,"Nonfat Greek yogurt cup, clearly yogurt",Chobani® Vanilla Nonfat Greek Yogurt Cups,Dairy
+yogurt,14,PASS,"Nonfat Greek yogurt tub, clearly yogurt",Chobani® Vanilla Nonfat Greek Yogurt Tub,Dairy
+yogurt,15,PASS,"Low fat Greek yogurt cup, clearly yogurt",Chobani® Vanilla with Mixed Berry Low Fat Greek Yogurt Cups,Dairy
+yogurt,16,PASS,"Whole milk Greek yogurt tub, clearly yogurt",Chobani® Whole Milk Plain Greek Yogurt Tub,Dairy
+yogurt,17,PASS,"Greek yogurt cup, clearly yogurt",Chobani® Zero Sugar Vanilla Greek Yogurt Cup,Dairy
+yogurt,18,PASS,"Plain lactose free yogurt tub, clearly yogurt",Fage® BestSelf™ Plain Lactose Free Yogurt Tub,"Dairy,Natural & Organic"
+yogurt,19,PASS,"Plain Greek yogurt cup, clearly yogurt",Fage® Total Plain 0% Milkfat Greek Yogurt Cup,"Dairy,Natural & Organic"
+yogurt,20,PASS,"Low fat Greek yogurt cup, clearly yogurt",Fage® Total Plain 2% Milkfat Low Fat Greek Yogurt Cup,"Dairy,Natural & Organic"
+yogurt,21,PASS,"Low fat Greek yogurt tub, clearly yogurt",Fage® Total Plain Low Fat Greek Yogurt Tub,"Dairy,Natural & Organic"
+yogurt,22,PASS,"Nonfat Greek yogurt tub, clearly yogurt",Fage® Total Plain Nonfat Greek Yogurt Tub,Dairy
+yogurt,23,PASS,"Whole milk Greek yogurt tub, clearly yogurt",Fage® Total Plain Whole Milk Greek Yogurt Tub,"Dairy,Natural & Organic"
+yogurt,24,PASS,"Kids fat free yogurt tubes, clearly yogurt",Go GURT Berry and Fruit Punch Kids Fat Free Yogurt Tubes,Dairy
+yogurt,25,PASS,Description clearly states yogurt cup,Kroger® CARBmaster® Cinnamon Roll Lactose Free Lowfat Yogurt Cup,Dairy
+yogurt,26,PASS,Description clearly states yogurt cup,Kroger® CARBmaster® Orange Vanilla Lactose Free Lowfat Yogurt Cup,Dairy
+yogurt,27,PASS,Description clearly states yogurt cup,Kroger® CARBmaster® Strawberry Lactose Free Lowfat Yogurt Cup,Dairy
+yogurt,28,PASS,Description clearly states yogurt tub,Kroger® CARBmaster® Vanilla Lactose Free Lowfat Yogurt Tub,Dairy
+yogurt,29,PASS,Description clearly states yogurt tub,Kroger® Plain Low Fat Yogurt Tub,Dairy
+yogurt,30,PASS,Description clearly states yogurt cup,Kroger® Protein Strawberry Yogurt Cup,Dairy
+yogurt,31,PASS,Description clearly states yogurt tubes,Kroger® Strawberry & Vanilla Low Fat Yogurt Tubes,Dairy
+yogurt,32,PASS,Description clearly states yogurt tubes,Kroger® Strawberry Banana & Cherry Low Fat Yogurt Tubes,Dairy
+yogurt,33,PASS,Description clearly states yogurt tub,Kroger® Vanilla Blended Whole Milk Yogurt Tub,Dairy
+yogurt,34,PASS,Description clearly states yogurt tub,Kroger® Vanilla Low Fat Yogurt Tub,Dairy
+yogurt,35,PASS,Description clearly states Greek yogurt cups,Light + Fit Blueberry Fat Free Greek Yogurt Cups,Dairy
+yogurt,36,PASS,Description clearly states Greek yogurt cups,Light + Fit Cherry Fat Free Greek Yogurt Cups,Dairy
+yogurt,37,PASS,Description clearly states Greek yogurt cups with mix-ins,Light + Fit REMIX Strawberry Cheesecake Fat Free Greek Yogurt Cups with Mix-Ins,Dairy
+yogurt,38,PASS,Description clearly states yogurt tub,Light + Fit Vanilla Gluten-Free Fat Free Yogurt Tub,Dairy
+yogurt,39,PASS,Description clearly states yogurt tub,Mountain High Plain Low Fat Yogurt Tub,Dairy
+yogurt,40,PASS,Description clearly states yogurt tub,Mountain High Plain Yogurt Tub,Dairy
+yogurt,41,PASS,Description clearly states yogurt tub,Mountain High Vanilla Yogurt Tub,Dairy
+yogurt,42,PASS,Description clearly states yogurt cup,Noosa® Lemon Yogurt Cup,Dairy
+yogurt,43,PASS,Description clearly states yogurt cup,Noosa® Pumpkin Yogurt Cup,Dairy
+yogurt,44,PASS,Description clearly states yogurt cup,Oikos Pro 20g Protein Vanilla Yogurt-Cultured Ultra-Filtered Milk Product Cup​s,Dairy
+yogurt,45,PASS,Description clearly states Greek yogurt cup,Oikos Triple Zero Mixed Berry High Protein Nonfat Greek Yogurt Cup,Dairy
+yogurt,46,PASS,Description clearly states Greek yogurt cups,Oikos Triple Zero Mixed Berry High Protein Nonfat Greek Yogurt Cups,Dairy
+yogurt,47,PASS,Description clearly states Greek yogurt cup,Oikos Triple Zero Strawberry High Protein Nonfat Greek Yogurt Cup,Dairy
+yogurt,48,PASS,Description clearly states Greek yogurt cup,Oikos Triple Zero Vanilla High Protein Nonfat Greek Yogurt Cup,Dairy
+yogurt,49,PASS,Description clearly states Greek yogurt cups,Oikos Triple Zero Vanilla High Protein Nonfat Greek Yogurt Cups,Dairy
+yogurt,50,PASS,Greek yogurt explicitly stated,Oikos Triple Zero Vanilla High Protein Nonfat Greek Yogurt Tub,Dairy
+yogurt,51,PASS,French style whole milk yogurt,Oui by Yoplait Black Cherry Whole Milk French Style Yogurt Jar,Dairy
+yogurt,52,PASS,French style whole milk yogurt,Oui by Yoplait Mocha and Chocolate Whole Milk French Style Yogurt Jar,Dairy
+yogurt,53,PASS,French style whole milk yogurt,Oui by Yoplait Strawberry Whole Milk French Style Yogurt Jar,Dairy
+yogurt,54,PASS,French style whole milk yogurt,Oui by Yoplait Vanilla and Chocolate Whole Milk French Style Yogurt Jar,Dairy
+yogurt,55,PASS,Yogurt cultured dairy snack,Ratio Protein Blueberry Yogurt Cultured Dairy Snack,Dairy
+yogurt,56,PASS,Plain nonfat Greek yogurt,Simple Truth Organic® Plain Nonfat Greek Yogurt Tub,"Dairy,Natural & Organic"
+yogurt,57,PASS,Strawberry banana vanilla yogurt tubes,Simple Truth Organic® Reduced Fat Strawberry Banana and Vanilla Yogurt Tubes,"Dairy,Natural & Organic"
+yogurt,58,PASS,Vanilla nonfat Greek yogurt,Simple Truth Organic® Vanilla Nonfat Greek Yogurt Tub,"Dairy,Natural & Organic"
+yogurt,59,PASS,Reduced fat yogurt tubes,Stonyfield Organic Kids Cherry & Berry Reduced Fat Yogurt Tubes,"Natural & Organic,Dairy"
+yogurt,60,PASS,Reduced fat yogurt tubes,"Stonyfield Organic Kids Reduced Fat Yogurt Tubes, Strawberry","Natural & Organic,Dairy"
+yogurt,61,PASS,Plain whole milk probiotic yogurt,"Stonyfield Organic Plain Whole Milk Probiotic Yogurt, 32 oz Container","Natural & Organic,Dairy"
+yogurt,62,PASS,Vanilla whole milk probiotic yogurt,"Stonyfield Organic Vanilla Whole Milk Probiotic Yogurt, 32 oz Container","Natural & Organic,Dairy"
+yogurt,63,PASS,Greek style yogurt tub,The Greek Gods® Honey Greek Style Yogurt Tub,Dairy
+yogurt,64,PASS,Greek style yogurt tub,The Greek Gods® Honey Vanilla Greek Style Yogurt Tub,Dairy
+yogurt,65,PASS,Greek style yogurt tub,The Greek Gods® Strawberry with Honey Greek Style Yogurt Tub,Dairy
+yogurt,66,PASS,Low fat yogurt cup,Tillamook California Peach Low Fat Yogurt Cup,Dairy
+yogurt,67,PASS,Low fat yogurt cup,Tillamook Oregon Marionberry Low Fat Yogurt Cup,Dairy
+yogurt,68,PASS,Low fat yogurt cup,Tillamook Oregon Strawberry Low Fat Yogurt Cup,Dairy
+yogurt,69,PASS,Low fat yogurt cup,Tillamook Vanilla Bean Low Fat Yogurt Cup,Dairy
+yogurt,70,PASS,Low fat yogurt tub,Tillamook Vanilla Bean Low Fat Yogurt Tub,Dairy
+yogurt,71,PASS,Low fat yogurt cup,Tillamook Washington Raspberry Low Fat Yogurt Cup,Dairy
+yogurt,72,PASS,Low fat yogurt cup,YoCrunch Vanilla with Mini M&Ms Low Fat Yogurt Cups,Dairy
+yogurt,73,PASS,Lowfat lactose free yogurt cup,Yogurt® CARBmaster® Banana Cream Pie Lactose Free Lowfat Yogurt Cup,Dairy
+yogurt,74,PASS,Fat free yogurt cup,Yoplait Light Blueberry Patch Fat Free Yogurt Cup,Dairy
+yogurt,75,PASS,Fat free yogurt cup matches yogurt search term,Yoplait Light Cherry Fat Free Yogurt Cup,Dairy
+yogurt,76,PASS,Fat free yogurt cup matches yogurt search term,Yoplait Light Strawberry Fat Free Yogurt Cup,Dairy
+yogurt,77,PASS,Fat free yogurt cup matches yogurt search term,Yoplait Light Very Vanilla Fat Free Yogurt Cup,Dairy
+yogurt,78,PASS,Low fat yogurt cups match yogurt search term,Yoplait Original French Vanilla Low Fat Yogurt Cups,Dairy
+yogurt,79,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Cherry Orchard Yogurt Cup,Dairy
+yogurt,80,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat French Vanilla Yogurt Cup,Dairy
+yogurt,81,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Harvest Peach Yogurt Cup,Dairy
+yogurt,82,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Key Lime Pie Yogurt Cup,Dairy
+yogurt,83,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Mixed Berry Yogurt Cup,Dairy
+yogurt,84,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Mountain Blueberry Yogurt Cup,Dairy
+yogurt,85,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Red Raspberry Yogurt Cup,Dairy
+yogurt,86,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Strawberry Banana Yogurt Cup,Dairy
+yogurt,87,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Low Fat Strawberry Yogurt Cup,Dairy
+yogurt,88,PASS,Low fat yogurt cups match yogurt search term,Yoplait Original Low Fat Strawberry and Harvest Peach Yogurt Cups,Dairy
+yogurt,89,PASS,Low fat yogurt cups match yogurt search term,Yoplait Original Low Fat Strawberry and Strawberry Banana Yogurt Cups,Dairy
+yogurt,90,PASS,Low fat yogurt cups variety pack matches yogurt search term,Yoplait Original Low Fat Yogurt Cups Variety Pack,Dairy
+yogurt,91,PASS,Low fat yogurt cup matches yogurt search term,Yoplait Original Orange Creme Flavored Low Fat Yogurt Cup,Dairy
+yogurt,92,PASS,Low fat yogurt tub matches yogurt search term,Yoplait Original Strawberry Banana Flavored Smooth Style Low Fat Yogurt Tub,Dairy
+yogurt,93,PASS,Low fat yogurt tub matches yogurt search term,Yoplait Original Strawberry Flavored Smooth Style Low Fat Yogurt Tub,Dairy
+yogurt,94,PASS,Low fat yogurt cups variety pack matches yogurt search term,Yoplait The Super Mario Galaxy Movie Low Fat Yogurt Cups Variety Pack,Dairy
+yogurt,95,PASS,Low fat yogurt tub matches yogurt search term,Yoplait® Original Smooth Style Strawberry Banana Low Fat Yogurt Tub,Dairy
+yogurt,96,PASS,Low fat yogurt tub matches yogurt search term,Yoplait® Original Smooth Style Strawberry Low Fat Yogurt Tub,Dairy
+yogurt,97,PASS,Low fat yogurt tub matches yogurt search term,Yoplait® Original Smooth Style Vanilla Low Fat Yogurt Tub,Dairy
+yogurt,98,PASS,Low fat yogurt tub matches yogurt search term,Yoplait® Original Vanilla Flavored Smooth Style Low Fat Yogurt Tub,Dairy
+yogurt,99,PASS,Icelandic-style lowfat yogurt matches yogurt search term,"siggi’s Blueberry Icelandic-Style Lowfat Yogurt, 5.3 oz",Dairy
+yogurt,100,PASS,Description clearly states yogurt,"siggi’s Coconut Icelandic-Style Lowfat Yogurt, 5.3 oz",Dairy
+yogurt,101,PASS,Description clearly states yogurt,"siggi’s Icelandic Skyr Nonfat Yogurt, Mixed Berries & Acai",Dairy
+yogurt,102,PASS,Description clearly states yogurt,"siggi’s Raspberry Icelandic-Style Nonfat Yogurt, 5.3 oz",Dairy
+yogurt,103,PASS,Description clearly states yogurt,"siggi’s Vanilla Icelandic-Style Nonfat Yogurt, 5.3 oz",Dairy
+oat milk,0,PASS,Explicit oat milk product,BetterBody Foods Oatsome™ Organic Original Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,1,PASS,Explicit oat milk product,Califia Farms Dairy Free Organic Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,2,PASS,Explicit oat milk product,Califia Farms® Extra Creamy Dairy Free Oat Milk,"Natural & Organic,Dairy"
+oat milk,3,PASS,Explicit oat milk product,Califia Farms® Oat Barista Blend Oatmilk,"Natural & Organic,Dairy"
+oat milk,4,PASS,Explicit oat milk product,Chobani® Dairy Free Extra Creamy Oat Milk,"Natural & Organic,Dairy"
+oat milk,5,PASS,Explicit oat milk product,Chobani® Dairy Free Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,6,PASS,Vanilla flavor is acceptable for oat milk,Chobani® Dairy Free Vanilla Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,7,PASS,Explicit oat milk product,MALK Organic Dairy Free Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,8,PASS,Vanilla flavor is acceptable for oat milk,MALK Organic Dairy Free Vanilla Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,9,PASS,Explicit oat milk product,Minor Figures Barista Oat Milk,"Dairy,Natural & Organic"
+oat milk,10,PASS,Explicit oat milk product,Oatly Dairy Free Full Fat Oat Milk Half Gallon,"Dairy,Dairy,Natural & Organic"
+oat milk,11,PASS,Explicit oat milk product,Oatly Dairy Free Original Oatmilk,"Natural & Organic,Dairy"
+oat milk,12,PASS,Explicit oat milk product,Oatly Dairy Free Super Basic Oat Milk,"Natural & Organic,Dairy"
+oat milk,13,PASS,Explicit oat milk product,Oatly Dairy Free Unsweetened Oatmilk,"Dairy,Natural & Organic"
+oat milk,14,PASS,Explicit oat milk product,Oatly Dairy-Free Original Barista Edition Oatmilk,"Natural & Organic,Dairy"
+oat milk,15,PASS,Explicit oat milk product,Oatly Dairy-Free Shelf-Stable Barista Edition Original Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,16,PASS,Explicit oat milk product,Oatly Dairy-Free Shelf-Stable Original Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,17,PASS,Explicit oat milk product,Planet Oat Dairy Free Barista Oat Milk 52 fl oz,"Natural & Organic,Dairy"
+oat milk,18,PASS,Explicit oat milk product,Planet Oat Dairy Free Original Oat Milk 52 fl oz,"Natural & Organic,Dairy"
+oat milk,19,PASS,Explicit oat milk product,Planet Oat Dairy Free Shelf Stable Original Oat Milk Quart,"Natural & Organic,Dairy,Dairy"
+oat milk,20,PASS,Vanilla flavor is acceptable for oat milk,Planet Oat Dairy Free Vanilla Oat Milk 52 fl oz,"Natural & Organic,Dairy,Dairy"
+oat milk,21,PASS,Explicit oat milk product,"Planet Oat Unsweetened Extra Creamy Oatmilk, 52 oz","Natural & Organic,Dairy,Dairy"
+oat milk,22,PASS,Chocolate flavor is acceptable for oat milk,Planet Oat® Dairy Free Dark Chocolate Oat Milk,"Natural & Organic,Dairy,Dairy"
+oat milk,23,PASS,Explicit oat milk product,Planet Oat® Dairy Free Extra Creamy Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,24,PASS,Explicit oat milk product,Planet Oat® Dairy Free Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,25,PASS,Description clearly states oat milk,Planet Oat® Dairy Free Unsweeted Original Oat Milk,"Natural & Organic,Dairy"
+oat milk,26,PASS,Description clearly states oatmilk,Planet Oat® Dairy-Free Extra Creamy Shelf-Stable Original Oatmilk,"Natural & Organic,Dairy,Dairy"
+oat milk,27,PASS,Description clearly states oatmilk,Planet Oat® Unsweetened Original Oatmilk,Dairy
+oat milk,28,PASS,Description clearly states oat milk,Simple Truth™ Dairy Free Shelf Stable Original Oat Milk Quart,"Dairy,Dairy,Natural & Organic"
+fish,0,PASS,Catfish fillets are clearly fish.,Catfish Fillets,Meat & Seafood
+fish,1,PASS,Fresh catfish fillet is clearly fish.,Fresh Catfish Fillet (never frozen; sustainably sourced),Meat & Seafood
+fish,2,PASS,Catfish nuggets are fish pieces.,Fresh Catfish Nuggets (never frozen; sustainably sourced),Meat & Seafood
+fish,3,PASS,Whole fresh catfish is clearly fish.,Fresh Catfish Whole (never frozen; sustainably sourced),Meat & Seafood
+fish,4,PASS,Rockfish fillet is clearly fish.,Fresh Rockfish Fillet Pacific Caught (sustainably sourced),Meat & Seafood
+fish,5,PASS,Breaded fish sandwich cut from whole fish fillets.,"Gorton’s Breaded Fish Sandwich Cut from Whole Fish Fillets (Not Minced), Wild Caught, Frozen","Frozen,Meat & Seafood"
+fish,6,PASS,Breaded fish fillets are fish.,"Gorton’s Crunchy Breaded Fish 100% Whole Fish Fillets (Not Minced), Crunchy Panko Breadcrumbs","Frozen,Meat & Seafood"
+fish,7,PASS,Breaded fish portions from pollock are fish.,"Gorton’s Crunchy Breaded Fish Portions, Pollock, Crunchy Panko Breadcrumbs, Frozen","Frozen,Meat & Seafood"
+fish,8,PASS,Breaded fish sticks made from fish.,"Gorton’s Crunchy Breaded Fish Sticks (Not Minced), Panko Breadcrumbs, Frozen","Frozen,Meat & Seafood"
+fish,9,PASS,Fish sticks cut from real fish.,"Gorton’s Crunchy Breaded Fish Sticks Cut from Real Fish, Crunchy Panko Breadcrumbs, Frozen","Frozen,Meat & Seafood"
+fish,10,PASS,Parmesan crusted whole fish fillets.,"Gorton’s Parmesan Crusted Fish 100% Whole Fish Fillets (Not Minced), Wild Caught, Frozen","Frozen,Meat & Seafood"
+fish,11,PASS,Farm raised catfish fillets are fish.,Kroger® Farm Raised Catfish Fillets,Meat & Seafood
+fish,12,PASS,Frozen farm raised catfish fillets are fish.,Kroger® Farm Raised Catfish Fillets Frozen BIG DEAL!,Meat & Seafood
+fish,13,PASS,Breaded fish sticks are fish.,Van de Kamp's® Crunchy Breaded Fish Sticks,"Frozen,Meat & Seafood"
+fish,14,PASS,Breaded fish for sandwiches is fish.,Van de Kamp's® Crunchy Breaded Fish for Sandwiches,"Frozen,Meat & Seafood"
+fish,15,PASS,Breaded jumbo fish sticks are fish.,Van de Kamp's® Crunchy Breaded Jumbo Fish Sticks,"Frozen,Meat & Seafood"
+fish,16,PASS,Fish fri is a fish product.,Zatarain's Crispy Southern Fish Fri,Meat & Seafood
+bread,0,PASS,Clearly labeled bread,Alfaro's Artesano Bread,Bakery
+bread,1,PASS,Clearly labeled bread,Alfaro's Artesano Golden Wheat Bakery Bread,Bakery
+bread,2,PASS,Clearly labeled bread,Alfaro's Artesano Hawaiian Bread,Bakery
+bread,3,PASS,Clearly labeled bread,Aunt Millie's Country Buttermilk Bread,Bakery
+bread,4,PASS,Clearly labeled bread,Bakery Fresh Crisp & Soft French Bread,"Bakery,Bakery"
+bread,5,PASS,Clearly labeled bread,Bimbo Large White Bread,Bakery
+bread,6,PASS,Clearly labeled bread,Bimbo Soft White Bread,Bakery
+bread,7,PASS,Clearly labeled bread,California Goldminer® Sourdough Square Bread,Bakery
+bread,8,PASS,Clearly labeled bread,"Dave's Killer Bread 21 Whole Grains and Seeds Thin-Sliced Organic Bread, 20.5 oz","Natural & Organic,Bakery"
+bread,9,PASS,Clearly labeled bread,Dave's Killer Bread Organic 21 Whole Grains and Seeds Bread,"Natural & Organic,Bakery"
+bread,10,PASS,Clearly labeled bread,Dave's Killer Bread Organic Thin Sliced Good Seed Whole Grain Bread,"Natural & Organic,Bakery"
+bread,11,PASS,Clearly labeled bread,Dave's Killer Bread Organic Thin Sliced Sprouted and Whole Grain Bread,"Natural & Organic,Bakery"
+bread,12,PASS,Clearly labeled bread,Dave's Killer Bread Organic Thin Sliced White Bread Done Right Artisan Style Bread,"Bakery,Natural & Organic"
+bread,13,PASS,Clearly labeled bread,"Dave's Killer Bread White Bread Done Right, Artisan-Style Organic White Bread, 24 oz Loaf","Bakery,Natural & Organic"
+bread,14,PASS,Clearly labeled bread,Dave's Killer Bread® 100% Whole Wheat Thin-Sliced Organic Bread,"Bakery,Natural & Organic"
+bread,15,PASS,Clearly labeled bread,Franz® Mckenzie Buttermilk Bread,Bakery
+bread,16,PASS,Clearly labeled bread,Franz® San Juan Island Multigrain Bread,Bakery
+bread,17,PASS,Clearly labeled bread,Franz® White Bread,Bakery
+bread,18,PASS,Clearly labeled bread,Grandma Sycamore's White Bread,Bakery
+bread,19,PASS,Clearly labeled bread,Kroger® 100% Whole Wheat Bread,Bakery
+bread,20,PASS,Clearly labeled bread,Kroger® Classic White Bread,Bakery
+bread,21,PASS,Clearly labeled bread,Kroger® Honey Wheat Bread,Bakery
+bread,22,PASS,Clearly labeled bread,Kroger® Soft Wheat Bread,Bakery
+bread,23,PASS,Clearly labeled bread,Kroger® Soft Wheat Sandwich Bread,Bakery
+bread,24,PASS,Clearly labeled bread,Kroger® White Bread,Bakery
+bread,25,PASS,Clear white sandwich bread,Kroger® White Sandwich Bread,Bakery
+bread,26,PASS,Large bread clearly labeled,Mrs Baird's Large Bread,Bakery
+bread,27,PASS,Organic wheat bread,Naked Bread Organic Wheat Bread,"Bakery,Natural & Organic"
+bread,28,PASS,Organic white bread,Naked Bread Organic White Bread,"Bakery,Natural & Organic"
+bread,29,PASS,Organic whole wheat bread,Naked Bread® Organic 100% Whole Wheat Bread,"Bakery,Natural & Organic"
+bread,30,PASS,Whole wheat bread,Nature's Own 100% Whole Wheat Bread,Bakery
+bread,31,PASS,Butterbread bread,Nature's Own Butterbread Bread,Bakery
+bread,32,PASS,Honey wheat bread,Nature's Own Honey Wheat Bread,Bakery
+bread,33,PASS,Wheat plus protein bread,"Nature's Own Life Wheat Plus Protein Bread, 22g Protein per 2 slices, Keto Friendly, 16 oz Loaf",Bakery
+bread,34,PASS,Non GMO white bread,Nature's Own Perfectly Crafted Non GMO White Bread,Bakery
+bread,35,PASS,Sweet Hawaiian bread,Nature's Own Sweet Hawaiian Bread,Bakery
+bread,36,PASS,White wheat bread,Nature's Own WhiteWheat Bread,Bakery
+bread,37,PASS,Country style buttermilk bread,Oroweat Country Style Buttermilk Bread,Bakery
+bread,38,PASS,Oatnut whole grain bread,Oroweat Oatnut Whole Grain Bread,Bakery
+bread,39,PASS,Organic rustic white bread,Oroweat Organic Non GMO Rustic White Bread,"Bakery,Natural & Organic"
+bread,40,PASS,Whole grain bread,Oroweat Whole Grain Bread,Bakery
+bread,41,PASS,Whole wheat bread,Oroweat Whole Wheat Bread,Bakery
+bread,42,PASS,Hearty white bread,Pepperidge Farm Farmhouse Hearty White Bread,Bakery
+bread,43,PASS,Sourdough bread,"Pepperidge Farm Farmhouse Sourdough Bread, 24 Oz Loaf",Bakery
+bread,44,PASS,100% whole wheat bread,Private Selection® 100% Whole Wheat Bread Wide Pan,Bakery
+bread,45,PASS,Honey oat bread,Private Selection® Honey Oat Bread Wide Pan,Bakery
+bread,46,PASS,Sourdough bread,Private Selection® Sourdough Bread Wide Pan,Bakery
+bread,47,PASS,Sugar free whole wheat bread,Private Selection® Sugar Free 100% Whole Wheat Bread Wide Pan,Bakery
+bread,48,PASS,Rustic white bread,Private Selection® White Bread Rustic Wide Pan,Bakery
+bread,49,PASS,Wide pan sourdough bread,Private Selection® Wide Pan Sourdough Bread,Bakery
+bread,50,PASS,Explicitly sourdough bread,San Luis Sourdough Plain Sourdough Bread,Bakery
+bread,51,PASS,Clearly labeled bread,Sara Lee Artesano Golden Wheat Bread,Bakery
+bread,52,PASS,Clearly labeled bread,Sara Lee Artesano Original Bread,Bakery
+bread,53,PASS,Clearly labeled bread,Sara Lee Butter Bread,Bakery
+bread,54,PASS,Clearly labeled bread,Sara Lee Classic Bread,Bakery
+bread,55,PASS,Clearly labeled bread,Sara Lee Honey Wheat Bread,Bakery
+bread,56,PASS,Clearly labeled bread,Sara Lee White made with Whole Grain Bread,Bakery
+bread,57,PASS,Clearly labeled bread,Simple Truth Organic® White Bread,"Bakery,Natural & Organic"
+bread,58,PASS,Clearly labeled bread,Smart Way™ White Bread,Bakery
+bread,59,PASS,Clearly labeled bread,Sunbeam Giant White Bread,Bakery
+bread,60,PASS,Explicitly artisan style sourdough bread,The Rustik Oven Artisan Style Sourdough Bread,Bakery
+bread,61,PASS,Clearly labeled whole wheat bread,Western Hearth® 100% Whole Wheat Bread,Bakery
+bread,62,PASS,Clearly labeled grain bread,Western Hearth® 12 Grain Bread,Bakery
+bread,63,PASS,Clearly labeled artisan white bread,Western Hearth® Artisan White Bread,Bakery
+bread,64,PASS,Clearly labeled buttermilk bread,Western Hearth® Buttermilk Bread,Bakery
+bread,65,PASS,Clearly labeled white bread,Western Hearth® Old Fashioned White Bread,Bakery
+bread,66,PASS,Clearly labeled sweet Hawaiian bread,Western Hearth® Sweet Hawaiian Bread,Bakery
+bread,67,PASS,Clearly labeled white bread,Wonder Classic White Bread,Bakery
+soda,0,PASS,Description explicitly states soda.,7UP Lemon Lime Caffeine-Free Soda Cans,"Beverages,Beverages"
+soda,1,PASS,Description explicitly states soda.,7UP Tropical Caffeine Free Lemon Lime Mango Peach Soda Cans,"Beverages,Beverages,Beverages"
+soda,2,PASS,Description explicitly states soda.,A&W® Root Beer Soda Cans,"Beverages,Beverages"
+soda,3,PASS,Description explicitly states soda.,A&W® Root Beer Zero Sugar Soda Bottle,Beverages
+soda,4,PASS,Description explicitly states soda.,A&W® Root Beer Zero Sugar Soda Bottles,Beverages
+soda,5,PASS,Description explicitly states soda.,A&W® Root Beer Zero Sugar Soda Cans,Beverages
+soda,6,PASS,Description explicitly states soda.,Big K® Cherry Cola Soda Cans,Beverages
+soda,7,PASS,Description explicitly states soda.,Big K® Cola Soda Cans,Beverages
+soda,8,PASS,Description explicitly states soda.,Big K® Dr. K Soda Cans,Beverages
+soda,9,PASS,Description explicitly states soda.,Big K® Lemon Lime Caffeine Free Soda Bottle,"Beverages,Beverages"
+soda,10,PASS,Description explicitly states soda.,Big K® Lemon Lime Caffeine Free Soda Cans,"Beverages,Beverages"
+soda,11,PASS,Description explicitly states soda.,Big K® Orange Caffeine Free Soda Cans,"Beverages,Beverages"
+soda,12,PASS,Description explicitly states soda.,Cactus Cooler Orange Pineapple Soda Cans,Beverages
+soda,13,PASS,Description explicitly states soda.,Canada Dry Ginger Ale Caffeine Free Soda Cans,"Beverages,Beverages"
+soda,14,PASS,Description explicitly states soda.,Coca-Cola Classic Soda Bottle,Beverages
+soda,15,PASS,Description explicitly states soda.,Coca-Cola&reg; Zero Sugar Orange Cream Soda Cans,"Beverages,Beverages"
+soda,16,PASS,Description explicitly states soda.,Coca-Cola® Cherry Soda Cans,Beverages
+soda,17,PASS,Description explicitly states soda.,Coca-Cola® Cherry Zero Sugar Soda Cans,Beverages
+soda,18,PASS,Description explicitly states soda.,Coca-Cola® Soda Bottle,"Beverages,Beverages"
+soda,19,PASS,Description explicitly states soda.,Coca-Cola® Soda Bottles,Beverages
+soda,20,PASS,Description explicitly states soda.,Coca-Cola® Soda Cans,Beverages
+soda,21,PASS,Description explicitly states soda.,Coca-Cola® Soda Mini Cans,Beverages
+soda,22,PASS,Description explicitly states soda.,Coca-Cola® Zero Sugar Soda Cans,Beverages
+soda,23,PASS,Description explicitly states soda.,Diet Coke® Soda Bottles,"Beverages,Beverages"
+soda,24,PASS,Description explicitly states soda.,Diet Coke® Soda Cans,"Beverages,Beverages"
+soda,25,PASS,Diet Dr Pepper is a soda.,Diet Dr Pepper Soda Cans,"Beverages,Beverages"
+soda,26,PASS,Diet Mountain Dew is a soda.,Diet Mountain Dew® Soda Cans,"Beverages,Beverages"
+soda,27,PASS,Dr Pepper Blackberry is a soda.,Dr Pepper Blackberry Soda Cans,"Beverages,Beverages"
+soda,28,PASS,Dr Pepper Cherry is a soda.,Dr Pepper Cherry Soda Cans,"Beverages,Beverages"
+soda,29,PASS,Dr Pepper Soda Bottle is soda.,Dr Pepper Soda Bottle,Beverages
+soda,30,PASS,Dr Pepper Soda Bottles are soda.,Dr Pepper Soda Bottles,Beverages
+soda,31,PASS,Dr Pepper Soda Cans are soda.,Dr Pepper Soda Cans,Beverages
+soda,32,PASS,Dr Pepper Soda Cans are soda.,Dr Pepper Soda Cans,"Beverages,Beverages"
+soda,33,PASS,Dr Pepper Zero Sugar is soda.,Dr Pepper Zero Sugar Soda Cans,Beverages
+soda,34,PASS,Dr Pepper Soda Cans are soda.,Dr Pepper® Soda Cans,Beverages
+soda,35,PASS,Fanta Orange is a soda.,Fanta® Orange Soda Cans,Beverages
+soda,36,PASS,Fanta Pineapple is a soda.,Fanta® Pineapple Soda Cans,"Beverages,Beverages"
+soda,37,PASS,Fanta Strawberry is a soda.,Fanta® Strawberry Soda Cans,"Beverages,Beverages"
+soda,38,PASS,Kroger Big K Zero Sugar Cola is soda.,Kroger® Big K® Zero Sugar Cola Soda Bottle,"Beverages,Beverages"
+soda,39,PASS,Mountain Dew Baja Blast is soda.,Mountain Dew® Baja Blast Soda Cans,"Beverages,Beverages"
+soda,40,PASS,Mountain Dew Baja Blast Zero Sugar is soda.,Mountain Dew® Baja Blast Zero Sugar Soda Cans,"Beverages,Beverages,Beverages"
+soda,41,PASS,Mountain Dew Baja Cabo Citrus Zero Sugar is soda.,Mountain Dew® Baja Cabo Citrus Zero Sugar Tropical Punch Soda Cans,Beverages
+soda,42,PASS,Mountain Dew Soda Cans are soda.,Mountain Dew® Soda Cans,Beverages
+soda,43,PASS,Mountain Dew Soda Pop Baja Cabo Citrus is soda.,Mountain Dew® Soda Pop Baja Cabo Citrus Tropical Punch Soda Cans,Beverages
+soda,44,PASS,Mr. Pibb Zero Sugar Cherry is soda.,Mr. Pibb® Zero Sugar Cherry Soda Cans,"Beverages,Beverages"
+soda,45,PASS,Pepsi Cola Soda Pop is soda.,Pepsi Cola Soda Pop,Beverages
+soda,46,PASS,Pepsi Cola Soda Pop Mini Cans are soda.,Pepsi Cola Soda Pop Mini Cans,Beverages
+soda,47,PASS,Pepsi Cola Soda Bottles are soda.,Pepsi Cola® Soda Bottles,Beverages
+soda,48,PASS,Pepsi Cola Wild Cherry is soda.,Pepsi Cola® Wild Cherry Soda Cans,Beverages
+soda,49,PASS,Pepsi Diet Soda Cola is soda.,"Pepsi Diet Soda Cola 12 Fl Oz, 24 Count","Beverages,Beverages"
+soda,50,PASS,Pepsi is a well-known soda brand,"Pepsi Soda Cola 12 Fl Oz, 24 Count",Beverages
+soda,51,PASS,Sprite is a lemon-lime soda,Sprite® Lemon Lime Caffeine Free Soda Bottle,"Beverages,Beverages"
+soda,52,PASS,Sprite soda bottles match search term,Sprite® Lemon Lime Caffeine Free Soda Bottles,"Beverages,Beverages"
+soda,53,PASS,Sprite soda cans match search term,Sprite® Lemon Lime Caffeine Free Soda Cans,"Beverages,Beverages"
+soda,54,PASS,Vanilla flavored Sprite soda is still soda,Sprite® Vanilla Frost Caffeine Free Soda Cans,Beverages
+soda,55,PASS,Squirt grapefruit soda matches search term,Squirt Grapefruit Soda Bottle,"Beverages,Beverages"
+soda,56,PASS,Squirt citrus soda matches search term,Squirt® Citrus Soda Bottles,"Beverages,Beverages"
+soda,57,PASS,Squirt grapefruit soda cans match search term,Squirt® Grapefruit Soda Cans,"Beverages,Beverages"
+soda,58,PASS,Sunkist orange soda matches search term,Sunkist® Orange Zero Sugar Soda Cans,Beverages
+cheese,0,PASS,Queso fresco is a type of cheese,Cacique® Ranchero® Part Skim Milk Queso Fresco Cheese,"International,Dairy,International"
+cheese,1,PASS,American cheese slices are cheese,Horizon Organic American Cheese Slices,"Natural & Organic,Dairy"
+cheese,2,PASS,Mozzarella string cheese is cheese,Horizon Organic Mozzarella String Cheese,"Natural & Organic,Dairy"
+cheese,3,PASS,Four cheese shredded blend is cheese,Kraft Mexican Style Four Cheese Finely Shredded Natural Cheese,Dairy
+cheese,4,PASS,Sharp cheddar shredded is cheese,Kraft Sharp Cheddar Finely Shredded Natural Cheese,Dairy
+cheese,5,PASS,Sliced cheese singles are cheese,Kraft Singles American Sliced Cheese,Dairy
+cheese,6,PASS,Triple cheddar shredded is cheese,Kraft Triple Cheddar Finely Shredded Natural Cheese Bag,Dairy
+cheese,7,PASS,Cheddar Jack shredded is cheese,Kroger® Cheddar Jack Shredded Cheese,Dairy
+cheese,8,PASS,Colby Jack block is cheese,Kroger® Colby Jack Block Cheese,Dairy
+cheese,9,PASS,Colby Jack block is cheese,Kroger® Colby Jack Block Cheese BIG DEAL!,Dairy
+cheese,10,PASS,Colby Jack shredded is cheese,Kroger® Colby Jack Shredded Cheese,Dairy
+cheese,11,PASS,Colby Jack sliced is cheese,Kroger® Colby Jack Sliced Cheese,Dairy
+cheese,12,PASS,Extra sharp cheddar sliced is cheese,Kroger® Extra Sharp Cheddar Sliced Cheese,Dairy
+cheese,13,PASS,Havarti sliced is cheese,Kroger® Havarti Sliced Cheese,Dairy
+cheese,14,PASS,Italian style blend shredded is cheese,Kroger® Italian Style Blend Shredded Cheese,Dairy
+cheese,15,PASS,Medium cheddar block is cheese,Kroger® Medium Cheddar Block Cheese,Dairy
+cheese,16,PASS,Medium cheddar shredded is cheese,Kroger® Medium Cheddar Shredded Cheese,Dairy
+cheese,17,PASS,Medium cheddar sliced is cheese,Kroger® Medium Cheddar Sliced Cheese,Dairy
+cheese,18,PASS,Mexican style blend shredded is cheese,Kroger® Mexican Style Blend Shredded Cheese,Dairy
+cheese,19,PASS,Mexican style blend shredded is cheese,Kroger® Mexican Style Blend Shredded Cheese Family Size,Dairy
+cheese,20,PASS,Mild cheddar block is cheese,Kroger® Mild Cheddar Cheese Block,Dairy
+cheese,21,PASS,Mild cheddar shredded is cheese,Kroger® Mild Cheddar Shredded Cheese,Dairy
+cheese,22,PASS,Monterey Jack block is cheese,Kroger® Monterey Jack Block Cheese,Dairy
+cheese,23,PASS,Monterey Jack shredded is cheese,Kroger® Monterey Jack Shredded Cheese,Dairy
+cheese,24,PASS,Mozzarella block is cheese,Kroger® Mozzarella Block Cheese,Dairy
+cheese,25,PASS,Mozzarella shredded cheese is cheese,Kroger® Mozzarella Shredded Cheese,Dairy
+cheese,26,PASS,Mozzarella shredded cheese family size is cheese,Kroger® Mozzarella Shredded Cheese Family Size,Dairy
+cheese,27,PASS,Mozzarella string cheese is cheese,Kroger® Mozzarella String Cheese,Dairy
+cheese,28,PASS,Parmesan shredded cheese is cheese,Kroger® Parmesan Shredded Cheese,Dairy
+cheese,29,PASS,Pepper Jack sliced cheese is cheese,Kroger® Pepper Jack Sliced Cheese,Dairy
+cheese,30,PASS,Reduced fat Mexican style shredded cheese is cheese,Kroger® Reduced Fat Mexican Style Shredded Cheese,Dairy
+cheese,31,PASS,Sharp cheddar block cheese is cheese,Kroger® Sharp Cheddar Block Cheese,Dairy
+cheese,32,PASS,Sharp cheddar shredded cheese is cheese,Kroger® Sharp Cheddar Shredded Cheese,Dairy
+cheese,33,PASS,Singles American sliced cheese is cheese,Kroger® Singles American Sliced Cheese,Dairy
+cheese,34,PASS,Smoke flavored provolone sliced cheese is cheese,Kroger® Smoke Flavored Provolone Sliced Cheese,Dairy
+cheese,35,PASS,Swiss sliced cheese is cheese,Kroger® Swiss Sliced Cheese,Dairy
+cheese,36,PASS,Whole milk mozzarella shredded cheese is cheese,Kroger® Whole Milk Mozzarella Shredded Cheese,Dairy
+cheese,37,PASS,Colby-Jack sliced cheese is cheese,Sargento® Colby-Jack Sliced Cheese,Dairy
+cheese,38,PASS,Medium cheddar sliced cheese is cheese,Sargento® Medium Cheddar Sliced Cheese,Dairy
+cheese,39,PASS,4 State Cheddar shredded cheese is cheese,Sargento® Off the Block 4 State Cheddar® Shredded Cheese,Dairy
+cheese,40,PASS,4 Cheese Mexican blend natural cheese shreds is cheese,Sargento® Off the Block Fine Cut 4 Cheese Mexican Blend Natural Cheese Shreds,Dairy
+cheese,41,PASS,Cheddar-Jack natural cheese shreds is cheese,Sargento® Off the Block Fine Cut Cheddar-Jack Natural Cheese Shreds,Dairy
+cheese,42,PASS,Pepper Jack sliced cheese is cheese,Sargento® Pepper Jack Sliced Cheese,Dairy
+cheese,43,PASS,Provolone sliced cheese is cheese,Sargento® Provolone Sliced Cheese,Dairy
+cheese,44,PASS,Sharp cheddar sliced cheese is cheese,Sargento® Sharp Cheddar Sliced Cheese,Dairy
+cheese,45,PASS,Whole milk mozzarella shredded cheese is cheese,Sargento® Whole Milk Mozzarella Shredded Cheese,Dairy
+cheese,46,PASS,Colby Jack block cheese is cheese,Simple Truth Organic® Colby Jack Block Cheese,"Natural & Organic,Dairy"
+cheese,47,PASS,Colby Jack cheese slices is cheese,Simple Truth Organic® Colby Jack Cheese Slices,"Natural & Organic,Dairy"
+cheese,48,PASS,Grated Parmesan cheese is cheese,Simple Truth Organic® Grated Parmesan Cheese,"Natural & Organic,Dairy"
+cheese,49,PASS,Low moisture part skim mozzarella shredded cheese is cheese,Simple Truth Organic® Low Moisture Part Skim Mozzarella Shredded Cheese,"Natural & Organic,Dairy"
+cheese,50,PASS,Mexican Style Blend Shredded Cheese is a cheese product,Simple Truth Organic® Mexican Style Blend Shredded Cheese,"Dairy,Natural & Organic"
+cheese,51,PASS,Sharp White Cheddar Block Cheese is cheese,Simple Truth Organic® Sharp White Cheddar Block Cheese,"Natural & Organic,Dairy"
+cheese,52,PASS,Sharp White Cheddar Shredded Cheese is cheese,Simple Truth Organic® Sharp White Cheddar Shredded Cheese,"Dairy,Natural & Organic"
+cheese,53,PASS,Sharp White Cheddar Sliced Cheese is cheese,Simple Truth Organic® Sharp White Cheddar Sliced Cheese,"Natural & Organic,Dairy"
+cheese,54,PASS,Aged Medium Cheddar Block Cheese is cheese,Tillamook® Aged Medium Cheddar Block Cheese,Dairy
+cheese,55,PASS,Aged Sharp Cheddar Block Cheese is cheese,Tillamook® Aged Sharp Cheddar Block Cheese,Dairy
+cheese,56,PASS,Medium Cheddar Block Cheese is cheese,Tillamook® Medium Cheddar Block Cheese,Dairy
+cheese,57,PASS,Mexican 4 Cheese Shredded Cheese is cheese,Tillamook® Mexican 4 Cheese Shredded Cheese Farmstyle,Dairy
+cheese,58,PASS,Mozzarella Shredded Cheese is cheese,Tillamook® Mozzarella Shredded Cheese Farmstyle,Dairy
+cheese,59,PASS,Triple Cheddar Shredded Cheese is cheese,Tillamook® Triple Cheddar Shredded Cheese Farmstyle,"Dairy,Deli"
+cheese,60,PASS,Velveeta Original Flavored Sliced Cheese is cheese,Velveeta Original Flavored Sliced Cheese,Dairy
+oranges,0,PASS,Cara Cara Navel Oranges are a type of orange,Cara Cara Navel Oranges,Produce
+oranges,1,PASS,Mandarin Clementine Oranges are a type of orange,Cuties® Organic Seedless Mandarin Clementine Oranges in 2lb Bag,Produce
+oranges,2,PASS,Mandarin Clementine Oranges are a type of orange,Cuties® Seedless California Mandarin Clementine Oranges in 3lb Bag,"Produce,Produce"
+oranges,3,PASS,Navel Oranges are a type of orange,Fresh Large Organic Navel Oranges - Each,"Natural & Organic,Produce"
+oranges,4,PASS,Navel Oranges are a type of orange,Fresh Medium Organic Navel Oranges - Each,"Natural & Organic,Produce"
+oranges,5,PASS,Navel Oranges are a type of orange,Fresh Navel Oranges - Each,Produce
+oranges,6,PASS,Mandarin Clementine Oranges are a type of orange,Kroger® Adorbs™ Fresh Seedless Mandarin Clementine Oranges Bag,"Produce,Produce,Produce"
+oranges,7,PASS,Navel Oranges are a type of orange,Kroger® Fresh Navel Oranges Bag,Produce
+oranges,8,PASS,Navel Oranges are a type of orange,Kroger® Fresh Navel Oranges Bag,"Produce,Produce"
+oranges,9,PASS,Oranges bag is a direct match,Kroger® Oranges Bag,Produce
+oranges,10,PASS,Valencia Oranges are a type of orange,Large Valencia Oranges,Produce
+oranges,11,PASS,Navel Oranges are a type of orange,Medium Fresh Navel Oranges- Each,"Produce,Produce"
+oranges,12,PASS,Valencia Oranges are a type of orange,Medium Valencia Oranges,Produce
+oranges,13,PASS,Red Navel Oranges are a type of orange,Organic Red Navel Oranges,"Natural & Organic,Produce"
+oranges,14,PASS,Blood Oranges are a type of orange,Private Selection® Fresh Blood Oranges Bag,Produce
+oranges,15,PASS,Navel Oranges Cara Cara are a type of orange,Private Selection® Fresh Navel Oranges Cara Cara Bag,Produce
+oranges,16,PASS,Navel Oranges Cara Cara are a type of orange,Private Selection® Fresh Navel Oranges Cara Cara Bag,"Produce,Produce"
+oranges,17,PASS,Navel Oranges Heirloom are a type of orange,Private Selection® Fresh Navel Oranges Heirloom Bag,Produce
+oranges,18,FAIL,Raspberry Oranges likely a flavored or hybrid product,Private Selection® Raspberry Oranges,Produce
+oranges,19,PASS,Sugar Gem Extra Sweet Navel Oranges are a type of orange,Private Selection® Sugar Gem Extra Sweet Navel Oranges,Produce
+oranges,20,PASS,Red Navel Oranges are a type of orange,Red Navel Oranges,Produce
+oranges,21,PASS,Mandarin Clementine Oranges are a type of orange,Seedless California Cuties® Mandarin Clementine Oranges in 5lb Bag,"Produce,Produce,Produce"
+oranges,22,PASS,Mandarin Clementine Oranges are a type of orange,Seedless Mandarin Clementine Oranges,"Produce,Produce"
+oranges,23,PASS,Navel Oranges are a type of orange,Simple Truth Organic® Fresh Navel Oranges Bag,"Produce,Natural & Organic"
+oranges,24,PASS,Seedless Mandarin Oranges are a type of orange,Simple Truth Organic® Fresh Seedless Mandarin Oranges Bag,"Natural & Organic,Produce"
