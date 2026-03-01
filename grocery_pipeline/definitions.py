@@ -16,11 +16,12 @@ from grocery_pipeline.assets.silver.silver_exploration_kroger_products import (
 from grocery_pipeline.jobs.jobs import (
     bronze_kroger_products_daily_job,
     bronze_scraper_products_daily_job,
+    per_retailer_jobs,
 )
 from grocery_pipeline.schedules.schedules import (
     bronze_kroger_products_daily_schedule,
-    bronze_scraper_products_daily_schedule,
 )
+from grocery_pipeline.sensors.scraper_sensors import scraper_sensors
 from grocery_pipeline.resources.bigquery import bigquery_client
 
 
@@ -33,10 +34,13 @@ defs = Definitions(
     jobs=[
         bronze_kroger_products_daily_job,
         bronze_scraper_products_daily_job,
+        *per_retailer_jobs.values(),
     ],
     schedules=[
         bronze_kroger_products_daily_schedule,
-        bronze_scraper_products_daily_schedule,
+    ],
+    sensors=[
+        *scraper_sensors,
     ],
     resources={
         "bigquery_client": bigquery_client,

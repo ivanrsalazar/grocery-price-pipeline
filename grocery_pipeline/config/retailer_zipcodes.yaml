@@ -1,0 +1,13 @@
+retailers:
+  heb:
+    - "78704"
+  meijer:
+    - "49503"
+  walmart:
+    - "33019"
+  vons:
+    - "92123"
+  wd:
+    - "33009"
+  sprouts:
+    - "92123"
