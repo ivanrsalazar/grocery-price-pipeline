@@ -196,6 +196,12 @@ rules:
     # strategy: require_any_of
     # require_any_of: ["choice", "select", "prime", "angus"]
     strategy: all_tokens
+    none_of:
+      - pork
+      - chicken
+      - turkey
+      - lamb
+      - deer
 
   # -------------------------
   # Beverages
