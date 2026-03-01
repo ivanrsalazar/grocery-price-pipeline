@@ -1,4 +1,4 @@
-from dagster import define_asset_job, AssetSelection
+from dagster import define_asset_job, AssetSelection, multiprocess_executor
 
 # Job that materializes the daily Kroger bronze asset
 bronze_kroger_products_daily_job = define_asset_job(
@@ -20,4 +20,6 @@ bronze_scraper_products_daily_job = define_asset_job(
         "bronze_wd_products_daily",
         "bronze_sprouts_products_daily",
     ),
+    executor_def=multiprocess_executor,
 )
+

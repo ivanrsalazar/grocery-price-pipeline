@@ -54,7 +54,7 @@ except ImportError as e:
 _DEFAULT_TERMS_FILE = str(
     Path.home()
     / "pipelines"
-    / "grocery-price-pipeline"
+    / "grocery_pipeline"
     / "grocery_pipeline"
     / "config"
     / "canonical_search_terms.yaml"
