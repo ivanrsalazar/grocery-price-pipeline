@@ -1,0 +1,23 @@
+version: 2
+
+exposures:
+  - name: grocery_price_portfolio
+    label: Grocery Price Comparison Portfolio
+    type: dashboard
+    maturity: medium
+    description: >
+      Four-market grocery basket comparison, price index, item contribution,
+      and data-quality reporting for the public portfolio.
+    depends_on:
+      - ref('mart_city_price_comparison')
+      - ref('mart_period_comparison')
+      - ref('mart_item_price_change')
+      - ref('mart_data_quality_daily')
+      - ref('mart_standardized_basket_daily')
+      - ref('mart_cheapest_basket_products')
+      - ref('mart_fixed_basket_item_movers')
+      - ref('mart_category_price_movers')
+      - ref('mart_category_price_support')
+    owner:
+      name: Ivan Salazar
+      email: ivansalazar0003@gmail.com

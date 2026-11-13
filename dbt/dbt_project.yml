@@ -1,0 +1,40 @@
+name: grocery_analytics
+version: "1.0.0"
+config-version: 2
+
+profile: grocery_analytics
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - target
+  - dbt_packages
+
+vars:
+  basket_baseline_date: "2026-04-07"
+  basket_comparison_date: "2026-11-12"
+
+models:
+  grocery_analytics:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  grocery_analytics:
+    locations:
+      +column_types:
+        location_id: string
+    basket_items:
+      +column_types:
+        upc: string

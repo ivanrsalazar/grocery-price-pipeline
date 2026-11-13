@@ -1,16 +1,20 @@
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 
 import yaml
 from dagster import AssetExecutionContext, AssetKey, asset
+from google.cloud import bigquery
+
+from grocery_pipeline.settings import get_bq_project
 
 # =====================================================
 # BigQuery tables
 # =====================================================
 
-BQ_PROJECT = "grocery-pipe-line"
+BQ_PROJECT = get_bq_project()
 
 BRONZE_TABLE = f"{BQ_PROJECT}.grocery_bronze.exploration_kroger_products"
 SILVER_TABLE = f"{BQ_PROJECT}.grocery_silver.exploration_kroger_products"
@@ -330,8 +334,9 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
     """
     bq = getattr(context.resources, "bigquery_client", None)
     if bq is None:
-        from google.cloud import bigquery
         bq = bigquery.Client(project=BQ_PROJECT)
+
+    snapshot_date = datetime.now(timezone.utc).date()
 
     term_records = build_term_records()
     context.log.info(
@@ -521,6 +526,7 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
         FROM `{BRONZE_TABLE}` b
         JOIN term_map tm
           ON REGEXP_REPLACE(LOWER(TRIM(b.search_term)), r"\\s+", " ") = tm.search_term_norm
+        WHERE b.snapshot_date = @snapshot_date
       ),
       scored AS (
         SELECT
@@ -633,7 +639,8 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
       ) = 1
     ) S
     ON
-      T.snapshot_date = S.snapshot_date
+      T.snapshot_date = @snapshot_date
+      AND T.snapshot_date = S.snapshot_date
       AND T.location_id = S.location_id
       AND T.search_term = S.search_term
       AND T.product_id = S.product_id
@@ -742,7 +749,19 @@ def silver_exploration_kroger_products(context: AssetExecutionContext) -> None:
     );
     """
 
-    context.log.info(f"Running silver merge into `{SILVER_TABLE}` from `{BRONZE_TABLE}`")
-    job = bq.query(query, location="us-east1")
+    context.log.info(
+        f"Running silver merge for snapshot_date={snapshot_date} "
+        f"into `{SILVER_TABLE}` from `{BRONZE_TABLE}`"
+    )
+    job_config = bigquery.QueryJobConfig(
+        query_parameters=[
+            bigquery.ScalarQueryParameter("snapshot_date", "DATE", snapshot_date)
+        ]
+    )
+    job = bq.query(query, location="us-east1", job_config=job_config)
     job.result()
-    context.log.info("Silver exploration merge completed.")
+    context.log.info(
+        "Silver exploration merge completed | "
+        f"bytes_processed={job.total_bytes_processed or 0} | "
+        f"bytes_billed={job.total_bytes_billed or 0}"
+    )

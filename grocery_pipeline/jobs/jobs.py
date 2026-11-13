@@ -10,6 +10,7 @@ bronze_kroger_products_daily_job = define_asset_job(
     selection=AssetSelection.assets(
         "exploration_kroger_products_daily",
         "silver_exploration_kroger_products",
+        "gold_dbt_models",
     ),
 )
 

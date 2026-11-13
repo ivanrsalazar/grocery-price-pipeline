@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: grocery_silver
+    description: Curated Kroger product observations produced by Dagster.
+    database: grocery-pipe-line
+    schema: grocery_silver
+    tables:
+      - name: exploration_kroger_products
+        description: Daily matched Kroger products. Source duplicates are removed in staging.
+        config:
+          loaded_at_field: ingestion_ts
+          freshness:
+            warn_after: {count: 36, period: hour}
+            error_after: {count: 72, period: hour}
+
+  - name: grocery_bronze
+    description: Raw append-only Kroger API observations.
+    database: grocery-pipe-line
+    schema: grocery_bronze
+    tables:
+      - name: exploration_kroger_products
+        description: Raw API product search results, partitioned by snapshot date.
+        config:
+          loaded_at_field: ingestion_ts

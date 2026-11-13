@@ -27,4 +27,6 @@ CREATE TABLE IF NOT EXISTS `grocery-pipe-line.grocery_bronze.exploration_kroger_
   raw                    JSON,
 
   ingestion_ts TIMESTAMP
-);
+)
+PARTITION BY snapshot_date
+CLUSTER BY location_id, search_term, product_id;

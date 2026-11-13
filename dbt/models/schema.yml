@@ -1,0 +1,169 @@
+version: 2
+
+models:
+  - name: stg_kroger_products
+    description: One latest silver observation per date, market, search term, and product.
+    columns:
+      - name: observation_key
+        description: Stable primary key for a daily product observation.
+        data_tests: [not_null, unique]
+      - name: snapshot_date
+        data_tests: [not_null]
+      - name: location_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_locations')
+                field: location_id
+      - name: product_id
+        data_tests: [not_null]
+      - name: price
+        description: Regular item price; null when Kroger returns a catalog item without an offer.
+
+  - name: stg_locations
+    description: Four Kroger markets with reliable API coverage.
+    columns:
+      - name: location_id
+        data_tests: [not_null, unique]
+      - name: city
+        data_tests: [not_null, unique]
+
+  - name: stg_basket_items
+    description: Version-controlled definitions for canonical and matched-SKU baskets.
+    columns:
+      - name: basket_item_key
+        data_tests: [not_null, unique]
+      - name: pricing_method
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [market_median, matched_sku]
+      - name: standard_unit
+        description: Unit used to normalize canonical items before price aggregation.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [ounce, fluid_ounce, count]
+              config:
+                where: "basket_id = 'canonical_essentials'"
+      - name: item_category
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [Produce, Dairy and eggs, Bakery, Meat, Pantry, Frozen, Beverages]
+
+  - name: fct_grocery_basket_daily
+    description: Item-level daily basket prices by market and methodology.
+    columns:
+      - name: basket_observation_key
+        data_tests: [not_null, unique]
+      - name: item_price
+        data_tests: [not_null]
+
+  - name: mart_grocery_basket_daily
+    description: Daily basket totals with completeness and coverage measures.
+    columns:
+      - name: basket_daily_key
+        data_tests: [not_null, unique]
+      - name: coverage_ratio
+        data_tests: [not_null]
+
+  - name: mart_city_price_index
+    description: Complete basket totals indexed to each market's first complete observation.
+
+  - name: mart_item_price_change
+    description: Baseline-to-current item price changes by basket and market.
+
+  - name: mart_city_price_comparison
+    description: Latest complete city affordability ranking for each basket.
+
+  - name: mart_period_comparison
+    description: April 7 baseline versus the latest common complete date.
+
+  - name: mart_data_quality_daily
+    description: Daily source health, duplicate, market, term, and price metrics.
+    columns:
+      - name: snapshot_date
+        data_tests: [not_null, unique]
+
+  - name: fct_standardized_basket_daily
+    description: Canonical item prices normalized to fixed quantities, with cheapest and median observations.
+    columns:
+      - name: standardized_observation_key
+        data_tests: [not_null, unique]
+      - name: item_price
+        data_tests: [not_null]
+      - name: price_statistic
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [cheapest, median]
+
+  - name: mart_standardized_basket_daily
+    description: Daily fixed-quantity canonical basket totals for cheapest and median pricing strategies.
+    columns:
+      - name: standardized_basket_daily_key
+        data_tests: [not_null, unique]
+      - name: coverage_ratio
+        data_tests: [not_null]
+
+  - name: mart_cheapest_basket_products
+    description: Exact fixed product selected at the April baseline and tracked across snapshots, restricted to matching product IDs and package quantities available in April and November.
+    columns:
+      - name: cheapest_product_key
+        data_tests: [not_null, unique]
+      - name: description
+        data_tests: [not_null]
+      - name: standardized_price
+        data_tests: [not_null]
+
+  - name: mart_fixed_basket_item_movers
+    description: Fixed-product April-to-November item changes by city, including cross-market medians, direction counts, ranges, and city ranks.
+    columns:
+      - name: item_mover_key
+        data_tests: [not_null, unique]
+      - name: dollar_change
+        data_tests: [not_null]
+
+  - name: mart_fixed_basket_category_movers
+    description: Fixed-basket item contributions rolled into interpretable grocery categories by city and across markets.
+    columns:
+      - name: category_mover_key
+        data_tests: [not_null, unique]
+      - name: dollar_change
+        data_tests: [not_null]
+
+  - name: mart_category_price_movers
+    description: Equal-weighted unit-price index across exact product-ID matches in each grocery category, city, and comparison period.
+    columns:
+      - name: category_mover_key
+        data_tests: [not_null, unique]
+      - name: grocery_category
+        data_tests: [not_null]
+      - name: search_term_count
+        description: Number of search terms with at least one identical product observed on both comparison dates.
+        data_tests: [not_null]
+      - name: supporting_product_count
+        description: Number of exact product IDs observed on both comparison dates.
+        data_tests: [not_null]
+      - name: category_percent_change
+        description: Equal-weighted geometric change across search terms after pairing exact product IDs and normalized unit types across dates.
+        data_tests: [not_null]
+
+  - name: mart_category_price_support
+    description: Exact product-ID pairs supporting the broad category index for every city, search term, and normalized unit.
+    columns:
+      - name: category_support_key
+        data_tests: [not_null, unique]
+      - name: grocery_category
+        data_tests: [not_null]
+      - name: search_term
+        data_tests: [not_null]
+      - name: normalized_unit
+        data_tests: [not_null]
+      - name: baseline_description
+        data_tests: [not_null]
+      - name: comparison_description
+        data_tests: [not_null]

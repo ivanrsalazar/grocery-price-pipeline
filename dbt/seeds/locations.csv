@@ -1,0 +1,5 @@
+location_id,city,state,market_order,active
+70300022,Los Angeles,CA,1,true
+53100541,Chicago,IL,2,true
+03500529,Dallas,TX,3,true
+70500808,Seattle,WA,4,true

@@ -1,4 +1,5 @@
 import json
+import hashlib
 import os
 import time
 import random
@@ -11,6 +12,8 @@ import requests
 from google.cloud import bigquery
 from dagster import asset, AssetExecutionContext, RetryPolicy
 
+from grocery_pipeline.settings import get_bq_project
+
 # =====================================================
 # Constants
 # =====================================================
@@ -18,7 +21,7 @@ from dagster import asset, AssetExecutionContext, RetryPolicy
 KROGER_OAUTH_URL = "https://api.kroger.com/v1/connect/oauth2/token"
 KROGER_PRODUCTS_URL = "https://api.kroger.com/v1/products"
 
-BQ_PROJECT = "grocery-pipe-line"
+BQ_PROJECT = get_bq_project()
 BQ_DATASET = "grocery_bronze"
 BQ_TABLE = "exploration_kroger_products"
 
@@ -34,19 +37,22 @@ LOCATION_IDS = [            # Zip   | City
 
 BATCH_SIZE = 500
 REQUEST_SLEEP = 0.15
+MAX_REQUEST_ATTEMPTS = 4
+TOKEN_REFRESH_SKEW_SECONDS = 60
 
-CONFIG_PATH = (
-    Path("~/pipelines/grocery_pipeline/grocery_pipeline/config/canonical_search_terms.yaml")
-    .expanduser()
-)
+CONFIG_PATH = Path(__file__).resolve().parents[2] / "config" / "canonical_search_terms.yaml"
 
 # =====================================================
 # Auth
 # =====================================================
 
 
-def get_kroger_access_token() -> str:
-    resp = requests.post(
+class KrogerTokenExpired(RuntimeError):
+    """Raised when Kroger rejects an access token during a product request."""
+
+
+def _fetch_kroger_access_token(session=requests) -> tuple[str, int]:
+    resp = session.post(
         KROGER_OAUTH_URL,
         auth=(
             os.environ["KROGER_CLIENT_ID"],
@@ -56,7 +62,35 @@ def get_kroger_access_token() -> str:
         timeout=30,
     )
     resp.raise_for_status()
-    return resp.json()["access_token"]
+    payload = resp.json()
+    return payload["access_token"], int(payload.get("expires_in", 1800))
+
+
+def get_kroger_access_token() -> str:
+    """Fetch a token for one-off callers and credential checks."""
+    token, _ = _fetch_kroger_access_token()
+    return token
+
+
+class KrogerTokenManager:
+    """Cache and proactively refresh the short-lived Kroger OAuth token."""
+
+    def __init__(self, session):
+        self._session = session
+        self._token = None
+        self._refresh_at = 0.0
+
+    def get(self) -> str:
+        if self._token is None or time.monotonic() >= self._refresh_at:
+            return self.refresh()
+        return self._token
+
+    def refresh(self) -> str:
+        token, expires_in = _fetch_kroger_access_token(self._session)
+        refresh_after = max(1, expires_in - TOKEN_REFRESH_SKEW_SECONDS)
+        self._token = token
+        self._refresh_at = time.monotonic() + refresh_after
+        return token
 
 
 # =====================================================
@@ -69,23 +103,44 @@ def search_products(
     term: str,
     location_id: str,
     limit: int = 25,
+    session=requests,
 ) -> List[dict]:
-    resp = requests.get(
-        KROGER_PRODUCTS_URL,
-        headers={"Authorization": f"Bearer {token}"},
-        params={
-            "filter.term": term,
-            "filter.locationId": location_id,
-            "filter.limit": limit,
-        },
-        timeout=30,
-    )
+    for attempt in range(MAX_REQUEST_ATTEMPTS):
+        try:
+            resp = session.get(
+                KROGER_PRODUCTS_URL,
+                headers={"Authorization": f"Bearer {token}"},
+                params={
+                    "filter.term": term,
+                    "filter.locationId": location_id,
+                    "filter.limit": limit,
+                },
+                timeout=30,
+            )
+        except (requests.Timeout, requests.ConnectionError):
+            if attempt == MAX_REQUEST_ATTEMPTS - 1:
+                raise
+            time.sleep(min(2 ** attempt, 8) + random.random())
+            continue
 
-    if resp.status_code >= 500:
-        return []
+        if resp.status_code == 401:
+            raise KrogerTokenExpired("Kroger access token expired")
 
-    resp.raise_for_status()
-    return resp.json().get("data", [])
+        if resp.status_code == 429 or resp.status_code >= 500:
+            if attempt == MAX_REQUEST_ATTEMPTS - 1:
+                resp.raise_for_status()
+            retry_after = resp.headers.get("Retry-After")
+            try:
+                delay = float(retry_after) if retry_after else 2 ** attempt
+            except ValueError:
+                delay = 2 ** attempt
+            time.sleep(min(delay, 60) + random.random())
+            continue
+
+        resp.raise_for_status()
+        return resp.json().get("data", [])
+
+    raise RuntimeError("Kroger product request exhausted all retry attempts")
 
 
 # =====================================================
@@ -107,6 +162,15 @@ def load_search_terms() -> List[str]:
     return list(dict.fromkeys(terms))
 
 
+def _row_insert_id(row: Dict) -> str:
+    """Build a stable insert ID so retries do not duplicate a daily product row."""
+    key = "|".join(
+        str(row.get(field) or "")
+        for field in ("snapshot_date", "location_id", "search_term", "product_id")
+    )
+    return hashlib.sha256(key.encode("utf-8")).hexdigest()
+
+
 # =====================================================
 # Asset
 # =====================================================
@@ -119,7 +183,8 @@ def load_search_terms() -> List[str]:
 )
 def exploration_kroger_products_daily(context: AssetExecutionContext) -> None:
     client = bigquery.Client(project=BQ_PROJECT)
-    token = get_kroger_access_token()
+    session = requests.Session()
+    tokens = KrogerTokenManager(session)
 
     search_terms = load_search_terms()
 
@@ -136,7 +201,18 @@ def exploration_kroger_products_daily(context: AssetExecutionContext) -> None:
 
     for location_id in LOCATION_IDS:
         for term in search_terms:
-            products = search_products(token, term, location_id)
+            try:
+                products = search_products(
+                    tokens.get(), term, location_id, session=session
+                )
+            except KrogerTokenExpired:
+                context.log.info(
+                    "Kroger access token expired; refreshing and retrying "
+                    f"term={term!r} location_id={location_id}"
+                )
+                products = search_products(
+                    tokens.refresh(), term, location_id, session=session
+                )
 
             for p in products:
                 item = (p.get("items") or [{}])[0]
@@ -185,7 +261,11 @@ def exploration_kroger_products_daily(context: AssetExecutionContext) -> None:
                 # Batch flush
                 # -------------------------------
                 if len(rows) >= BATCH_SIZE:
-                    errors = client.insert_rows_json(TABLE_ID, rows)
+                    errors = client.insert_rows_json(
+                        TABLE_ID,
+                        rows,
+                        row_ids=[_row_insert_id(row) for row in rows],
+                    )
                     if errors:
                         raise RuntimeError(f"BigQuery insert errors: {errors}")
 
@@ -197,7 +277,11 @@ def exploration_kroger_products_daily(context: AssetExecutionContext) -> None:
 
     # final flush
     if rows:
-        errors = client.insert_rows_json(TABLE_ID, rows)
+        errors = client.insert_rows_json(
+            TABLE_ID,
+            rows,
+            row_ids=[_row_insert_id(row) for row in rows],
+        )
         if errors:
             raise RuntimeError(f"BigQuery insert errors: {errors}")
 

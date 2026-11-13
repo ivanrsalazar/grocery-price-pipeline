@@ -11,6 +11,46 @@ promotes validated records through configuration-driven quality rules.
 The repository also contains experimental browser-based collectors for H-E-B,
 Meijer, Walmart, Vons, Winn-Dixie, and Sprouts.
 
+## Portfolio highlights
+
+This repository demonstrates hands-on ownership of a modern analytics workflow:
+API ingestion, BigQuery warehouse design, modular dbt transformations, data
+quality testing, orchestration, documentation, and a decision-ready analytical
+product.
+
+| Area | Implementation |
+|---|---|
+| **dbt modeling** | 23 staging, intermediate, fact, and mart models targeting BigQuery |
+| **Data quality** | 58 generic and singular tests, plus source-freshness thresholds |
+| **Dimensional inputs** | Version-controlled seeds for locations and basket definitions |
+| **Documentation** | Model and column descriptions, lineage metadata, and a dashboard exposure |
+| **Optimization** | Date partitioning and clustering on high-use BigQuery models |
+| **Orchestration** | Dagster runs source freshness and `dbt build` after the silver asset succeeds |
+| **Analytics product** | Interactive four-city dashboard backed by tested gold-layer marts |
+
+The dbt work is not a standalone tutorial project: its models are part of the
+scheduled pipeline, consume the curated silver feed, and produce the tables
+used by the portfolio dashboard.
+
+## Dashboard preview
+
+The analytical layer supports two deliberately different basket methods: a
+standardized 12-item basket showing both market median and fixed-cheapest
+prices, and a broader category index restricted to exact SKU matches across
+the two comparison dates.
+
+| Median basket comparison | Fixed-cheapest basket comparison |
+|---|---|
+| ![Four-city median basket comparison](docs/median.png) | ![Four-city fixed-cheapest basket comparison](docs/cheapest.png) |
+
+| Matched-SKU category movers | Standardized item movers |
+|---|---|
+| ![Chicago matched-SKU category price changes](docs/chicago_categories.png) | ![Los Angeles standardized item price changes](docs/la_items.png) |
+
+The category bars are auditable in the local dashboard: selecting one opens
+the exact product IDs, package sizes, shelf prices, and normalized unit prices
+that support the result.
+
 ## Why this project exists
 
 Comparing grocery prices is harder than collecting a number from a product
@@ -39,7 +79,8 @@ flowchart LR
     D --> E[Normalization and matching]
     E --> F[(BigQuery Silver)]
     F --> G[LLM-assisted quality evaluation]
-    F -. planned aggregates .-> H[(BigQuery Gold)]
+    F --> H[dbt models and tests]
+    H --> J[(BigQuery Gold)]
 
     G --> I[CSV and JSONL evaluation outputs]
 ```
@@ -50,11 +91,12 @@ flowchart LR
 |---|---|---|
 | **Bronze** | Implemented | Append-only API and scraper snapshots, including raw source payloads and ingestion metadata |
 | **Silver** | Implemented | Deduplicated, normalized products that pass category, token, and exclusion rules |
-| **Gold** | Planned | Analytics-ready price indices, geographic comparisons, and time-series aggregates |
+| **Gold** | Implemented | dbt-tested grocery baskets, price indices, geographic comparisons, and data-quality marts |
 
 ## Implemented workflow
 
-The scheduled Kroger job materializes two Dagster assets in sequence.
+The scheduled Kroger job materializes three Dagster assets in sequence:
+bronze ingestion, silver validation, and the dbt-powered gold build.
 
 ### 1. Bronze ingestion
 
@@ -98,6 +140,76 @@ silver records and asks an LLM to classify each product match as:
 The evaluator writes CSV and JSONL outputs so false-positive patterns can be
 reviewed and converted into deterministic matching rules. LLM output is a QA
 signal, not the final source of truth.
+
+### 4. Gold analytics with dbt
+
+The [`dbt/`](dbt/) project builds and tests two complementary grocery baskets:
+
+- `canonical_essentials`: twelve canonical items priced using each market's
+  median matched product price; and
+- `matched_sku`: eight identical UPCs available across every active market on
+  the baseline and current comparison dates.
+
+Gold marts include daily basket totals, city affordability rankings, price
+indices, item-level price changes, an April-to-latest comparison, unit-price
+parsing, and daily data-quality metrics. The canonical basket also has a
+fixed-quantity mart that reports both the cheapest eligible option and the
+market median for all twelve items. A separate broad category index uses only
+exact product IDs observed on both snapshots, compares normalized unit prices,
+and reports the matched-SKU sample behind each category. Dagster runs `dbt source
+freshness` and `dbt build` after the silver asset succeeds.
+
+#### Model design
+
+The project uses a layered DAG rather than putting business logic directly in
+dashboard queries.
+
+| dbt layer | Responsibility | Examples |
+|---|---|---|
+| **Sources and staging** | Declare BigQuery sources, deduplicate observations, and create stable keys | `stg_kroger_products`, `stg_locations`, `stg_basket_items` |
+| **Intermediate** | Parse units, normalize package quantities, identify comparable products, and calculate market-level item statistics | `int_unit_prices`, `int_comparable_cheapest_items_daily`, `int_standardized_item_prices_daily` |
+| **Facts** | Preserve item-level grain for basket and standardized-price observations | `fct_grocery_basket_daily`, `fct_standardized_basket_daily` |
+| **Marts** | Produce basket totals, indices, period comparisons, movers, audit tables, and data-quality reporting | `mart_period_comparison`, `mart_category_price_movers`, `mart_category_price_support` |
+
+Notable modeling decisions include:
+
+- normalizing ounces, pounds, gallons, quarts, pints, fluid ounces, and counts
+  before comparing prices;
+- excluding ambiguous multipacks from standardized calculations;
+- tracking the same product ID and package quantity for the fixed-cheapest
+  basket;
+- restricting the broad category index to exact product IDs observed on both
+  April 7 and November 12;
+- giving search terms equal weight so categories with more configured searches
+  do not automatically dominate; and
+- partitioning and clustering larger BigQuery relations for their expected
+  access patterns.
+
+#### Testing, freshness, and documentation
+
+The project currently defines **58 dbt data tests**. In addition to generic
+`not_null`, `unique`, `relationships`, and `accepted_values` tests, singular
+tests assert that:
+
+- the four active markets are present in the latest snapshot;
+- canonical baskets are complete before they reach reporting;
+- standardized item prices are positive; and
+- fixed-cheapest comparisons retain the same product and package quantity.
+
+The silver source has freshness thresholds of 36 hours for warnings and 72
+hours for errors. Model and column descriptions live in
+[`dbt/models/schema.yml`](dbt/models/schema.yml), source contracts and
+freshness rules in [`dbt/models/sources.yml`](dbt/models/sources.yml), and the
+dashboard lineage is declared as a dbt exposure in
+[`dbt/models/exposures.yml`](dbt/models/exposures.yml).
+
+#### Production-style orchestration
+
+The Dagster [`gold_dbt_models`](grocery_pipeline/assets/gold/dbt_gold.py) asset
+depends on the silver transformation. It executes `dbt source freshness`
+before `dbt build`, streams dbt logs into the Dagster run, and fails the asset
+if either command returns a non-zero exit code. This makes model execution and
+tests part of the pipeline contract rather than a manual validation step.
 
 ## Configuration-driven matching
 
@@ -238,7 +350,7 @@ grocery-price-pipeline/
 │   ├── assets/
 │   │   ├── bronze/          # API and browser-based ingestion
 │   │   ├── silver/          # BigQuery normalization and matching
-│   │   └── gold/            # Planned analytical assets
+│   │   └── gold/            # Dagster-managed dbt gold build
 │   ├── config/              # Canonical terms, categories, and rules
 │   ├── jobs/                # Dagster asset jobs
 │   ├── resources/           # BigQuery resource
@@ -249,6 +361,9 @@ grocery-price-pipeline/
 │   ├── bronze/              # Bronze DDL
 │   ├── silver/              # Silver DDL
 │   └── migrations/          # Dataset initialization
+├── dbt/                     # Models, seeds, tests, analyses, and docs
+├── docs/                    # Portfolio dashboard screenshots
+├── sites/                   # Local static analytical dashboard
 ├── setup.cfg
 └── README.md
 ```
@@ -295,23 +410,53 @@ Review the project IDs in the SQL files and Python configuration, then execute
 the DDL under `warehouse/` in BigQuery. The current deployment uses the
 `grocery-pipe-line` project ID.
 
-### Start Dagster
+### Start Dagster on macOS
 
-On the configured deployment host:
+For the Kroger-only local deployment, use the self-contained definitions module:
 
 ```bash
-dagster dev -m grocery_pipeline.definitions
+uv venv --python python3.13 .venv
+uv pip install --python .venv/bin/python -e .
+
+./scripts/kroger_launch_agent.sh install
 ```
 
-Open the Dagster UI, materialize
-`bronze_kroger_products_daily_job`, and enable
-`bronze_kroger_products_daily_schedule` when the credentials and tables are
-ready.
+The LaunchAgent keeps Dagster alive after the terminal closes and restarts it
+if it exits. The service loads the Kroger credentials from `~/.zshrc`, uses local
+Application Default Credentials for BigQuery, persists Dagster state under
+`.dagster/`, and opens the UI at <http://127.0.0.1:3000>. The daily schedule is
+enabled by default and runs at 06:00 UTC.
+
+Service commands:
+
+```bash
+# Verify the background service
+./scripts/kroger_launch_agent.sh status
+
+# Follow logs
+./scripts/kroger_launch_agent.sh logs
+
+# Run one ingestion immediately in the foreground
+./scripts/kroger_service.sh run-once
+
+# Gracefully stop the background service
+./scripts/kroger_launch_agent.sh stop
+
+# Load and start it again
+./scripts/kroger_launch_agent.sh start
+
+# Stop it and move the installed plist to Trash
+./scripts/kroger_launch_agent.sh uninstall
+```
+
+The Mac must be running and awake at schedule time. A run missed while the Mac
+is powered off is not automatically backfilled; use `run-once` after startup
+when needed.
 
 > **Local-development note:** the current `Definitions` module also imports
 > experimental scraper assets from `~/lab/retail_scraper_poc/src`. Without
-> that external repository, those imports must be disabled or replaced before
-> starting the complete Dagster code location.
+> compatible external scraper modules, use `grocery_pipeline.definitions_kroger`
+> as shown above rather than the complete code location.
 
 ### Run the false-positive evaluator
 
@@ -323,27 +468,65 @@ Use the available flags to select search terms, sample limits, and the target
 BigQuery table. Review generated outputs before translating findings into YAML
 rules.
 
+### Build and inspect the gold layer
+
+```bash
+.venv/bin/dbt source freshness --project-dir dbt --profiles-dir dbt
+.venv/bin/dbt build --project-dir dbt --profiles-dir dbt
+.venv/bin/dbt docs generate --project-dir dbt --profiles-dir dbt
+.venv/bin/dbt docs serve --project-dir dbt --profiles-dir dbt --port 8080
+```
+
+See [`dbt/README.md`](dbt/README.md) for basket methodology and caveats.
+
+### View the portfolio dashboard
+
+The private, published dashboard tells the four-city April 7 versus November
+12 story with the standardized 12-item basket, fixed-SKU comparisons, and the
+broader matched-SKU category index shown in the screenshots above:
+
+<https://four-city-grocery-basket.lemonyfort3.chatgpt.site>
+
+Its buildless source is under `sites/four-city-grocery-basket/`.
+
+To serve the same dashboard locally in the background, replace `8085` with any
+available port and use these commands:
+
+```bash
+# Start on a custom port
+./sites/four-city-grocery-basket/dashboard.sh start 8085
+
+# Check whether it is running
+./sites/four-city-grocery-basket/dashboard.sh status 8085
+
+# Stop the process
+./sites/four-city-grocery-basket/dashboard.sh stop 8085
+```
+
+Then open <http://127.0.0.1:8085>. See
+[`sites/four-city-grocery-basket/README.md`](sites/four-city-grocery-basket/README.md)
+for local-network and stop instructions.
+
 ## Current limitations
 
-- Gold-layer price indices and aggregates are not implemented yet.
-- Several deployment paths and the BigQuery project ID are currently
-  environment-specific.
+- Only four configured markets currently return reliable product data; the
+  inactive New York location is excluded from gold coverage tests.
 - Browser-based retailer collectors rely on a separate local repository and
   manually managed browser sessions.
-- Automated tests and CI are not yet included.
-- Product-size normalization is not yet sufficient for unit-price comparisons.
+- CI is not yet configured to run the Python and dbt test suites automatically.
+- Unit-price parsing covers common ounce, pound, liquid-volume, and count
+  formats but not every retailer size string or multipack convention.
 - API availability and retailer catalog behavior can change independently of
   this pipeline.
 
 ## Roadmap
 
-- materialize gold price-history and geographic-comparison tables;
-- normalize package sizes and calculate comparable unit prices;
+- expand package-size and multipack normalization;
 - make project IDs and paths environment-driven;
 - integrate the retailer collectors without external source-path dependencies;
 - add data-quality tests, CI, and pipeline observability;
 - monitor BigQuery cost and freshness; and
-- publish analytical dashboards over gold-layer data.
+- automate dashboard data refreshes from the documented gold marts.
 
 ## Responsible use
 

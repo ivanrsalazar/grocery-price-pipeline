@@ -207,6 +207,21 @@ rules:
   # Beverages
   # -------------------------
 
+  orange juice:
+    strategy: all_tokens
+    none_of:
+      - drink
+
+  butter:
+    strategy: all_tokens
+    none_of:
+      - spreadable
+      - spread
+      - margarine
+      - with olive oil
+      - with canola oil
+      - plant based
+
   coffee:
     # Creamers are polluting coffee results.
     strategy: all_tokens

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A four-city Kroger grocery price comparison, April to November 2026.">
+  <title>The Four-City Grocery Basket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">4</span><span>MARKETS / 2 BASKETS</span></a>
+    <nav aria-label="Page sections"><a href="#cities">Cities</a><a href="#items">Items</a><a href="#method">Method</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">STANDARDIZED KROGER PRICE STUDY · APR 07 → NOV 12, 2026</div>
+      <h1>The prices moved.<br><em>The products didn’t.</em></h1>
+      <p class="dek">The fixed bargain basket follows the exact same product ID and package quantity from April to November. It fell 7.4% in Chicago, 2.3% in Dallas, and 0.6% in Los Angeles, while rising 6.8% in Seattle.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#cities">Explore the cities <span>↓</span></a>
+        <button class="button secondary" id="methodologyButton">How this was built</button>
+      </div>
+      <div class="hero-stat" aria-label="Largest basket movement">
+        <span class="stat-kicker">Largest fixed-basket move</span>
+        <strong>−7.4%</strong>
+        <span>Chicago fixed bargain basket</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Key findings">
+      <div><span>CHICAGO · FIXED / MED</span><b class="down">−7.4% / −4.2%</b></div>
+      <div><span>DALLAS · FIXED / MED</span><b class="down">−2.3% / +4.6%</b></div>
+      <div><span>LOS ANGELES · FIXED / MED</span><b class="down">−0.6% / −0.9%</b></div>
+      <div><span>SEATTLE · FIXED / MED</span><b class="up">+6.8% / −2.1%</b></div>
+    </section>
+
+    <section class="section intro" id="cities">
+      <div class="section-number">01</div>
+      <div>
+        <div class="eyebrow">THE CITY VIEW</div>
+        <h2>Two prices for the same basket</h2>
+        <p>Each city card presents a fixed bargain basket alongside the local median. The bargain basket selects the cheapest April product that is also available in November, then tracks that exact product and package.</p>
+      </div>
+      <div class="segmented" role="group" aria-label="Basket selection">
+        <button class="active" data-statistic="median">Median</button>
+        <button data-statistic="cheapest">Fixed cheapest</button>
+      </div>
+    </section>
+
+    <section class="city-grid" id="cityGrid" aria-live="polite"></section>
+
+    <section class="section item-section" id="items">
+      <div class="section-number">02</div>
+      <div>
+        <div class="eyebrow">WHAT DROVE THE CHANGE</div>
+        <h2>Find the biggest movers</h2>
+        <p>Keep the 12 standardized essentials at item level, or switch to a broader category index built only from exact product IDs observed on both dates. The category sample spans 6–31 search terms and 15–336 matched SKU observations per city.</p>
+      </div>
+      <div class="mover-toolbar">
+        <div class="city-tabs" id="cityTabs" role="tablist" aria-label="Choose a market view"></div>
+        <div class="mover-view-toggle" role="group" aria-label="Group movers">
+          <button class="active" data-mover-view="items">Items</button>
+          <button data-mover-view="categories">Categories</button>
+        </div>
+      </div>
+      <div class="contribution-panel">
+        <div class="panel-head">
+          <div><span class="eyebrow" id="chartEyebrow">ITEM CONTRIBUTIONS</span><h3 id="chartTitle">Dallas · 12 essentials</h3></div>
+          <div class="legend"><span><i class="dot up-dot"></i>Cost more</span><span><i class="dot down-dot"></i>Cost less</span></div>
+        </div>
+        <button class="compare-products" id="compareProductsButton" hidden>Compare the fixed April &amp; November products <span>↗</span></button>
+        <p class="category-audit-hint" id="categoryAuditHint" hidden>Click any category to inspect every exact SKU pair behind its index.</p>
+        <div class="mover-axis"><span>← cheaper</span><span>more expensive →</span></div>
+        <div class="chart" id="contributionChart"></div>
+      </div>
+    </section>
+
+    <section class="finding-band">
+      <div class="quote-mark">“</div>
+      <blockquote id="findingQuote">Dallas saved $4.77 overall—even as chicken thighs rose $2.00—because milk, broccoli and eggs fell enough to offset it.</blockquote>
+      <span class="finding-source">THE BASKET IS THE STORY; THE ITEMS ARE THE EXPLANATION.</span>
+    </section>
+
+    <section class="section method" id="method">
+      <div class="section-number">03</div>
+      <div class="method-copy">
+        <div class="eyebrow">FROM API TO ANSWER</div>
+        <h2>A tested analytics layer, not a one-off chart</h2>
+        <p>The dashboard is the visible end of a local Kroger ingestion pipeline. Dagster orchestrates collection and transformation; BigQuery stores the history; dbt turns raw observations into documented, tested facts and marts.</p>
+        <div class="pipeline" aria-label="Data pipeline">
+          <div><b>Kroger API</b><span>product observations</span></div><i>→</i>
+          <div><b>Dagster</b><span>daily orchestration</span></div><i>→</i>
+          <div><b>BigQuery</b><span>bronze + silver</span></div><i>→</i>
+          <div><b>dbt</b><span>gold marts</span></div><i>→</i>
+          <div><b>This story</b><span>decision-ready</span></div>
+        </div>
+      </div>
+      <aside class="quality-card">
+        <span class="quality-label">LATEST QUALITY RUN</span>
+        <strong>58 / 58</strong>
+        <span class="quality-sub">dbt tests passing</span>
+        <dl><div><dt>Markets</dt><dd>4 active</dd></div><div><dt>Latest snapshot</dt><dd>Nov 12</dd></div><div><dt>Source rows</dt><dd>26,050</dd></div><div><dt>Unique products</dt><dd>13,025</dd></div></dl>
+      </aside>
+    </section>
+
+    <section class="notes">
+      <div><span>01</span><p><b>Comparable dates.</b> Every displayed change uses April 7 and November 12, 2026 for all four cities.</p></div>
+      <div><span>02</span><p><b>Fixed quantities.</b> Produce and meats are per pound; eggs per dozen; milk 64 fl oz; juice 52 fl oz; packaged goods use fixed category sizes.</p></div>
+      <div><span>03</span><p><b>Two price points.</b> Fixed cheapest tracks the same April-selected product ID and package in November. Median is the middle of each date’s local assortment.</p></div>
+      <div><span>04</span><p><b>Broad categories.</b> The category index includes only exact product IDs available on both dates, compares normalized unit prices, then gives each search term equal weight. It is not an official inflation index.</p></div>
+    </section>
+  </main>
+
+  <footer><span>GROCERY PRICE PIPELINE</span><span>DATA THROUGH NOVEMBER 12, 2026</span><span>BUILT WITH DAGSTER · BIGQUERY · DBT</span></footer>
+
+  <dialog id="methodologyDialog">
+    <button class="dialog-close" aria-label="Close">×</button>
+    <div class="eyebrow">METHODOLOGY</div>
+    <h2>Same quantities, explicit comparison rules</h2>
+    <p><b>Median</b> represents the middle standardized price in each city's eligible assortment. <b>Fixed cheapest</b> selects the cheapest April product that also exists in November with the same product ID and package quantity, then tracks that exact item.</p>
+    <p>Standards are: 16 oz apples, tomatoes, butter, ground beef and chicken thighs; 20 oz bread; 15 oz beans; 12 oz broccoli and cereal; 64 fl oz milk; 52 fl oz juice; and 12 eggs.</p>
+    <p><b>Category view</b> is independent of the 12-item basket. It uses only exact product-ID matches observed in the same city, search term, and normalized unit on both dates. SKU changes are combined within each term, then terms receive equal weight in the category index. Sample sizes are shown beside every bar.</p>
+    <p>No product or package substitution is allowed in the fixed basket. April 7 and November 12 were chosen because all four active markets had complete observations on both dates. Ambiguous multipacks and inactive NYC are excluded.</p>
+  </dialog>
+  <dialog id="productsDialog" class="products-dialog">
+    <button class="dialog-close products-close" aria-label="Close">×</button>
+    <div class="eyebrow">CHEAPEST BASKET · ACTUAL PRODUCTS</div>
+    <h2 id="productsDialogTitle">Dallas: April vs. November</h2>
+    <p class="products-intro">Every row uses the same product ID and package quantity in both snapshots. Shelf price is the package cost; basket price is the amount attributed to the standardized basket quantity.</p>
+    <div class="product-comparison" id="productComparison"></div>
+  </dialog>
+  <dialog id="categorySupportDialog" class="products-dialog category-support-dialog">
+    <button class="dialog-close category-support-close" aria-label="Close">×</button>
+    <div class="eyebrow">CATEGORY INDEX · SUPPORTING PRODUCTS</div>
+    <h2 id="categorySupportTitle">Dallas Produce: April vs. November</h2>
+    <p class="products-intro">Every row is the same Kroger product ID in April and November, within the same city, search term, and normalized unit. Search terms are grouped so you can audit every SKU contributing to the category index.</p>
+    <div class="support-legend"><span class="same-product-badge same">Exact SKU match only</span></div>
+    <div class="category-support-list" id="categorySupportList" aria-live="polite"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

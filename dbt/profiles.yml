@@ -1,0 +1,13 @@
+grocery_analytics:
+  target: local
+  outputs:
+    local:
+      type: bigquery
+      method: oauth
+      project: grocery-pipe-line
+      dataset: grocery_gold
+      location: us-east1
+      threads: 4
+      priority: interactive
+      job_execution_timeout_seconds: 600
+      job_retries: 2

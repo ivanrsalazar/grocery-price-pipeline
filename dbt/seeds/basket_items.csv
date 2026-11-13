@@ -1,0 +1,21 @@
+basket_id,item_name,search_term,quantity,pricing_method,upc,item_order,standard_quantity,standard_unit,item_category
+canonical_essentials,Apples,apples,1,market_median,,1,16,ounce,Produce
+canonical_essentials,Tomatoes,tomatoes,1,market_median,,2,16,ounce,Produce
+canonical_essentials,Whole milk,whole milk,1,market_median,,3,64,fluid_ounce,Dairy and eggs
+canonical_essentials,Eggs,eggs,1,market_median,,4,12,count,Dairy and eggs
+canonical_essentials,Butter,butter,1,market_median,,5,16,ounce,Dairy and eggs
+canonical_essentials,White bread,white bread,1,market_median,,6,20,ounce,Bakery
+canonical_essentials,Ground beef,ground beef,1,market_median,,7,16,ounce,Meat
+canonical_essentials,Chicken thighs,chicken thighs,1,market_median,,8,16,ounce,Meat
+canonical_essentials,Black beans,black beans,1,market_median,,9,15,ounce,Pantry
+canonical_essentials,Frozen broccoli,frozen broccoli,1,market_median,,10,12,ounce,Frozen
+canonical_essentials,Cereal,cereal,1,market_median,,11,12,ounce,Pantry
+canonical_essentials,Orange juice,orange juice,1,market_median,,12,52,fluid_ounce,Beverages
+matched_sku,GOYA black beans,black beans,1,matched_sku,0004133112466,1,,,Pantry
+matched_sku,Kerrygold unsalted butter,butter,1,matched_sku,0076770700215,2,,,Dairy and eggs
+matched_sku,Cinnamon Toast Crunch cereal,cereal,1,matched_sku,0001600012254,3,,,Pantry
+matched_sku,Vital Farms large eggs,eggs,1,matched_sku,0086174500001,4,,,Dairy and eggs
+matched_sku,Birds Eye broccoli florets,frozen broccoli,1,matched_sku,0001450000256,5,,,Frozen
+matched_sku,Kroger pulp-free orange juice,orange juice,1,matched_sku,0001111048480,6,,,Beverages
+matched_sku,On-the-vine tomatoes,tomatoes,1,matched_sku,0000000004664,7,,,Produce
+matched_sku,Horizon grassfed whole milk,whole milk,1,matched_sku,0074236500707,8,,,Dairy and eggs
